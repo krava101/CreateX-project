@@ -537,7 +537,7 @@ header .container{
     background-color: #fff;
     border-radius: none;
     width: 100%;
-    transform: translateY(68px);
+    transform: translateY(70px);
     transition: transform .25s ease-in-out .1s;
 }
 
