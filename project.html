@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CreateX</title>
     <link
@@ -20,9 +21,9 @@
     
     
     
-    <script type="module" crossorigin src="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js"></script>
-    <script type="module" crossorigin src="/CreateX-project/assets/main-04061a12.js"></script>
-    <link rel="stylesheet" href="/CreateX-project/assets/services-a89cb776.css">
+    <script type="module" crossorigin src="/CreateX-project/commonHelpers6.js"></script>
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/project-20f82fe5.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-339bb4d6.css">
   </head>
   <body>
@@ -39,14 +40,13 @@
               <a href="./about.html" class="header-nav-links"> About Us </a>
             </li>
             <li>
-              <a
-                href="./services.html"
-                class="header-nav-links active-nav-link"
-              >
-                Services
-              </a>
+              <a href="./services.html" class="header-nav-links">Services</a>
             </li>
-            <li><a href="./work.html" class="header-nav-links">Work</a></li>
+            <li>
+              <a href="./work.html" class="header-nav-links active-nav-link"
+                >Work</a
+              >
+            </li>
             <li><a href="./news.html" class="header-nav-links">News</a></li>
             <li>
               <a href="./contacts.html" class="header-nav-links">Contacts</a>
@@ -88,91 +88,229 @@
       <section class="hero">
         <div class="container">
           <p class="page-path">
-            <span class="page-path-dark">Homepage</span> / Services
+            <span class="page-path-dark">Homepage / Work</span> / Project Name
           </p>
-          <h1 class="page-title">services</h1>
-          <p class="hero-text">
-            If you are looking for a full-service construction company, look to
-            Createx Construction Bureau. We are doing our best to be a partner
-            for all of your construction needs.
-          </p>
+          <h1 class="page-title">project name</h1>
+          <div class="project-img-list-wrapper">
+            <ul class="project-img-list list"></ul>
+            <button class="slider-left-btn" type="button">
+              <svg class="slider-left-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-left-arrow"></use>
+              </svg>
+            </button>
+            <button class="slider-right-btn" type="button">
+              <svg class="slider-right-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="project-small-img-list list">
+            <li class="project-small-img-item active"></li>
+            <li class="project-small-img-item"></li>
+            <li class="project-small-img-item"></li>
+            <li class="project-small-img-item"></li>
+            <li class="project-small-img-item"></li>
+            <li class="project-small-img-item"></li>
+          </ul>
+          <div class="project-info-box">
+            <div class="project-goal">
+              <h2 class="section-title">Project goal</h2>
+              <p class="project-goal-text">
+                Build a private house 840 sq. feet with a large living room,
+                three bedrooms, two bathrooms, a terrace, a pool and a garage
+                for two cars.
+                <br />
+                <br />
+                Modern design and care for each family member to feel
+                as comfortable as possible in the new home.
+              </p>
+            </div>
+            <table class="project-info-table">
+              <thead>
+                <tr>
+                  <th>Location</th>
+                  <th>CLIENT</th>
+                  <th>ARCHITECT</th>
+                  <th>SIZE</th>
+                  <th>VALUE</th>
+                  <th>COMPLETED</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2464 Royal Ln. Mesa, New Jersey</td>
+                  <td>Darlene Robertson</td>
+                  <td>HIK Architecture</td>
+                  <td>840 sq. feet</td>
+                  <td>$2 million</td>
+                  <td>May 2020</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
       <div class="bg-container"></div>
-      <!-- HERO -->
-      <!-- SERVICES -->
-      <section class="services-info">
+      <section class="decisions">
         <div class="container">
-          <ul class="services-info-list list">
-            <li class="services-info-card">
-              <img
-                src="/CreateX-project/assets/construction-73796e43.jpg"
-                alt="Construction"
-              />
-              <div class="services-info-wrapper">
-                <h2 class="services-info-title">Construction</h2>
-                <p class="services-info-text">
-                  Sapien, feugiat faucibus orci arcu, vulputate. Tristique
-                  varius consectetur vulputate arcu, scelerisque nisi, nibh.
-                  Enim semper id sodales ultricies sed ut ut augue. Mattis
-                  habitant venenatis, gravida posuere massa ac interdum. Eget
-                  aliquam dignissim ut vestibulum.
-                </p>
-                <a class="services-info-link" href="">Learn more</a>
-              </div>
+          <h2 class="section-title">Constructive decisions</h2>
+          <img
+            class="decisions-img"
+            src="/CreateX-project/assets/decisions-img-a4b2f81e.jpg"
+            alt="Worker"
+          />
+          <ul class="decisions-list list">
+            <li class="decisions-item">
+              <svg class="decision-check-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-check"></use>
+              </svg>
+              Vitae ultrices ornare eu sed in est quisque duis id.
             </li>
-            <li class="services-info-card">
-              <img
-                src="/CreateX-project/assets/project-development-a7afb9e0.jpg"
-                alt="Project-development"
-              />
-              <div class="services-info-wrapper">
-                <h2 class="services-info-title">Project Development</h2>
-                <p class="services-info-text">
-                  Volutpat tellus mauris sit sit. Posuere ut sit vestibulum amet
-                  viverra in. Est nulla lectus purus tincidunt massa tortor.
-                  Hendrerit vulputate elementum blandit massa vitae amet felis
-                  eget.
-                </p>
-                <a class="services-info-link" href="">Learn more</a>
-              </div>
+            <li class="decisions-item">
+              <svg class="decision-check-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-check"></use>
+              </svg>
+              A fermentum in morbi pretium aliquam adipiscing donec tempus.
             </li>
-            <li class="services-info-card">
-              <img
-                src="/CreateX-project/assets/interior-design-4386f777.jpg"
-                alt="Interior-design"
-              />
-              <div class="services-info-wrapper">
-                <h2 class="services-info-title">Interior Design</h2>
-                <p class="services-info-text">
-                  Eleifend orci massa et facilisis orci feugiat ac. Congue in ut
-                  lacus, turpis accumsan gravida. Aliquet mattis dignissim massa
-                  sociis a, id bibendum. Egestas lorem eros, mi cras amet, vel
-                  eget molestie. Turpis enim arcu, amet donec massa pellentesque
-                  nulla duis. Arcu dictum metus sed purus senectus faucibus eget
-                  elementum pretium.
-                </p>
-                <a class="services-info-link" href="">Learn more</a>
-              </div>
+            <li class="decisions-item">
+              <svg class="decision-check-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-check"></use>
+              </svg>
+              Mauris odio pellentesque commodo, diam.
             </li>
-            <li class="services-info-card">
-              <img src="/CreateX-project/assets/repairs-a3af7a95.jpg" alt="Repairs" />
-              <div class="services-info-wrapper">
-                <h2 class="services-info-title">Repairs</h2>
-                <p class="services-info-text">
-                  Facilisis cursus feugiat sit pulvinar amet. Ac facilisi dictum
-                  commodo, tortor gravida pretium, orci. Nunc sit sollicitudin
-                  id egestas mattis. Turpis viverra nec urna ultrices urna.
-                </p>
-                <a class="services-info-link" href="">Learn more</a>
-              </div>
+            <li class="decisions-item">
+              <svg class="decision-check-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-check"></use>
+              </svg>
+              Fermentum vestibulum est fermentum, egestas gravida scelerisque
+              quis.
+            </li>
+            <li class="decisions-item">
+              <svg class="decision-check-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-check"></use>
+              </svg>
+              At pharetra libero blandit risus, fringilla sed commodo diam.
+            </li>
+            <li class="decisions-item">
+              <svg class="decision-check-icon">
+                <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-check"></use>
+              </svg>
+              Integer ultricies viverra ut enim viverra ut.
             </li>
           </ul>
         </div>
       </section>
-      <!-- SERVICES -->
+      <section class="projects">
+        <div class="container">
+          <div class="projects-title-container">
+            <h2 class="projects-title section-title">Similar projects</h2>
+            <div class="p-slider-controls">
+              <button type="button" class="p-left-arrow-btn">
+                <svg class="p-left-arrow p-arrow">
+                  <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-left-arrow"></use>
+                </svg>
+              </button>
+              <button type="button" class="p-right-arrow-btn">
+                <svg class="p-right-arrow p-arrow">
+                  <use href="/CreateX-project/assets/icons-ab127fb4.svg#icon-right-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <ul class="project-list list">
+            <li class="project-card">
+              <img
+                class="project-img"
+                src="/CreateX-project/assets/project-7-d0d2466a.jpg"
+                alt=""
+              />
+              <div class="project-card-box">
+                <h5 class="card-title">Red Finger Building</h5>
+                <p class="project-card-text">Business Centers</p>
+                <a
+                  class="project-card-link"
+                  href="project.html?project=project7"
+                  >view project</a
+                >
+              </div>
+            </li>
+            <li class="project-card">
+              <img
+                class="project-img"
+                src="/CreateX-project/assets/project-1-68d98b07.jpg"
+                alt=""
+              />
+              <div class="project-card-box">
+                <h5 class="card-title">Cubes Building</h5>
+                <p class="project-card-text">Business Centers</p>
+                <a
+                  class="project-card-link"
+                  href="project.html?project=project1"
+                  >view project</a
+                >
+              </div>
+            </li>
+            <li class="project-card">
+              <img
+                class="project-img"
+                src="/CreateX-project/assets/project-6-1855c2a2.jpg"
+                alt=""
+              />
+              <div class="project-card-box">
+                <h5 class="card-title">The Pencil Building</h5>
+                <p class="project-card-text">Stores & Malls</p>
+                <a class="project-card-link" href="">view project</a>
+              </div>
+            </li>
+            <li class="project-card">
+              <img
+                class="project-img"
+                src="/CreateX-project/assets/project-2-31564239.jpg"
+                alt=""
+              />
+              <div class="project-card-box">
+                <h5 class="card-title">Modern Cottage</h5>
+                <p class="project-card-text">Private houses</p>
+                <a class="project-card-link" href="">view project</a>
+              </div>
+            </li>
+            <li class="project-card">
+              <img
+                class="project-img"
+                src="/CreateX-project/assets/project-3-6a284aa9.jpg"
+                alt=""
+              />
+              <div class="project-card-box">
+                <h5 class="card-title">Luxury Beach House</h5>
+                <p class="project-card-text">Private houses</p>
+                <a class="project-card-link" href="">view project</a>
+              </div>
+            </li>
+            <li class="project-card">
+              <img
+                class="project-img"
+                src="/CreateX-project/assets/project-4-49f1e897.jpg"
+                alt=""
+              />
+              <div class="project-card-box">
+                <h5 class="card-title">Modern Double Bedroom</h5>
+                <p class="project-card-text">Apartments & flats</p>
+                <a class="project-card-link" href="">view project</a>
+              </div>
+            </li>
+          </ul>
+          <div class="projects-info">
+            <h3 class="view-more-title">Explore all our works</h3>
+            <a
+              href="./work.html"
+              class="portfolio-link view-more-link orange-btn"
+              >View portfolio</a
+            >
+          </div>
+        </div>
+      </section>
       <!-- FORM SECTION -->
-      <section class="application">
+      <section class="application" id="application">
         <div class="container">
           <form class="application-form">
             <p class="form-title">A quick way to discuss details</p>
