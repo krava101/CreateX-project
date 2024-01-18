@@ -102,6 +102,21 @@ header .container{
     margin: 0 auto;
 }
 
+.hero-steps-list-wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-steps-list{
+    display: flex;
+    transition: transform 2s linear;
+}
+
+.hero-steps-list-item{
+    min-width: 1230px;
+    height: 100%;
+}
+
 .page-title{
     max-width: 577px;
     font-size: 72px;
@@ -118,7 +133,7 @@ header .container{
 }
 
 .hero-text{
-    max-width: 595px;
+    max-width: 60%;
     font-size: 20px;
     line-height: 1.5;
     color: #fff;
@@ -163,28 +178,64 @@ header .container{
     padding: 0 40px;
 }
 
-.hero-list{
+.hero-pag-list{
     display: flex;
     gap: 4px;
 }
 
-.hero-list-item{
+.hero-pag-list-item{
     width: 178px;
     height: 54px;
     font-size: 28px;
     font-weight: 700;
     line-height: 1.5;
     color: #fff;
-    opacity: 0.6;
+    opacity: 0.4;
+    transition: opacity 0.5s linear;
 }
 
-.active{
+.active-hero-pag{
     opacity: 1;
 }
 
 .hero-item-hr{
     border: 2px solid #fff;
     border-radius: 4px;
+}
+
+.hero-left-btn, .hero-right-btn{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;;
+    opacity: 0.5;
+    transition: opacity .25s linear;
+}
+
+.hero-left-btn{
+    left: 32px;
+}
+
+.hero-right-btn{
+    right: 32px;
+}
+
+.hero-left-btn:hover,
+.hero-left-btn:focus,
+.hero-right-btn:hover,
+.hero-right-btn:focus{
+    opacity: 1;
+}
+
+.hero-left-icon, .hero-right-icon{
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
 }
 /* HERO */
 
@@ -467,6 +518,10 @@ header .container{
     padding: 120px 0;
 }
 
+.projects .container{
+    overflow: hidden;
+}
+
 .projects-title-container{
     position: relative;
 }
@@ -478,7 +533,7 @@ header .container{
 
 .p-slider-controls{
     position: absolute;
-    right: -12px;
+    right: 0;
     bottom: 0;
     display: flex;
     align-items: center;
@@ -509,23 +564,18 @@ header .container{
 
 .works-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
+    transition: transform 1s linear;
 }
 
 .works-card {
     position: relative;
     height: 440px;
-    flex-basis: calc((100% - 60px) / 3);
+    min-width: 390px;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    box-shadow: 0px 5px 10px rgba(30, 33, 44, 0.06);
     transition: box-shadow .25s ease-in-out .1s;
-}
-
-.works-card:hover,
-.works-card:focus {
-    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.10), 0px 80px 80px -20px rgba(154, 156, 165, 0.16);
 }
 
 .works-card-box {
