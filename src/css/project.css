@@ -124,12 +124,24 @@ header .container {
 .project-img-list-wrapper{
     position: relative;
     width: 100%;
-    height: 500px;
-    background-color: #cfcfcf;
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .project-img-list{
     display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    transform: translateX(0);
+}
+
+.project-img-list li{
+    min-width: 1230px;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .project-small-img-list{
@@ -139,11 +151,15 @@ header .container {
 }
 
 .project-small-img-item{
-    width: 100px;
-    height: 100px;
-    background-color: #cfcfcf;
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
     border-radius: 4px;
-    opacity: 0.6;
+    opacity: 0.3;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .project-small-img-item.active{
@@ -163,7 +179,7 @@ header .container {
     border: none;
     background-color: #fff;
     ;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: opacity .25s linear;
 }
 
@@ -186,7 +202,7 @@ header .container {
 .slider-right-icon {
     width: 24px;
     height: 24px;
-    fill: var(--primary-color);
+    fill: #000;
 }
 
 .project-info-box{
@@ -209,21 +225,8 @@ header .container {
 
 .project-info-list{
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.project-info-item{
-    color: var(--title-color);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.6;
-    text-transform: uppercase;
-}
-
-.project-info-table{
-    display: flex;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 16px 32px;
     width: 500px;
     border-radius: 4px;
     background-color: #fff;
@@ -231,23 +234,16 @@ header .container {
     box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156,165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
 }
 
-.project-info-table tr{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 16px;
-
-    font-size: 16px;
-    line-height: 1.63;
-}
-
-.project-info-table th{
+.project-info-list li{
+    width: 100px;
     text-transform: uppercase;
     color: var(--title-color);
     font-weight: 700;
 }
 
-.project-info-table td{
+.project-info-list li:nth-child(2n){
+    width: 248px;
+    text-transform: none;
     color: var(--secondary-color);
     font-weight: 400;
 }

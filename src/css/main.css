@@ -580,6 +580,11 @@ header .container{
     transition: box-shadow .25s ease-in-out .1s;
 }
 
+.works-img{
+    width: 390px;
+    height: 345px;
+}
+
 .works-card-box {
     position: absolute;
     bottom: 0;
