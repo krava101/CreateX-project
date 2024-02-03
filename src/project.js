@@ -40,6 +40,8 @@ const projects = [
 const section = document.querySelector(".hero");
 const href = window.location.href;
 const projectNum = href[href.length - 1];
+const rightArrowIcon = new URL('/img/icons.svg#icon-right-arrow', import.meta.url).href;
+const leftArrowIcon = new URL('/img/icons.svg#icon-left-arrow', import.meta.url).href;
 
 
 function loadProject(project) {
@@ -72,12 +74,12 @@ function loadProject(project) {
             </ul>
             <button class="slider-left-btn" type="button">
               <svg class="slider-left-icon">
-                <use href="../img/icons.svg#icon-left-arrow"></use>
+                <use href=${leftArrowIcon}></use>
               </svg>
             </button>
             <button class="slider-right-btn" type="button">
               <svg class="slider-right-icon">
-                <use href="../img/icons.svg#icon-right-arrow"></use>
+                <use href=${rightArrowIcon}></use>
               </svg>
             </button>
           </div>
