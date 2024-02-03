@@ -43,14 +43,15 @@ const projectNum = href[href.length - 1];
 const arrowIconUrl = new URL('/img/icons.svg', import.meta.url).href;
 const projectImgsUrl = new URL('/img/project-img', import.meta.url).href;
 
-const firstImg = new URL('/img/project-img/1-project-1.jpg', import.meta.url).href;
+function getImgUrl(urlList) {
+  const newUrlList = urlList.map(e => new URL('/img/project-img' + e, import.meta.url).href);
+  return newUrlList;
+}
 
-console.log(projectImgsUrl + '/1-project-1.jpg/');
-console.log(arrowIconUrl + '#icon-left-arrow');
 
-
-function loadProject(project) {
-    const currentProject = projects[project];
+function loadProject(projectNum) {
+  const currentProject = projects[projectNum];
+  const images = getImgUrl(currentProject.images);
   const markup = `<div class="container">
           <p class="page-path">
             <span class="page-path-dark">Homepage / Work</span> / ${currentProject.name}
@@ -59,23 +60,23 @@ function loadProject(project) {
           <div class="project-img-list-wrapper">
             <ul class="project-img-list list">
               <li
-                style="background-image: url(${firstImg})"
+                style="background-image: url(${images[0]})"
               >
               </li>
               <li
-                style="background-image: url(${projectImgsUrl + currentProject.images[1]})"
+                style="background-image: url(${images[1]})"
               ></li>
               <li
-                style="background-image: url(${projectImgsUrl + currentProject.images[2]})"
+                style="background-image: url(${images[2]})"
               ></li>
               <li
-                style="background-image: url(${projectImgsUrl + currentProject.images[3]})"
+                style="background-image: url(${images[3]})"
               ></li>
               <li
-                style="background-image: url(${projectImgsUrl + currentProject.images[4]})"
+                style="background-image: url(${images[4]})"
               ></li>
               <li
-                style="background-image: url(${projectImgsUrl + currentProject.images[5]})"
+                style="background-image: url(${images[5]})"
               ></li>
             </ul>
             <button class="slider-left-btn" type="button">
@@ -90,12 +91,12 @@ function loadProject(project) {
             </button>
           </div>
           <ul class="project-small-img-list list">
-            <li class="project-small-img-item active" style="background-image: url(${projectImgsUrl + currentProject.images[0]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[1]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[2]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[3]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[4]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[5]})"></li>
+            <li class="project-small-img-item active" style="background-image: url(${images[0]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${images[1]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${images[2]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${images[3]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${images[4]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${images[5]})"></li>
           </ul>
           <div class="project-info-box">
             <div class="project-goal">
