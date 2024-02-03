@@ -9,7 +9,7 @@ const projects = [
     value: "$900 million",
     completed: "June 2013",
     description: "Completed in 2013, Cubes Building provides spaces for offices, housing, shops and hotels, creating a dynamic urban landscapeon the banks of the Meuse River. Its modern and innovative design reflects the modern architectural aesthetic and plays an important rolein Rotterdam's modern urban appearance.",
-    images: ["1-project-1.jpg", "1-project-2.jpg", "1-project-3.jpg", "1-project-4.jpg", "1-project-5.jpg","1-project-6.jpg"]
+    images: ["/1-project-1.jpg", "/1-project-2.jpg", "/1-project-3.jpg", "/1-project-4.jpg", "/1-project-5.jpg","/1-project-6.jpg"]
   },
   {
     name: "Modern Cottage",
@@ -41,7 +41,9 @@ const section = document.querySelector(".hero");
 const href = window.location.href;
 const projectNum = href[href.length - 1];
 const arrowIconUrl = new URL('/img/icons.svg', import.meta.url).href;
-const projectImgsUrl = new URL('/img/project-img/', import.meta.url).href;
+const projectImgsUrl = new URL('/img/project-img', import.meta.url).href;
+
+const firstImg = new URL('/img/project-img/1-project-1.jpg', import.meta.url).href;
 
 console.log(projectImgsUrl + '/1-project-1.jpg/');
 console.log(arrowIconUrl + '#icon-left-arrow');
@@ -57,7 +59,7 @@ function loadProject(project) {
           <div class="project-img-list-wrapper">
             <ul class="project-img-list list">
               <li
-                style="background-image: url(${projectImgsUrl + currentProject.images[0]})"
+                style="background-image: url(${firstImg})"
               >
               </li>
               <li
