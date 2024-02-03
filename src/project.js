@@ -9,7 +9,7 @@ const projects = [
     value: "$900 million",
     completed: "June 2013",
     description: "Completed in 2013, Cubes Building provides spaces for offices, housing, shops and hotels, creating a dynamic urban landscapeon the banks of the Meuse River. Its modern and innovative design reflects the modern architectural aesthetic and plays an important rolein Rotterdam's modern urban appearance.",
-    images: ["../img/project-img/1-project-1.jpg", "../img/project-img/1-project-2.jpg", "./img/project-img/1-project-3.jpg", "./img/project-img/1-project-4.jpg", "./img/project-img/1-project-5.jpg","./img/project-img/1-project-6.jpg"]
+    images: ["../img/project-img/1-project-1.jpg", "../img/project-img/1-project-2.jpg", "../img/project-img/1-project-3.jpg", "../img/project-img/1-project-4.jpg", "../img/project-img/1-project-5.jpg","../img/project-img/1-project-6.jpg"]
   },
   {
     name: "Modern Cottage",
@@ -21,7 +21,7 @@ const projects = [
     value: "$2 million",
     completed: "May 2020",
     description: "Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms, a terrace, a pool and a garage for two cars. <br/><br/> Modern design and care for each family member to feel as comfortable as possible in the new home.",
-    images: ["./img/project-img/2-project-1.jpg", "./img/project-img/2-project-2.jpg", "./img/project-img/2-project-3.jpg", "./img/project-img/2-project-4.jpg", "./img/project-img/2-project-5.jpg", "./img/project-img/2-project-6.jpg", ]
+    images: ["../img/project-img/2-project-1.jpg", "../img/project-img/2-project-2.jpg", "../img/project-img/2-project-3.jpg", "../img/project-img/2-project-4.jpg", "../img/project-img/2-project-5.jpg", "../img/project-img/2-project-6.jpg", ]
   },
   {
     name: "Luxury Beach House",
@@ -33,7 +33,7 @@ const projects = [
     value: "$1.7 million",
     completed: "June 2015",
     description: "The villa is located on the beautiful Abaco Rose Garden of Cape Coral on a very wide canal and has a fantastic view. This large house is built on a corner lot and has oversized south facing position. 2015 has been completely remodeled and refurbished. <br/> 5 bedrooms and 3 bathrooms with over 3000sq ft has plenty of room for up to 10 people.",
-    images: ["./img/project-img/3-project-1.jpg", "./img/project-img/3-project-2.jpg", "./img/project-img/3-project-3.jpg", "./img/project-img/3-project-4.jpg", "./img/project-img/3-project-5.jpg", "./img/project-img/3-project-6.jpg", ]
+    images: ["../img/project-img/3-project-1.jpg", "../img/project-img/3-project-2.jpg", "../img/project-img/3-project-3.jpg", "../img/project-img/3-project-4.jpg", "../img/project-img/3-project-5.jpg", "../img/project-img/3-project-6.jpg", ]
   },
 ]
 
@@ -72,12 +72,12 @@ function loadProject(project) {
             </ul>
             <button class="slider-left-btn" type="button">
               <svg class="slider-left-icon">
-                <use href="./img/icons.svg#icon-left-arrow"></use>
+                <use href="../img/icons.svg#icon-left-arrow"></use>
               </svg>
             </button>
             <button class="slider-right-btn" type="button">
               <svg class="slider-right-icon">
-                <use href="./img/icons.svg#icon-right-arrow"></use>
+                <use href="../img/icons.svg#icon-right-arrow"></use>
               </svg>
             </button>
           </div>
