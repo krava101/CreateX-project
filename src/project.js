@@ -9,7 +9,7 @@ const projects = [
     value: "$900 million",
     completed: "June 2013",
     description: "Completed in 2013, Cubes Building provides spaces for offices, housing, shops and hotels, creating a dynamic urban landscapeon the banks of the Meuse River. Its modern and innovative design reflects the modern architectural aesthetic and plays an important rolein Rotterdam's modern urban appearance.",
-    images: ["./img/project-img/1-project-1.jpg", "./img/project-img/1-project-2.jpg", "./img/project-img/1-project-3.jpg", "./img/project-img/1-project-4.jpg", "./img/project-img/1-project-5.jpg","./img/project-img/1-project-6.jpg"]
+    images: ["../img/project-img/1-project-1.jpg", "../img/project-img/1-project-2.jpg", "./img/project-img/1-project-3.jpg", "./img/project-img/1-project-4.jpg", "./img/project-img/1-project-5.jpg","./img/project-img/1-project-6.jpg"]
   },
   {
     name: "Modern Cottage",
