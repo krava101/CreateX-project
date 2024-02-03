@@ -41,7 +41,7 @@ const section = document.querySelector(".hero");
 const href = window.location.href;
 const projectNum = href[href.length - 1];
 const arrowIconUrl = new URL('/img/icons.svg', import.meta.url).href;
-const projectImgsUrl = '/img/project-img/';
+const projectImgsUrl = new URL('/img/project-img/', import.meta.url).href;
 
 console.log(projectImgsUrl + '/1-project-1.jpg/');
 console.log(arrowIconUrl + '#icon-left-arrow');
