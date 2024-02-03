@@ -9,7 +9,7 @@ const projects = [
     value: "$900 million",
     completed: "June 2013",
     description: "Completed in 2013, Cubes Building provides spaces for offices, housing, shops and hotels, creating a dynamic urban landscapeon the banks of the Meuse River. Its modern and innovative design reflects the modern architectural aesthetic and plays an important rolein Rotterdam's modern urban appearance.",
-    images: ["../img/project-img/1-project-1.jpg", "../img/project-img/1-project-2.jpg", "../img/project-img/1-project-3.jpg", "../img/project-img/1-project-4.jpg", "../img/project-img/1-project-5.jpg","../img/project-img/1-project-6.jpg"]
+    images: ["1-project-1.jpg", "1-project-2.jpg", "1-project-3.jpg", "1-project-4.jpg", "1-project-5.jpg","1-project-6.jpg"]
   },
   {
     name: "Modern Cottage",
@@ -21,7 +21,7 @@ const projects = [
     value: "$2 million",
     completed: "May 2020",
     description: "Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms, a terrace, a pool and a garage for two cars. <br/><br/> Modern design and care for each family member to feel as comfortable as possible in the new home.",
-    images: ["../img/project-img/2-project-1.jpg", "../img/project-img/2-project-2.jpg", "../img/project-img/2-project-3.jpg", "../img/project-img/2-project-4.jpg", "../img/project-img/2-project-5.jpg", "../img/project-img/2-project-6.jpg", ]
+    images: ["2-project-1.jpg", "2-project-2.jpg", "2-project-3.jpg", "2-project-4.jpg", "2-project-5.jpg", "2-project-6.jpg", ]
   },
   {
     name: "Luxury Beach House",
@@ -33,20 +33,23 @@ const projects = [
     value: "$1.7 million",
     completed: "June 2015",
     description: "The villa is located on the beautiful Abaco Rose Garden of Cape Coral on a very wide canal and has a fantastic view. This large house is built on a corner lot and has oversized south facing position. 2015 has been completely remodeled and refurbished. <br/> 5 bedrooms and 3 bathrooms with over 3000sq ft has plenty of room for up to 10 people.",
-    images: ["../img/project-img/3-project-1.jpg", "../img/project-img/3-project-2.jpg", "../img/project-img/3-project-3.jpg", "../img/project-img/3-project-4.jpg", "../img/project-img/3-project-5.jpg", "../img/project-img/3-project-6.jpg", ]
+    images: ["3-project-1.jpg", "3-project-2.jpg", "3-project-3.jpg", "3-project-4.jpg", "3-project-5.jpg", "3-project-6.jpg", ]
   },
 ]
 
 const section = document.querySelector(".hero");
 const href = window.location.href;
 const projectNum = href[href.length - 1];
-const rightArrowIcon = new URL('/img/icons.svg#icon-right-arrow', import.meta.url).href;
-const leftArrowIcon = new URL('/img/icons.svg#icon-left-arrow', import.meta.url).href;
+const arrowIconUrl = new URL('/img/icons.svg', import.meta.url).href;
+const projectImgsUrl = '/img/project-img/';
+
+console.log(projectImgsUrl + '/1-project-1.jpg/');
+console.log(arrowIconUrl + '#icon-left-arrow');
 
 
 function loadProject(project) {
     const currentProject = projects[project];
-    const markup = `<div class="container">
+  const markup = `<div class="container">
           <p class="page-path">
             <span class="page-path-dark">Homepage / Work</span> / ${currentProject.name}
           </p>
@@ -54,42 +57,43 @@ function loadProject(project) {
           <div class="project-img-list-wrapper">
             <ul class="project-img-list list">
               <li
-                style="background-image: url(${currentProject.images[0]})"
+                style="background-image: url(${projectImgsUrl + currentProject.images[0]})"
+              >
+              </li>
+              <li
+                style="background-image: url(${projectImgsUrl + currentProject.images[1]})"
               ></li>
               <li
-                style="background-image: url(${currentProject.images[1]})"
+                style="background-image: url(${projectImgsUrl + currentProject.images[2]})"
               ></li>
               <li
-                style="background-image: url(${currentProject.images[2]})"
+                style="background-image: url(${projectImgsUrl + currentProject.images[3]})"
               ></li>
               <li
-                style="background-image: url(${currentProject.images[3]})"
+                style="background-image: url(${projectImgsUrl + currentProject.images[4]})"
               ></li>
               <li
-                style="background-image: url(${currentProject.images[4]})"
-              ></li>
-              <li
-                style="background-image: url(${currentProject.images[5]})"
+                style="background-image: url(${projectImgsUrl + currentProject.images[5]})"
               ></li>
             </ul>
             <button class="slider-left-btn" type="button">
               <svg class="slider-left-icon">
-                <use href=${leftArrowIcon}></use>
+                <use href=${arrowIconUrl + '#icon-left-arrow'}></use>
               </svg>
             </button>
             <button class="slider-right-btn" type="button">
               <svg class="slider-right-icon">
-                <use href=${rightArrowIcon}></use>
+                <use href=${arrowIconUrl + '#icon-right-arrow'}></use>
               </svg>
             </button>
           </div>
           <ul class="project-small-img-list list">
-            <li class="project-small-img-item active" style="background-image: url(${currentProject.images[0]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[1]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[2]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[3]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[4]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[5]})"></li>
+            <li class="project-small-img-item active" style="background-image: url(${projectImgsUrl + currentProject.images[0]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[1]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[2]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[3]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[4]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${projectImgsUrl + currentProject.images[5]})"></li>
           </ul>
           <div class="project-info-box">
             <div class="project-goal">
