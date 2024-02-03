@@ -9,7 +9,7 @@ const projects = [
     value: "$900 million",
     completed: "June 2013",
     description: "Completed in 2013, Cubes Building provides spaces for offices, housing, shops and hotels, creating a dynamic urban landscapeon the banks of the Meuse River. Its modern and innovative design reflects the modern architectural aesthetic and plays an important rolein Rotterdam's modern urban appearance.",
-    images: ["/1-project-1.jpg", "/1-project-2.jpg", "/1-project-3.jpg", "/1-project-4.jpg", "/1-project-5.jpg","/1-project-6.jpg"]
+    images: [`${new URL('/img/project-img/1-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/1-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/1-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/1-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/1-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/1-project-6.jpg', import.meta.url).href}`]
   },
   {
     name: "Modern Cottage",
@@ -60,23 +60,22 @@ function loadProject(projectNum) {
           <div class="project-img-list-wrapper">
             <ul class="project-img-list list">
               <li
-                style="background-image: url(${images[0]})"
-              >
-              </li>
-              <li
-                style="background-image: url(${images[1]})"
+                style="background-image: url(${currentProject.images[0]})"
               ></li>
               <li
-                style="background-image: url(${images[2]})"
+                style="background-image: url(${currentProject.images[1]})"
               ></li>
               <li
-                style="background-image: url(${images[3]})"
+                style="background-image: url(${currentProject.images[2]})"
               ></li>
               <li
-                style="background-image: url(${images[4]})"
+                style="background-image: url(${currentProject.images[3]})"
               ></li>
               <li
-                style="background-image: url(${images[5]})"
+                style="background-image: url(${currentProject.images[4]})"
+              ></li>
+              <li
+                style="background-image: url(${currentProject.images[5]})"
               ></li>
             </ul>
             <button class="slider-left-btn" type="button">
@@ -91,12 +90,12 @@ function loadProject(projectNum) {
             </button>
           </div>
           <ul class="project-small-img-list list">
-            <li class="project-small-img-item active" style="background-image: url(${images[0]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${images[1]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${images[2]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${images[3]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${images[4]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${images[5]})"></li>
+            <li class="project-small-img-item active" style="background-image: url(${currentProject.images[0]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${currentProject.images[1]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${currentProject.images[2]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${currentProject.images[3]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${currentProject.images[4]})"></li>
+            <li class="project-small-img-item" style="background-image: url(${currentProject.images[5]})"></li>
           </ul>
           <div class="project-info-box">
             <div class="project-goal">
