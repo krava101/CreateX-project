@@ -1,0 +1,57 @@
+<section class="application" id="application">
+  <div class="container">
+    <form class="application-form">
+      <p class="form-title">A quick way to discuss details</p>
+      <label class="app-label">
+        Name*
+        <input
+          type="text"
+          placeholder="Your name"
+          class="app-input"
+          name="user_name"
+          required
+        />
+      </label>
+      <label class="app-label"
+        >Phone*
+        <input
+          type="tel"
+          placeholder="Your phone number"
+          class="app-input"
+          name="user_tel"
+          required
+        />
+      </label>
+      <label class="app-label"
+        >Email
+        <input
+          type="email"
+          placeholder="Your working email"
+          class="app-input"
+          name="user_email"
+          required
+        />
+      </label>
+      <label class="app-label"
+        >Message*
+        <textarea
+          id=""
+          cols="1"
+          rows="1"
+          placeholder="Your message"
+          name="user_message"
+          class="app-textarea"
+          required
+        ></textarea>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="app-checkbox" name="user_receive" />
+        <svg class="decor-checkbox">
+          <use href="./img/icons.svg#icon-decor-checkbox"></use>
+        </svg>
+        I agree to receive communications from Createx Construction Bureau.
+      </label>
+      <button type="submit" class="app-btn orange-btn">send request</button>
+    </form>
+  </div>
+</section>

@@ -21,7 +21,7 @@ const projects = [
     value: "$2 million",
     completed: "May 2020",
     description: "Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms, a terrace, a pool and a garage for two cars. <br/><br/> Modern design and care for each family member to feel as comfortable as possible in the new home.",
-    images: ["2-project-1.jpg", "2-project-2.jpg", "2-project-3.jpg", "2-project-4.jpg", "2-project-5.jpg", "2-project-6.jpg", ]
+    images: [`${new URL('/img/project-img/2-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/2-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/2-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/2-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/2-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/2-project-6.jpg', import.meta.url).href}`]
   },
   {
     name: "Luxury Beach House",
@@ -33,7 +33,7 @@ const projects = [
     value: "$1.7 million",
     completed: "June 2015",
     description: "The villa is located on the beautiful Abaco Rose Garden of Cape Coral on a very wide canal and has a fantastic view. This large house is built on a corner lot and has oversized south facing position. 2015 has been completely remodeled and refurbished. <br/> 5 bedrooms and 3 bathrooms with over 3000sq ft has plenty of room for up to 10 people.",
-    images: ["3-project-1.jpg", "3-project-2.jpg", "3-project-3.jpg", "3-project-4.jpg", "3-project-5.jpg", "3-project-6.jpg", ]
+    images: [`${new URL('/img/project-img/3-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/3-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/3-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/3-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/3-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/3-project-6.jpg', import.meta.url).href}`]
   },
 ]
 
