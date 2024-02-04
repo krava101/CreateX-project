@@ -147,6 +147,11 @@ header .container {
     background-repeat: no-repeat;
 }
 
+.project-img{
+    width: 390px;
+    height: 345px;
+}
+
 ul.project-small-img-list{
     display: flex;
     gap: 20px;
