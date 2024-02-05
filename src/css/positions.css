@@ -276,7 +276,7 @@ header .container {
     margin-bottom: 24px;
 }
 
-.benefits-list{
+ul.benefits-list{
     display: flex;
     align-items: center;
     gap: 94px;

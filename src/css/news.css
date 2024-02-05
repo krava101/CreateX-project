@@ -168,7 +168,7 @@ header .container {
     outline: none;
 }
 
-.news-list{
+ul.news-list{
     display: flex;
     flex-wrap: wrap;
     margin: 60px 0;
@@ -200,7 +200,7 @@ header .container {
     color: var(--red-color);
 }
 
-.news-date-list {
+ul.news-date-list {
     display: flex;
     gap: 12px;
     margin: 12px 0 16px;

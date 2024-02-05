@@ -320,7 +320,7 @@ header .container{
     color: var(--secondary-color);
 }
 
-.our-core-list{
+ul.our-core-list{
     display: flex;
     gap: 94px;
     margin-top: 60px;
@@ -416,7 +416,7 @@ header .container{
     margin-bottom: 24px;
 }
 
-.services-list{
+ul.services-list{
     display: flex;
     gap: 30px;
     margin: 60px 0 80px;

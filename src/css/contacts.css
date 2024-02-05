@@ -368,7 +368,7 @@ header .container {
     margin-bottom: 24px;
 }
 
-.offices-list{
+ul.offices-list{
     display: flex;
     align-items: center;
     gap: 120px;

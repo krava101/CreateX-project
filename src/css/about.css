@@ -369,7 +369,7 @@ header .container {
   padding: 120px 0 90px;
 }
 
-.partners-list {
+ul.partners-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -396,7 +396,7 @@ header .container {
   text-align: center;
 }
 
-.team-list{
+ul.team-list{
   display: flex;
   flex-wrap: wrap;
   gap: 60px 30px;
