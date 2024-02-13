@@ -1,4 +1,4 @@
-import { projects } from './data-projects';
+import { projects } from './data-projects.js';
 const projectsList = document.querySelector(".projects-list");
 const mediaNavList = document.querySelector(".media-list");
 const mediaBtns = document.querySelectorAll(".media-btn");
