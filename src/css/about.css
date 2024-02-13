@@ -436,7 +436,7 @@ ul.team-list{
   overflow: hidden;
 }
 
-.team-info-list{
+ul.team-info-list{
   position: absolute;
   bottom: 0;
   display: flex;
