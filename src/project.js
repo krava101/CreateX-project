@@ -1,88 +1,4 @@
-const projects = [
-  {
-    id: 0,
-    name: "Cubes Building",
-    type: "Business Centers",
-    location: "Wilhelminakade 663, 3072 AP Rotterdam",
-    client: "Mark Beids",
-    architect: "OMA",
-    size: "162000 sq. m.",
-    value: "$900 million",
-    completed: "June 2013",
-    description: "Completed in 2013, Cubes Building provides spaces for offices, housing, shops and hotels, creating a dynamic urban landscapeon the banks of the Meuse River. Its modern and innovative design reflects the modern architectural aesthetic and plays an important rolein Rotterdam's modern urban appearance.",
-    previewImg: new URL('/img/work-page-img/project-1.jpg', import.meta.url).href, 
-    images: [`${new URL('/img/project-img/1-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/1-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/1-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/1-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/1-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/1-project-6.jpg', import.meta.url).href}`]
-  },
-  {
-    id: 1,
-    name: "Modern Cottage",
-    type: "Private houses",
-    location: "2464 Royal Ln. Mesa, New Jersey",
-    client: "Darlene Robertson",
-    architect: "HIK Architecture",
-    size: "840 sq. feet",
-    value: "$2 million",
-    completed: "May 2020",
-    description: "Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms, a terrace, a pool and a garage for two cars. <br/><br/> Modern design and care for each family member to feel as comfortable as possible in the new home.",
-    previewImg: new URL('/img/work-page-img/project-2.jpg', import.meta.url).href,
-    images: [`${new URL('/img/project-img/2-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/2-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/2-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/2-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/2-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/2-project-6.jpg', import.meta.url).href}`]
-  },
-  {
-    id: 2,
-    name: "Luxury Beach House",
-    type: "Private houses",
-    location: "1226 SW  39th St, Pelican, Cape Coral, Florida",
-    client: "Brad Garley",
-    architect: "MDA",
-    size: "280 sq. m.",
-    value: "$1.7 million",
-    completed: "June 2015",
-    description: "The villa is located on the beautiful Abaco Rose Garden of Cape Coral on a very wide canal and has a fantastic view. This large house is built on a corner lot and has oversized south facing position. 2015 has been completely remodeled and refurbished. <br/> 5 bedrooms and 3 bathrooms with over 3000sq ft has plenty of room for up to 10 people.",
-    previewImg: new URL('/img/work-page-img/project-3.jpg', import.meta.url).href,
-    images: [`${new URL('/img/project-img/3-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/3-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/3-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/3-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/3-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/3-project-6.jpg', import.meta.url).href}`]
-  },
-  {
-    id: 3,
-    name: "Modern Double Bedrooms",
-    type: "Apartments & flats",
-    location: "121 N 2nd St, Philadelphia, Pennsylvania",
-    client: "Alan Greed",
-    architect: "Loft",
-    size: "20 sq. m.",
-    value: "$50 thousand",
-    completed: "August 2021",
-    description: "The modern double bedroom spanning 20 square meters is a cozy and stylish space designed for maximum comfort and functionality. The bright and contemporary design of this bedroom aims to highlight modern trends in interior decor.",
-    previewImg: new URL('/img/work-page-img/project-4.jpg', import.meta.url).href,
-    images: [`${new URL('/img/project-img/4-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/4-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/4-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/4-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/4-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/4-project-6.jpg', import.meta.url).href}`]
-  },
-  {
-    id: 4,
-    name: "Kids Bedroom With Decorations",
-    type: "Apartments & flats",
-    location: "1550 Burnett St, Houston, Texas",
-    client: "Elsa Down",
-    architect: "Loft",
-    size: "18 sq. m.",
-    value: "$30 thousand",
-    completed: "May 2022",
-    description: "The kids' bedroom with decorations spanning 18 square meters is a vibrant and imaginative space designed to inspire creativity and provide a comfortable haven for little ones. The decor is carefully curated to create a lively and playful atmosphere.",
-    previewImg: new URL('/img/work-page-img/project-5.jpg', import.meta.url).href,
-    images: [`${new URL('/img/project-img/5-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/5-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/5-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/5-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/5-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/5-project-6.jpg', import.meta.url).href}`]
-  },
-  {
-    id: 5,
-    name: "The Pencil Building",
-    type: "Stores & Malls",
-    location: "600 Peachtree Street NE Atlanta, Georgia, United States",
-    client: "CP Group",
-    architect: "CPA",
-    size: "1,312,980 sq ft",
-    value: "$150 million",
-    completed: "October 1992",
-    description: "Bank of America Plaza is a supertall skyscraper between Midtown Atlanta and Downtown Atlanta. At 311.8 m (1,023 ft), as of February 2024 the tower is the 23rd tallest building in the United States, the tallest building in the Southeastern region of the United States, and the tallest building in any U.S. state capital, overtaking the 250 m (820 ft), 50-story One Atlantic Center in height, which held the record as Georgia's tallest building.",
-    previewImg: new URL('/img/work-page-img/project-6.jpg', import.meta.url).href,
-    images: [`${new URL('/img/project-img/6-project-1.jpg', import.meta.url).href}`, `${new URL('/img/project-img/6-project-2.jpg', import.meta.url).href}`, `${new URL('/img/project-img/6-project-3.jpg', import.meta.url).href}`, `${new URL('/img/project-img/6-project-4.jpg', import.meta.url).href}`,`${new URL('/img/project-img/6-project-5.jpg', import.meta.url).href}`,`${new URL('/img/project-img/6-project-6.jpg', import.meta.url).href}`]}
-]
+import { projects } from "./data-projects";
 
 const section = document.querySelector(".hero");
 const similarProjList = document.querySelector(".project-list");
@@ -92,15 +8,8 @@ const href = window.location.href;
 const projectNum = href[href.length - 1];
 const arrowIconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
-function getImgUrl(urlList) {
-  const newUrlList = urlList.map(e => new URL('/img/project-img' + e, import.meta.url).href);
-  return newUrlList;
-}
-
-
 function loadProject(projectNum) {
   const currentProject = projects[projectNum];
-  const images = getImgUrl(currentProject.images);
   const markup = `<div class="container">
           <p class="page-path">
             <span class="page-path-dark">Homepage / Work</span> / ${currentProject.name}

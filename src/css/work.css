@@ -144,15 +144,20 @@ header .container {
     width: 1230px;
 }
 
-.media-card{
+li:has(.media-btn){
+    flex-basis: calc((100% - 80px) / 5);
+}
+
+.media-btn{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     gap: 16px;
     padding: 32px 0;
-    flex-basis: calc((100% - 80px) / 5);
     height: 154px;
 
+    border: none;
     border-radius: 4px;
     background-color: #fff;
     box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
@@ -161,8 +166,9 @@ header .container {
     box-shadow .3s ease-in-out;
 }
 
-.media-card:hover,
-.media-card:focus{
+.media-btn:hover,
+.media-btn:focus,
+.media-btn.active{
     background-color: var(--red-color);
     box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.10), 0px 12px 10px -6px rgba(255, 90, 48, 0.13), 0px 26px 24px -10px rgba(255, 90, 48, 0.15), 0px 60px 80px -20px rgba(255, 90, 48, 0.21);
 }
@@ -172,10 +178,12 @@ header .container {
     height: 48px;
     fill: var(--red-color);
     transition: fill .3s ease-in-out 0.1s;
+    pointer-events: none;
 }
 
-.media-card:hover .media-icon,
-.media-card:focus .media-icon{
+.media-btn:hover .media-icon,
+.media-btn:focus .media-icon,
+.media-btn.active .media-icon{
     fill: #fff;
 }
 
@@ -186,10 +194,12 @@ header .container {
     font-weight: 700;
     line-height: 160%;
     transition: color .3s ease-in-out 0.1s;
+    pointer-events: none;
 }
 
-.media-card:hover .media-title,
-.media-card:focus .media-title{
+.media-btn:hover .media-title,
+.media-btn:focus .media-title,
+.media-btn.active .media-title{
     color: #fff;
 }
 /* MEDIA */
@@ -287,13 +297,27 @@ header .container {
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-top: 60px;
+    margin: 60px auto 0;
+    border: none;
+    background-color: transparent;
 }
 
 .projects-load-icon{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
+    
+}
 
+.projects-load-more.active .projects-load-icon{
+    animation: spin .7s linear;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(360deg);
+    }100%{
+        transform: rotate(0deg);
+    }
 }
 /* PROJECTS */
 
