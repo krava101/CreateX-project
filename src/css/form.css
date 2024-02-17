@@ -1,10 +1,12 @@
 /* FORM */
 .application {
+    max-width: 1920px;
     padding: 80px 0;
     background-image: url('../img/home-page-img/app-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin: 0 auto;
 }
 
 .application .container {

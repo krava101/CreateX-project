@@ -150,10 +150,6 @@ header .container {
     border-radius: 6px;
 }
 
-.contact-form{
-    
-}
-
 .contact-form-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -316,7 +312,7 @@ header .container {
 
 .contact-checkbox {
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 0;
     width: 16px;
     height: 16px;

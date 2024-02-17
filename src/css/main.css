@@ -113,7 +113,7 @@ header .container{
 
 .hero-steps-list{
     display: flex;
-    transition: transform 2s linear;
+    transition: opacity 1s linear;
 }
 
 .hero-steps-list-item{
