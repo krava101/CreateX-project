@@ -49,14 +49,12 @@ offersList.addEventListener("click", event => {
   if (event.target.nodeName === "LI") {
     event.target.classList.toggle("visible");
     if (event.target.classList.contains("visible")) {
-      event.target.querySelector(":scope use").href.baseVal = iconUrl + '#icon-minus';
+      event.target.querySelector("use").href.baseVal = iconUrl + '#icon-minus';
     } else {
       setTimeout(() => {
-        event.target.querySelector(":scope use").href.baseVal = iconUrl + '#icon-plus';
-      },400)
-      
+        event.target.querySelector("use").href.baseVal = iconUrl + '#icon-plus';
+      }, 400); 
     }
-  
   }
 })
 

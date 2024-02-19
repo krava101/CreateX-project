@@ -153,6 +153,7 @@ header .container {
 }
 
 .offer-list{
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -163,6 +164,7 @@ header .container {
     width: 24px;
     height: 24px;
     pointer-events: none;
+    fill: var(--red-color);
 }
 
 .offer-list-title{
@@ -172,7 +174,7 @@ header .container {
     color: var(--title-color);
     font-size: 28px;
     font-weight: 700;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0;
     margin-bottom: 12px;
     pointer-events: none;
@@ -193,4 +195,152 @@ header .container {
 
 li.visible .offer-list-about{
     max-height: 500px;
+}
+
+/* how we do */
+
+.how-do{
+    padding: 90px 0 120px;
+}
+
+.how-do-list{
+    display: flex;
+    gap: 30px;
+}
+
+.how-do-item{
+    position: relative;
+    width: calc((100% - 90px) / 4);
+    padding-top: 76px;
+}
+
+.how-do-num{
+    position: absolute;
+    left: -15px;
+    top: -12px;
+    display: grid;
+    place-items: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: transparent;
+    outline: 16px solid transparent;
+
+    color: #d7dadd;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0;
+    transition: color .2s .1s, backgraund-color .5s .1s, outline-color .3s ;
+    transition-timing-function: linear;
+}
+
+.how-do-item-title{
+    color: var(--title-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.how-do-txt{
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+.how-do-item hr{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 209px;
+    border: 1px dashed rgb(215, 218, 221);
+    margin: 0;
+}
+
+.how-do-item:hover .how-do-num,
+.how-do-item:focus .how-do-num{
+    background-color: rgb(255, 90, 48, 0.12);
+    outline-color: rgb(255, 90, 48, 0.06);
+    color: #ff5930;
+}
+
+/* benefits */
+
+.benefits{
+    position: relative;
+    padding: 80px 0 126px;
+    background-color: var(--title-color);
+    color: #fff;
+    text-align: center;
+}
+
+.benefits .section-title{
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.benefits-text{
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: 0.6;
+    margin-bottom: 60px;
+}
+
+.benefits-list{
+    display: flex;
+    gap: 94px;
+}
+
+.benefits-list li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits-decor{
+    width: 0px;
+    min-height: 100%;
+    border-left: 1px solid;
+    border-radius: 500px;
+    opacity: 0.1;
+}
+
+.benefits-icon{
+    width: 48px;
+    height: 48px;
+    fill: var(--red-color);
+}
+
+.benefits-title{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 24px 0 8px;
+}
+
+.benefits-list-text{
+    line-height: 1.6;
+    opacity: 0.6;
+}
+
+.benefits-btn{
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 390px;
+    height: 52px;
+    border: none;
+    background-color: var(--red-color);
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
 }
