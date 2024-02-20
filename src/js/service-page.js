@@ -1,6 +1,8 @@
-import { services } from "./data-services";
+import { services } from "../data/data-services";
+import { projects } from "../data/data-projects";
 
 const offerSection = document.querySelector(".offer");
+const similarList = document.querySelector(".project-list");
 const href = window.location.href;
 const projectNum = href[href.length - 1];
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
@@ -37,6 +39,8 @@ function loadService(projectNum){
         </div>
   `
   offerSection.innerHTML = markup;
+
+  similarProjects(currentService.status)
 }
 
 loadService(projectNum);
@@ -57,4 +61,22 @@ offersList.addEventListener("click", event => {
     }
   }
 })
+
+function similarProjects(type) {
+  const markup = projects.filter(e => e.status === type).reduce((acc, e) => acc + `
+    <li class="project-card">
+      <img
+        class="project-img"
+        src="${e.previewImg}"
+        alt=""
+      />
+      <div class="project-card-box">
+        <h5 class="card-title">${e.name}</h5>
+        <p class="project-card-text">${e.type}</p>
+        <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
+      </div>
+    </li>`, '');
+  
+  similarList.innerHTML = markup;
+}
 

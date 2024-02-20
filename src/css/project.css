@@ -1,5 +1,6 @@
 @import url(./form.css);
 @import url(./footer.css);
+@import url(./similar-projects.css);
 
 .section-title{
     text-align: left;
@@ -354,77 +355,4 @@ ul.project-info-list{
     display: flex;
     gap: 30px;
     transition: transform 1s linear;
-}
-
-.project-card {
-    position: relative;
-    height: 440px;
-    min-width: 390px;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0px 5px 10px rgba(30, 33, 44, 0.06);
-    transition: box-shadow .25s ease-in-out .1s;
-}
-
-.project-card-box {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    padding: 16px 0 24px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: none;
-    width: 100%;
-    transform: translateY(70px);
-    transition: transform .25s ease-in-out .1s;
-}
-
-.project-card:hover .project-card-box,
-.project-card:focus .project-card-box {
-    transform: translateY(0);
-}
-
-.project .card-title {
-    margin-bottom: 4px;
-}
-
-.project-card-text {
-    color: var(--secondary-color);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-}
-
-.project-card-link {
-    display: inline-block;
-    width: 172px;
-    height: 44px;
-    border: 1px solid var(--red-color);
-    border-radius: 4px;
-    margin-top: 24px;
-
-    color: var(--red-color);
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 314.3%;
-    letter-spacing: 0.036em;
-    text-transform: uppercase;
-    transition: color .25s ease-in-out .1s,
-        background-color .25s ease-in-out .1s,
-        box-shadow .25s ease-in-out .1s;
-}
-
-.project-card-link:hover,
-.project-card-link:focus {
-    background-color: var(--red-color);
-    color: #fff;
-    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.10), 0px 12px 10px -6px rgba(255, 90, 48, 0.13), 0px 26px 24px -10px rgba(255, 90, 48, 0.15), 0px 60px 80px -20px rgba(255, 90, 48, 0.21);
-}
-
-.projects-info {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 80px;
 }

@@ -1,4 +1,4 @@
-import { projects } from "./data-projects";
+import { projects } from "../data/data-projects";
 
 const section = document.querySelector(".hero");
 const similarProjList = document.querySelector(".project-list");

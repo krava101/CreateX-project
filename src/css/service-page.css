@@ -1,5 +1,7 @@
 @import url(./form.css);
 @import url(./footer.css);
+@import url(./similar-projects.css);
+@import url(./partners-list.css);
 
 /* HEADER */
 header {
@@ -343,4 +345,43 @@ li.visible .offer-list-about{
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
+}
+
+/* similar projects */
+.projects {
+    padding: 180px 0 100px;
+}
+
+.projects .container {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.projects .section-title {
+    text-align: left;
+}
+
+.project-controls{
+    position: absolute;
+    top: 36px;
+    right: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.project-controls-btn{
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+}
+
+.project-controls-btn svg{
+    width: 24px;
+    height: 24px;
+}
+
+.partners{
+    padding: 60px 0 110px;
+    background-color: var(--cloud);
 }

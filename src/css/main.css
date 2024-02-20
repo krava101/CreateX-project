@@ -1,5 +1,6 @@
 @import url(./form.css);
 @import url(./footer.css);
+@import url(./partners-list.css);
 
 /* HEADER */
 header{
@@ -650,32 +651,12 @@ ul.services-list{
     gap: 40px;
     margin-top: 85px;
 }
-/* PROJECTS */
 
 /* PARTNERS */
 .partners{
     background-color: #F4F5F6;
     padding: 80px 0 90px;
 }
-
-.partners-list{
-    display: flex;
-    justify-content: center;
-    gap: 102px;
-}
-
-.partners-img {
-    width: 120px;
-    height: 64px;
-    opacity: 0.4;
-    transition: opacity 0.25s ease-in-out;
-}
-
-.partners-link:hover .partners-img,
-.partners-link:focus .partners-img {
-    opacity: 1;
-}
-/* PARTNERS */
 
 /* REVIEWS */
 

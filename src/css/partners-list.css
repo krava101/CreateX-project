@@ -1,0 +1,17 @@
+.partners-list {
+    display: flex;
+    justify-content: center;
+    gap: 102px;
+}
+
+.partners-img {
+    width: 120px;
+    height: 64px;
+    opacity: 0.4;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.partners-link:hover .partners-img,
+.partners-link:focus .partners-img {
+    opacity: 1;
+}
