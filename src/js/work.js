@@ -34,6 +34,7 @@ const loadProjects = (status = "all", page = 1) => {
 }
 
 loadProjects();
+loadComment(0)
 
 mediaNavList.addEventListener("click", event => {
     mediaBtns.forEach(btn => btn.classList.remove("active"));
