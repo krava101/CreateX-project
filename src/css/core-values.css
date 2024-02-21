@@ -1,0 +1,39 @@
+.our-core .section-title {
+    margin-bottom: 24px;
+}
+
+.our-core-card {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.our-core-card-title {
+    margin: 24px 0 8px;
+}
+
+.our-core-card-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+ul.our-core-list {
+    display: flex;
+    gap: 94px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.our-core-decor-item {
+    height: 188px;
+    width: 1px;
+    border: 1px solid rgba(228, 228, 228, 0.493);
+    border-radius: 50%;
+}
+
+.our-core-icons {
+    width: 48px;
+    height: 48px;
+    fill: var(--red-color);
+}

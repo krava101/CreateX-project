@@ -102,7 +102,7 @@ header .container {
         linear-gradient(to bottom, #F4F5F6, #F4F5F6);
     background-repeat: no-repeat;
     background-size: 1100px , contain;
-    background-position: 980px -176px, right;
+    background-position: 965px -176px, right;
 }
 
 .page-path {
@@ -333,6 +333,7 @@ li.visible .offer-list-about{
     bottom: -26px;
     left: 50%;
     transform: translateX(-50%);
+    transform-origin: center;
     width: 390px;
     height: 52px;
     border: none;
@@ -345,6 +346,11 @@ li.visible .offer-list-about{
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
+    transition: transform .2s ease-in-out;
+}
+
+.benefits-btn:hover, .benefits-btn:focus{
+    transform: translateX(-50%) scale(0.96);
 }
 
 /* similar projects */
@@ -382,6 +388,143 @@ li.visible .offer-list-about{
 }
 
 .partners{
-    padding: 60px 0 110px;
+    padding: 120px 0 0;
     background-color: var(--cloud);
+}
+
+.partners h2.section-title{
+    margin-bottom: 70px;
+}
+
+/* Pricing */
+
+.pricing{
+    padding: 80px 0 110px;
+    background-color: var(--cloud);
+    background-image: url("../img/services-page-img/pricing-bg.png");
+    background-position: -440px -245px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pricing .section-title{
+    margin-bottom: 24px;
+}
+
+.pricing-text{
+    color: var(--secondary-color);
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.pricing-table{
+    display: grid;
+    grid-template-columns: 495px 685px;
+    width: 100%;
+    margin-top: 60px;
+
+    color: var(--secondary-color);
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fff;
+    outline: 1px solid rgb(240, 242, 245);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+}
+
+.pricing-table thead tr{
+    display: grid;
+}
+
+.pricing-table th{
+    display: grid;
+    place-items: center start;
+    width: 100%;
+    height: 58px;
+    padding-left: 24px;
+}
+
+.pricing-table th:first-child{
+    display: grid;
+    align-items: end;
+    color: var(--title-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 121px;
+    padding: 24px;
+}
+
+
+.pricing-table th:nth-child(2n){
+    background-color: var(--cloud);
+}
+
+.pricing-table tbody{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.pricing-table tbody td{
+    display: grid;
+    place-items: center;
+    width: 245px;
+    height: 58px;
+}
+
+.pricing-table tbody td:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 121px;
+}
+
+.pricing-table tbody td:nth-child(2n){
+    background-color: var(--cloud);
+}
+
+.pricing-table tbody tr p{
+    color: var(--title-color);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.pricing-table tbody td:first-child{
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.pricing-table tbody td:has(.price-btn){
+    height: 100px;
+}
+
+.price-btn{
+    width: 143px;
+    height: 36px;
+    border: 1px solid var(--red-color);
+    border-radius: 4px;
+    background-color: transparent;
+    text-align: center;
+
+    color: var(--red-color);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transform-origin: center;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, transform .2s ease-in-out;
+}
+
+.price-btn:hover{
+    background-color: var(--red-color);
+    color: #fff;
+    transform:  scale(0.98);
 }
