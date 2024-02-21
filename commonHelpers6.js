@@ -1,4 +1,4 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as m}from"./assets/data-projects-98539dd2.js";const p=document.querySelector(".hero"),c=document.querySelector(".project-list"),d=document.querySelector(".projects-title-container"),j=document.querySelector(".projects-info"),a=window.location.href,y=a[a.length-1],o=new URL("/CreateX-project/assets/icons-ea889f47.svg",self.location).href;function h(t){const l=m[t],i=`<div class="container">
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as m}from"./assets/data-projects-98539dd2.js";const p=document.querySelector(".hero"),c=document.querySelector(".project-list"),d=document.querySelector(".projects-title-container"),j=document.querySelector(".projects-info"),a=window.location.href,y=a[a.length-1],o=new URL("/CreateX-project/assets/icons-79f9ae6a.svg",self.location).href;function h(t){const l=m[t],i=`<div class="container">
           <p class="page-path">
             <span class="page-path-dark">Homepage / Work</span> / ${l.name}
           </p>
