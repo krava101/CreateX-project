@@ -333,7 +333,6 @@ li.visible .offer-list-about{
     bottom: -26px;
     left: 50%;
     transform: translateX(-50%);
-    transform-origin: center;
     width: 390px;
     height: 52px;
     border: none;
@@ -519,7 +518,6 @@ li.visible .offer-list-about{
     line-height: 36px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    transform-origin: center;
     transition: background-color .5s ease-in-out, color .5s ease-in-out, transform .2s ease-in-out;
 }
 
