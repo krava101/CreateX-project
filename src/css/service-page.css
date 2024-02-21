@@ -342,14 +342,12 @@ li.visible .offer-list-about{
     font-size: 16px;
     font-weight: 700;
     line-height: 52px;
-    letter-spacing: 0.5px;
-    text-align: center;
     text-transform: uppercase;
-    transition: transform .2s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 .benefits-btn:hover, .benefits-btn:focus{
-    transform: translateX(-50%) scale(0.96);
+    transform: translateX(-50%) scale(0.95);
 }
 
 /* similar projects */
@@ -510,13 +508,11 @@ li.visible .offer-list-about{
     border: 1px solid var(--red-color);
     border-radius: 4px;
     background-color: transparent;
-    text-align: center;
 
     color: var(--red-color);
     font-size: 12px;
     font-weight: 700;
     line-height: 36px;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: background-color .5s ease-in-out, color .5s ease-in-out, transform .2s ease-in-out;
 }
@@ -524,5 +520,5 @@ li.visible .offer-list-about{
 .price-btn:hover{
     background-color: var(--red-color);
     color: #fff;
-    transform:  scale(0.98);
+    transform:  scale(0.96);
 }
