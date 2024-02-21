@@ -114,6 +114,7 @@ const leftBtn = document.querySelector(".slider-left-btn");
 const rightBtn = document.querySelector(".slider-right-btn");
 const gallery = document.querySelector(".project-img-list");
 const smallGallery = document.querySelector(".project-small-img-list");
+const projectNavList = document.querySelector(".project-small-img-list");
 let currentIndex = 0;
 
 leftBtn.addEventListener("click", () => {
@@ -131,3 +132,10 @@ function galleryScroll(index) {
   gallery.style.transform = `translateX(-${currentIndex * 1230}px)`;
   smallGallery.children[index].classList.add("active");
 }
+
+projectNavList.addEventListener("click", event => {
+  if (event.target !== event.currentTarget) {
+    currentIndex = Array.from(projectNavList.children).indexOf(event.target);
+    galleryScroll(currentIndex);
+  }
+})
