@@ -1,4 +1,5 @@
 import { projects } from "../data/data-projects";
+import activeSimilarProj from "./similar-projects";
 
 const section = document.querySelector(".hero");
 const similarProjList = document.querySelector(".project-list");
@@ -105,7 +106,7 @@ function loadSimilarProjects(currentProject) {
     similarProjectsTitle.textContent = "";
     similarProjectsInfo.style.margin = "0";
   }
-  
+  activeSimilarProj();
 }
 
 

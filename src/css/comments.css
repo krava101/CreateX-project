@@ -1,0 +1,62 @@
+.reviews .container {
+    position: relative;
+    display: flex;
+    gap: 135px;
+}
+
+.reviews-info {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.reviews-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.reviews-text {
+    color: var(--primary-color);
+}
+
+.reviews-nickname {
+    font-weight: 700;
+    color: var(--title-color);
+    margin: 24px 0 4px;
+
+}
+
+.reviews-position {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+.reviews-img {
+    position: absolute;
+    right: 0;
+}
+
+.reviews-slider {
+    position: absolute;
+    bottom: 0;
+    left: 528px;
+    display: flex;
+    gap: 24px;
+}
+
+.reviews-slider-btn {
+    padding: 0;
+    border: none;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+}
+
+.reviews-slider-icons {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+}

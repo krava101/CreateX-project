@@ -1,8 +1,9 @@
 import { services } from "../data/data-services";
 import { projects } from "../data/data-projects";
+import activeSimilarProj from "./similar-projects";
 
 const offerSection = document.querySelector(".offer");
-const similarList = document.querySelector(".project-list");
+const similarList = document.querySelector("#p-list");
 const href = window.location.href;
 const projectNum = href[href.length - 1];
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
@@ -40,7 +41,8 @@ function loadService(projectNum){
   `
   offerSection.innerHTML = markup;
 
-  similarProjects(currentService.status)
+  similarProjects(currentService.status);
+  activeSimilarProj();
 }
 
 loadService(projectNum);
@@ -79,4 +81,3 @@ function similarProjects(type) {
   
   similarList.innerHTML = markup;
 }
-

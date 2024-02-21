@@ -2,6 +2,8 @@
 @import url(./footer.css);
 @import url(./partners-list.css);
 @import url(./core-values.css);
+@import url(./similar-projects.css);
+@import url(./comments.css);
 
 /* HEADER */
 header{
@@ -487,124 +489,13 @@ ul.services-list{
 }
 
 .projects .container{
-    overflow: hidden;
-}
-
-.projects-title-container{
     position: relative;
+    overflow: hidden;
 }
 
 .projects-title{
     text-align: left;
-    margin-right: 525px;
-}
-
-.p-slider-controls{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-}
-
-.p-arrow{
-    width: 24px;
-    height: 24px;
-}
-
-.p-right-arrow{
-    fill: #fff;
-}
-
-.p-left-arrow-btn, .p-right-arrow-btn{
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: none;
-}
-
-.p-right-arrow-btn{
-    background-color: var(--red-color);
-}
-
-.works-list {
-    display: flex;
-    gap: 30px;
-    transition: transform 1s linear;
-}
-
-.works-card {
-    position: relative;
-    height: 440px;
-    min-width: 390px;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0px 5px 10px rgba(30, 33, 44, 0.06);
-    transition: box-shadow .25s ease-in-out .1s;
-}
-
-.works-img{
-    width: 390px;
-    height: 345px;
-}
-
-.works-card-box {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    padding: 16px 0 24px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: none;
-    width: 100%;
-    transform: translateY(70px);
-    transition: transform .25s ease-in-out .1s;
-}
-
-.works-card:hover .works-card-box,
-.works-card:focus .works-card-box {
-    transform: translateY(0);
-}
-
-.works .card-title {
-    margin-bottom: 4px;
-}
-
-.works-card-text {
-    color: var(--secondary-color);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-}
-
-.works-card-link {
-    display: inline-block;
-    width: 172px;
-    height: 44px;
-    border: 1px solid var(--red-color);
-    border-radius: 4px;
-    margin-top: 24px;
-
-    color: var(--red-color);
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 314.3%;
-    letter-spacing: 0.036em;
-    text-transform: uppercase;
-    transition: color .25s ease-in-out .1s,
-        background-color .25s ease-in-out .1s,
-        box-shadow .25s ease-in-out .1s;
-}
-
-.works-card-link:hover,
-.works-card-link:focus {
-    background-color: var(--red-color);
-    color: #fff;
-    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.10), 0px 12px 10px -6px rgba(255, 90, 48, 0.13), 0px 26px 24px -10px rgba(255, 90, 48, 0.15), 0px 60px 80px -20px rgba(255, 90, 48, 0.21);
+    width: 700px;
 }
 
 .projects-info{
@@ -612,6 +503,34 @@ ul.services-list{
     justify-content: center;
     gap: 40px;
     margin-top: 85px;
+}
+
+.project-slider{
+    position: absolute;
+    right: 0;
+    top: 84px;
+    display: flex;
+}
+
+.project-slider button{
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    fill: var(--primary-color);
+}
+
+.project-slider .p-right-btn{
+    background-color: var(--red-color);
+    fill: #fff;
+}
+
+.project-slider svg{
+    width: 24px;
+    height: 24px;
 }
 
 /* PARTNERS */
@@ -627,66 +546,6 @@ ul.services-list{
     background-color: #F4F5F6;
 }
 
-.reviews .container{
-    position: relative;
-    display: flex;
-    gap: 135px;
-}
-
-.reviews-info{
-    position: relative;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 600px;
-}
-
-.reviews-avatar{
-    border-radius: 50%;
-    margin-bottom: 24px;
-}
-
-.reviews-text{
-    color: var(--primary-color);
-}
-
-.reviews-nickname{
-    font-weight: 700;
-    color: var(--title-color);
-    margin: 24px 0 4px;
-
-}
-
-.reviews-position{
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--secondary-color);
-}
-
-.reviews-img{
-    position: absolute;
-    right: 0;
-}
-
-.reviews-slider{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    gap: 24px;
-}
-
-.reviews-slider-btn{
-    padding: 0;
-    border: none;
-    height: 24px;
-    background-color: #F4F5F6;
-}
-
-.reviews-slider-icons{
-    width: 24px;
-    height: 24px;
-    fill: var(--primary-color);
-}
 /* REVIEWS */
 
 /* FACTS */

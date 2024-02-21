@@ -1,13 +1,14 @@
+import { projects } from "../data/data-projects";
+import activeSimilarProj from "./similar-projects";
+import loadComment from "./comments";
+
 const form = document.querySelector(".application-form");
 const questionForm = document.querySelector(".question-form");
-const projectsList = document.querySelector(".works-list");
-const projectsLeftBtn = document.querySelector(".p-left-arrow-btn");
-const projectsRightBtn = document.querySelector(".p-right-arrow-btn");
 const heroList = document.querySelector(".hero-steps-list");
 const heroLeftBtn = document.querySelector(".hero-left-btn");
 const heroRightBtn = document.querySelector(".hero-right-btn");
 const heroPagList = document.querySelector(".hero-pag-list");
-let projectsIndex = 0;
+const projectList = document.querySelector("#p-list");
 let heroIndex = 0;
 
 const userInfo = {
@@ -23,6 +24,27 @@ const userQuestion = {
     phone: "",
     message: ""
 }
+
+function loadSimilarProjects() {
+    const markup = projects.reduce((acc, e) => acc + `
+    <li class="project-card">
+      <img
+        class="project-img"
+        src="${e.previewImg}"
+        alt=""
+      />
+      <div class="project-card-box">
+        <h5 class="card-title">${e.name}</h5>
+        <p class="project-card-text">${e.type}</p>
+        <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
+      </div>
+    </li>`, '');
+    projectList.innerHTML = markup;
+    activeSimilarProj();
+}
+
+loadSimilarProjects();
+loadComment(0);
 
 form.addEventListener("submit", event => {
     event.preventDefault();
@@ -44,21 +66,6 @@ questionForm.addEventListener("submit", event => {
     console.log(userQuestion);
     event.currentTarget.reset();
 })
-
-projectsLeftBtn.addEventListener("click", () => {
-    projectsIndex <= 0 ? projectsIndex = 0 : projectsIndex--;
-    activeProjectsSlider(projectsIndex);
-})
-
-projectsRightBtn.addEventListener("click", () => {
-    projectsIndex === projectsList.children.length-2 ? null : projectsIndex++;
-    activeProjectsSlider(projectsIndex);
-})
-
-function activeProjectsSlider(index) {
-    const cardWidth = projectsList.children[0].getBoundingClientRect().width + 30;
-    projectsList.style.transform = `translateX(${-index*cardWidth}px)`;
-}
 
 heroLeftBtn.addEventListener("click", event => {
     heroIndex <= 0 ? heroIndex = 0 : heroIndex--;

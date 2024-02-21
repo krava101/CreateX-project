@@ -514,11 +514,10 @@ li.visible .offer-list-about{
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
-    transition: background-color .5s ease-in-out, color .5s ease-in-out, transform .2s ease-in-out;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
 }
 
 .price-btn:hover{
     background-color: var(--red-color);
     color: #fff;
-    transform:  scale(0.96);
 }
