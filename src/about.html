@@ -178,36 +178,54 @@
           <h2 class="section-title">Our history</h2>
           <div class="history-wrapper">
             <ul class="history-list">
-              <li class="history-list-item active-history-item">Present</li>
-              <li class="history-list-item">March 2019</li>
-              <li class="history-list-item">November 2018</li>
-              <li class="history-list-item">July 2015</li>
-              <li class="history-list-item">August 2010</li>
-              <li class="history-list-item">February 2007</li>
-              <li class="history-list-item">May 2004</li>
-              <li class="history-list-item">October 2001</li>
-              <li class="history-list-item">June 2000</li>
+              <li class="history-list-item active">
+                <button type="button">Present</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">March 2019</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">November 2018</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">July 2015</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">August 2010</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">February 2007</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">May 2004</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">October 2001</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">June 2000</button>
+              </li>
             </ul>
             <div class="active-history-card">
               <img
                 class="active-history-img"
-                src="./img/about-page-img/history-img.jpg"
+                src="./img/about-page-img/history/history-1.jpg"
                 alt="Construction"
               />
               <p class="history-text">
                 Bcelerisque dapibus pharetra nibh semper iaculis duis viverra
                 porttitor in. Eu nec vitae, malesuada vitae egestas integer et
                 morbi. Maecenas sed quis diam posuere malesuada magnis.
-                Bcelerisque dapibus. Eu nec vitae
+                Bcelerisque dapibus. Eu nec vitae.
               </p>
             </div>
-            <div class="history-btns-wrapper">
-              <button class="history-btn" type="button">
+            <div class="history-btns-wrapper" id="history-slider">
+              <button class="history-btn" type="button" data-btn="l">
                 <svg class="history-btn-icon">
                   <use href="./img/icons.svg#icon-left-arrow"></use>
                 </svg>
               </button>
-              <button class="history-btn" type="button">
+              <button class="history-btn" type="button" data-btn="r">
                 <svg class="history-btn-icon">
                   <use href="./img/icons.svg#icon-right-arrow"></use>
                 </svg>
@@ -692,5 +710,6 @@
     </main>
     <!-- FOOTER -->
     <load ="partials/footer.html" />
+    <script type="module" src="./js/about.js"></script>
   </body>
 </html>
