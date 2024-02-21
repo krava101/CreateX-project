@@ -22,9 +22,9 @@
     
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers6.js"></script>
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/project-8174e019.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-3a722654.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/similar-projects-ebbc83be.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/project-aa2d327f.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-0951c556.css">
   </head>
   <body>
@@ -199,100 +199,19 @@
           <div class="projects-title-container">
             <h2 class="projects-title section-title">Similar projects</h2>
             <div class="p-slider-controls">
-              <button type="button" class="p-left-arrow-btn">
+              <button type="button" class="p-left-arrow-btn" id="p-left-btn">
                 <svg class="p-left-arrow p-arrow">
                   <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-left-arrow"></use>
                 </svg>
               </button>
-              <button type="button" class="p-right-arrow-btn">
+              <button type="button" class="p-right-arrow-btn" id="p-right-btn">
                 <svg class="p-right-arrow p-arrow">
                   <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-right-arrow"></use>
                 </svg>
               </button>
             </div>
           </div>
-          <ul class="project-list list">
-            <li class="project-card">
-              <img
-                class="project-img"
-                src="/CreateX-project/assets/project-7-0aa03d83.jpg"
-                alt=""
-              />
-              <div class="project-card-box">
-                <h5 class="card-title">Red Finger Building</h5>
-                <p class="project-card-text">Business Centers</p>
-                <a
-                  class="project-card-link"
-                  href="project.html?project=project7"
-                  >view project</a
-                >
-              </div>
-            </li>
-            <li class="project-card">
-              <img
-                class="project-img"
-                src="/CreateX-project/assets/project-1-68d98b07.jpg"
-                alt=""
-              />
-              <div class="project-card-box">
-                <h5 class="card-title">Cubes Building</h5>
-                <p class="project-card-text">Business Centers</p>
-                <a
-                  class="project-card-link"
-                  href="project.html?project=project1"
-                  >view project</a
-                >
-              </div>
-            </li>
-            <li class="project-card">
-              <img
-                class="project-img"
-                src="/CreateX-project/assets/project-6-5d8ae179.jpg"
-                alt=""
-              />
-              <div class="project-card-box">
-                <h5 class="card-title">The Pencil Building</h5>
-                <p class="project-card-text">Stores & Malls</p>
-                <a class="project-card-link" href="">view project</a>
-              </div>
-            </li>
-            <li class="project-card">
-              <img
-                class="project-img"
-                src="/CreateX-project/assets/project-2-999359c8.jpg"
-                alt=""
-              />
-              <div class="project-card-box">
-                <h5 class="card-title">Modern Cottage</h5>
-                <p class="project-card-text">Private houses</p>
-                <a class="project-card-link" href="">view project</a>
-              </div>
-            </li>
-            <li class="project-card">
-              <img
-                class="project-img"
-                src="/CreateX-project/assets/project-3-43960424.jpg"
-                alt=""
-              />
-              <div class="project-card-box">
-                <h5 class="card-title">Luxury Beach House</h5>
-                <p class="project-card-text">Private houses</p>
-                <a class="project-card-link" href="">view project</a>
-              </div>
-            </li>
-            <li class="project-card">
-              <img
-                class="project-img"
-                src="/CreateX-project/assets/project-4-3b4cb380.jpg"
-                alt=""
-              />
-              <div class="project-card-box">
-                <h5 class="card-title">Modern Double Bedroom</h5>
-                <p class="project-card-text">Apartments & flats</p>
-                <a class="project-card-link" href="">view project</a>
-              </div>
-            </li>
-          </ul>
+          <ul class="project-list list" id="p-list"></ul>
           <div class="projects-info">
             <h3 class="view-more-title">Explore all our works</h3>
             <a

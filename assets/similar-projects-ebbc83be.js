@@ -1,0 +1,2 @@
+const e=document.querySelector("#p-list"),i=document.querySelector("#p-left-btn"),o=document.querySelector("#p-right-btn");let t=0;function l(){i.addEventListener("click",()=>{t<=0?t=0:t--,n(t)}),o.addEventListener("click",()=>{t===e.children.length-2||t++,n(t)});function n(c){if(e.children.length>1){const r=e.children[0].getBoundingClientRect().width+30;e.style.transform=`translateX(${-c*r}px)`}}}export{l as a};
+//# sourceMappingURL=similar-projects-ebbc83be.js.map

@@ -1,4 +1,4 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as m}from"./assets/data-projects-98539dd2.js";const p=document.querySelector(".hero"),c=document.querySelector(".project-list"),d=document.querySelector(".projects-title-container"),j=document.querySelector(".projects-info"),a=window.location.href,y=a[a.length-1],o=new URL("/CreateX-project/assets/icons-79f9ae6a.svg",self.location).href;function h(t){const l=m[t],i=`<div class="container">
+import{p as m}from"./assets/data-projects-3a722654.js";/* empty css                     */import{a as p}from"./assets/similar-projects-ebbc83be.js";const d=document.querySelector(".hero"),c=document.querySelector(".project-list"),j=document.querySelector(".projects-title-container"),y=document.querySelector(".projects-info"),a=window.location.href,h=a[a.length-1],o=new URL("/CreateX-project/assets/icons-79f9ae6a.svg",self.location).href;function $(i){const l=m[i],t=`<div class="container">
           <p class="page-path">
             <span class="page-path-dark">Homepage / Work</span> / ${l.name}
           </p>
@@ -64,7 +64,7 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
               <li>COMPLETED</li>
               <li>${l.completed}</li>
             </ul>
-          </div>`;p.innerHTML=i,$(l)}h(y);function $(t){const l=m.filter(i=>i.type===t.type&&i!=t);if(l.length){const i=l.reduce((u,s)=>u+`
+          </div>`;d.innerHTML=t,f(l)}$(h);function f(i){const l=m.filter(t=>t.type===i.type&&t!=i);if(l.length){const t=l.reduce((u,s)=>u+`
     <li class="project-card">
       <img
         class="project-img"
@@ -76,5 +76,5 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
         <p class="project-card-text">${s.type}</p>
         <a class="project-card-link" href="project.html?project=project${s.id}">view project</a>
       </div>
-    </li>`,"");c.innerHTML=i}else c.innerHTML="<li></li>",d.textContent="",j.style.margin="0"}const f=document.querySelector(".slider-left-btn"),b=document.querySelector(".slider-right-btn"),r=document.querySelector(".project-img-list"),n=document.querySelector(".project-small-img-list");let e=0;f.addEventListener("click",()=>{e<=0?e=r.children.length-1:e--,g(e)});b.addEventListener("click",()=>{e===r.children.length-1?e=0:e++,g(e)});function g(t){Array.from(n.children).map(l=>l.classList.remove("active")),r.style.transform=`translateX(-${e*1230}px)`,n.children[t].classList.add("active")}
+    </li>`,"");c.innerHTML=t}else c.innerHTML="<li></li>",j.textContent="",y.style.margin="0";p()}const b=document.querySelector(".slider-left-btn"),v=document.querySelector(".slider-right-btn"),r=document.querySelector(".project-img-list"),n=document.querySelector(".project-small-img-list");let e=0;b.addEventListener("click",()=>{e<=0?e=r.children.length-1:e--,g(e)});v.addEventListener("click",()=>{e===r.children.length-1?e=0:e++,g(e)});function g(i){Array.from(n.children).map(l=>l.classList.remove("active")),r.style.transform=`translateX(-${e*1230}px)`,n.children[i].classList.add("active")}
 //# sourceMappingURL=commonHelpers6.js.map

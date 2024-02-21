@@ -21,9 +21,9 @@
     
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers9.js"></script>
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/work-cb27a4ca.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-3a722654.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/comments-a49f048a.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/work-c6832a3d.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-0951c556.css">
   </head>
   <body>
@@ -164,7 +164,7 @@
       <!-- REVIEWS -->
       <section class="reviews">
         <div class="container">
-          <div class="reviews-info">
+          <div class="reviews-info" id="comments">
             <h2 class="section-title">What our clients are saying</h2>
             <img
               src="/CreateX-project/assets/reviews-avatar-7403dad7.jpg"
@@ -178,24 +178,24 @@
             </p>
             <p class="reviews-nickname">Shawn Edwards</p>
             <p class="reviews-position">Position, Company name</p>
-            <div class="reviews-slider">
-              <button type="button" class="reviews-slider-btn">
-                <svg class="reviews-slider-icons">
-                  <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-left-arrow"></use>
-                </svg>
-              </button>
-              <button type="button" class="reviews-slider-btn">
-                <svg class="reviews-slider-icons">
-                  <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-right-arrow"></use>
-                </svg>
-              </button>
-            </div>
           </div>
           <img
             src="/CreateX-project/assets/reviews-60f1504e.jpg"
             alt="Worker and client"
             class="reviews-img"
           />
+          <div class="reviews-slider">
+            <button class="reviews-slider-btn" type="button" id="rev-left-btn">
+              <svg class="reviews-slider-icons">
+                <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-left-arrow"></use>
+              </svg>
+            </button>
+            <button class="reviews-slider-btn" type="button" id="rev-right-btn">
+              <svg class="reviews-slider-icons">
+                <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <!-- REVIEWS -->
