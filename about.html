@@ -21,7 +21,9 @@
     
     
     
-    <link rel="stylesheet" href="/CreateX-project/assets/about-bfe0412f.css">
+    <script type="module" crossorigin src="/CreateX-project/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/about-5a268c6c.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-0951c556.css">
   </head>
   <body>
@@ -220,36 +222,54 @@
           <h2 class="section-title">Our history</h2>
           <div class="history-wrapper">
             <ul class="history-list">
-              <li class="history-list-item active-history-item">Present</li>
-              <li class="history-list-item">March 2019</li>
-              <li class="history-list-item">November 2018</li>
-              <li class="history-list-item">July 2015</li>
-              <li class="history-list-item">August 2010</li>
-              <li class="history-list-item">February 2007</li>
-              <li class="history-list-item">May 2004</li>
-              <li class="history-list-item">October 2001</li>
-              <li class="history-list-item">June 2000</li>
+              <li class="history-list-item active">
+                <button type="button">Present</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">March 2019</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">November 2018</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">July 2015</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">August 2010</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">February 2007</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">May 2004</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">October 2001</button>
+              </li>
+              <li class="history-list-item">
+                <button type="button">June 2000</button>
+              </li>
             </ul>
             <div class="active-history-card">
               <img
                 class="active-history-img"
-                src="/CreateX-project/assets/history-img-e67c9548.jpg"
+                src="/CreateX-project/assets/history-1-e67c9548.jpg"
                 alt="Construction"
               />
               <p class="history-text">
                 Bcelerisque dapibus pharetra nibh semper iaculis duis viverra
                 porttitor in. Eu nec vitae, malesuada vitae egestas integer et
                 morbi. Maecenas sed quis diam posuere malesuada magnis.
-                Bcelerisque dapibus. Eu nec vitae
+                Bcelerisque dapibus. Eu nec vitae.
               </p>
             </div>
-            <div class="history-btns-wrapper">
-              <button class="history-btn" type="button">
+            <div class="history-btns-wrapper" id="history-slider">
+              <button class="history-btn" type="button" data-btn="l">
                 <svg class="history-btn-icon">
                   <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-left-arrow"></use>
                 </svg>
               </button>
-              <button class="history-btn" type="button">
+              <button class="history-btn" type="button" data-btn="r">
                 <svg class="history-btn-icon">
                   <use href="/CreateX-project/assets/icons-79f9ae6a.svg#icon-right-arrow"></use>
                 </svg>
@@ -935,5 +955,6 @@
   </div>
 </footer>
 
+    
   </body>
 </html>
