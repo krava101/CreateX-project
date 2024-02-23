@@ -1,32 +1,32 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{n as r}from"./assets/data-news-5b3ac4ea.js";const o=document.querySelector("#news-list"),u=document.querySelector(".news"),t=document.querySelector(".news-pagination-list"),p=document.querySelector("#next-page-btn"),w=document.querySelector(".news-nav-list");let d=Math.ceil(r.length/6),n="all",i=1;function m(e,s="all"){let l=0;s==="all"?l=e:l=e.filter(g=>g.type.toLowerCase()===s.toLowerCase());const c=l.slice((i-1)*6,i*6).reduce((g,a)=>g+`
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{n as r}from"./assets/data-news-b920c27b.js";const o=document.querySelector("#news-list"),u=document.querySelector(".news"),t=document.querySelector(".news-pagination-list"),h=document.querySelector("#next-page-btn"),w=document.querySelector(".news-nav-list");let d=Math.ceil(r.length/6),c="all",i=1;function m(e,s="all"){let n=0;s==="all"?n=e:n=e.filter(g=>g.type.toLowerCase()===s.toLowerCase());const a=n.slice((i-1)*6,i*6).reduce((g,l)=>g+`
     <li class="news-card">
       <img
         class="news-card-img"
-        src="${a.img}"
+        src="${l.img}"
         alt="News image"
       />
       <div class="news-card-box">
-        <a class="card-title" href="./post.html?post=${a.id}">${a.title}</a>
+        <a class="card-title" href="./post.html?post=${l.id}">${l.title}</a>
         <ul class="news-date-list list">
-          <li>${a.type}</li>
+          <li>${l.type}</li>
           <li class="news-date-decor-item"></li>
-          <li>${a.date}</li>
+          <li>${l.date}</li>
           <li class="news-date-decor-item"></li>
           <li class="news-comments">
             <svg class="news-comment-icon">
               <use href="./img/icons.svg#icon-comments"></use>
             </svg>
-            ${a.comments.length} comments
+            ${l.comments.length?l.comments.length:"No"} comments
           </li>
         </ul>
         <p class="news-card-text">
-          ${a.previewText}
+          ${l.previewText}
         </p>
       </div>
     </li>
-    `,"");o.innerHTML=c,d=Math.ceil(l.length/6),setTimeout(()=>{o.style.height="100%"},200)}function h(){if(d===1)return p.style.display="none",t.innerHTML="";const s=Array.from({length:d},(l,c)=>c+1).slice(0,4).reduce((l,c)=>l+` 
+    `,"");o.innerHTML=a,d=Math.ceil(n.length/6),setTimeout(()=>{o.style.height="100%"},200)}function p(){if(d===1)return h.style.display="none",t.innerHTML="";const s=Array.from({length:d},(n,a)=>a+1).slice(0,4).reduce((n,a)=>n+` 
       <li class="news-pag-item">
-        <button class="news-pagination-btn" type="button">${c}</button>
+        <button class="news-pagination-btn" type="button">${a}</button>
       </li>
-  `,"");t.innerHTML=s}m(r,n);h();t.children[0].classList.add("active");t.addEventListener("click",e=>{e.target!==e.currentTarget&&(Array.from(t.children).forEach(s=>s.classList.remove("active")),o.style.height="1564px",i=+e.target.textContent,e.target.parentNode.classList.add("active"),u.scrollIntoView({block:"start"}),m(r,n))});p.addEventListener("click",()=>{Array.from(t.children).forEach(e=>e.classList.remove("active")),i<d&&(i++,i<=t.children.length&&t.children[i-1].classList.add("active"),o.style.height="1564px",u.scrollIntoView({block:"start"}),m(r,n))});w.addEventListener("click",e=>{Array.from(e.currentTarget.children).forEach(s=>s.classList.remove("active")),e.target.parentNode.classList.add("active"),i=1,n=e.target.dataset.filter,p.style.display="block",m(r,n),h(),t.children[0].classList.add("active")});
+  `,"");t.innerHTML=s}m(r,c);p();t.children.length&&t.children[0].classList.add("active");t.addEventListener("click",e=>{e.target!==e.currentTarget&&(Array.from(t.children).forEach(s=>s.classList.remove("active")),o.style.height="1564px",i=+e.target.textContent,e.target.parentNode.classList.add("active"),u.scrollIntoView({block:"start"}),m(r,c))});h.addEventListener("click",()=>{Array.from(t.children).forEach(e=>e.classList.remove("active")),i<d&&(i++,i<=t.children.length&&t.children[i-1].classList.add("active"),o.style.height="1564px",u.scrollIntoView({block:"start"}),m(r,c))});w.addEventListener("click",e=>{Array.from(e.currentTarget.children).forEach(s=>s.classList.remove("active")),e.target.parentNode.classList.add("active"),i=1,c=e.target.dataset.filter,h.style.display="block",m(r,c),p(),t.children.length&&t.children[0].classList.add("active")});
 //# sourceMappingURL=commonHelpers4.js.map
