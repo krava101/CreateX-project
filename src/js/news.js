@@ -25,7 +25,7 @@ function loadNews(newsArr, type = "all") {
         alt="News image"
       />
       <div class="news-card-box">
-        <a class="card-title" href="">${e.title}</a>
+        <a class="card-title" href="./post.html?post=${e.id}">${e.title}</a>
         <ul class="news-date-list list">
           <li>${e.type}</li>
           <li class="news-date-decor-item"></li>
