@@ -74,7 +74,7 @@ function loadPost() {
   postSection.innerHTML = markup;
 }
 
-function loadPost(){}
+function loadHero(){}
 
 
 loadPost()
