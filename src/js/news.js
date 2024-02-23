@@ -35,7 +35,7 @@ function loadNews(newsArr, type = "all") {
             <svg class="news-comment-icon">
               <use href="./img/icons.svg#icon-comments"></use>
             </svg>
-            ${e.comments.length} comments
+            ${e.comments.length ? e.comments.length : 'No' } comments
           </li>
         </ul>
         <p class="news-card-text">
@@ -67,7 +67,8 @@ function loadPag() {
 }
 loadNews(news, newsType);
 loadPag();
-pagList.children[0].classList.add("active");
+pagList.children.length ? pagList.children[0].classList.add("active") : null;
+
 
 pagList.addEventListener("click", event => {
   if (event.target !== event.currentTarget) {
@@ -102,7 +103,7 @@ filterList.addEventListener("click", event => {
   nextBtn.style.display = "block";
   loadNews(news, newsType);
   loadPag();
-  pagList.children[0].classList.add("active");
+  pagList.children.length ? pagList.children[0].classList.add("active") : null;
 })
 
 
