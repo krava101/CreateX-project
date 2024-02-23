@@ -39,7 +39,7 @@ function loadNews(newsArr, type = "all") {
           </li>
         </ul>
         <p class="news-card-text">
-          ${e.text}
+          ${e.previewText}
         </p>
       </div>
     </li>
