@@ -6,7 +6,7 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
         alt="News image"
       />
       <div class="news-card-box">
-        <a class="card-title" href="">${s.title}</a>
+        <a class="card-title" href="./post.html?post=${s.id}">${s.title}</a>
         <ul class="news-date-list list">
           <li>${s.type}</li>
           <li class="news-date-decor-item"></li>
