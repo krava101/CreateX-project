@@ -2,6 +2,7 @@ import news from "../data/data-news";
 
 const postSection = document.querySelector(".post");
 const heroSection = document.querySelector(".hero");
+const commentsSection = document.querySelector(".comments")
 const href = window.location.href;
 const postId = +href[href.length - 1];
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
@@ -130,5 +131,32 @@ function loadHero() {
   heroSection.innerHTML = markup;
 }
 
+function loadComments() {
+  const markup = `
+    <div class="container">
+      <p class="comments-title">${currentPost.comments.length ? currentPost.comments.length : 'No'} comments</p>
+      <ul class="comments-list list">
+        ${currentPost.comments.reverse().reduce((acc, com) =>
+          acc + `
+            <li>
+            <div class="comments-info">
+              <p class="comments-nickname">${com.nickname}</p>
+              <p class="comments-date">${com.date}</p>
+            </div>
+            <p class="comment">
+              ${com.comment}
+              <a href="" class="comment-reply">
+                <svg>
+                  <use href="${iconUrl}#icon-reply"></use>
+                </svg> Reply
+              </a>
+            </p>
+          </li>`, '')}
+      </ul>
+    </div>`;
+  commentsSection.innerHTML = markup;
+}
+
 loadHero();
 loadPost();
+loadComments();

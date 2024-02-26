@@ -44,27 +44,27 @@ const news = [
         comments: [
             {
                 id: 1,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Peter Griffin',
+                date: 'June 24, 2020',
+                comment: 'Dolor sit amet consectetur adipisicing elit. Error enim quasi corporis quis iste, aliquid ex consequatur nihil debitis dicta quisquam quos voluptatem ratione nobis sit amet consectetur, adipisicing elit. Perspiciatis at aperiam reprehenderit cum dicta. Nesciunt ducimus nam minima placeat voluptatum, dolores mollitia iusto culpa id tempora aut debitis necessitatibus. Maxime?'
             }, 
             {
                 id: 2,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Nick Dameo',
+                date: 'June 30, 2020',
+                comment: 'Ipsum dolor, sit amet consectetur adipisicing elit. Illo nostrum cupiditate libero, porro minus cum tempore et consectetur corporis tenetur rem quo minima quae, repellendus expedita adipisci deleniti, qui atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores neque modi cumque.'
             },
             {
                 id: 3,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Dmitry Stock',
+                date: 'August 5, 2020',
+                comment: 'Amlet consectetur adipisicing elit. Hic unde atque, error earum saepe magni, alias est numquam exercitationem dolorem, ea voluptas soluta! Aperiam sunt architecto fuga dolorum temporibus natus. Omnis totam nesciunt, molestiae fugit placeat, perferendis illo expedita iusto deserunt similique.'
             },
             {
                 id: 4,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Pumell Diin',
+                date: 'Februar 10, 2021',
+                comment: 'Sitquam autem ratione rerum quos nostrum. Quia expedita doloribus fuga dolores labore sapiente, accusamus repellat quas facere eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quibusdam nemo quasi ratione eaque, labore voluptatibus deserunt consectetur. Ratione similique cum voluptate eius cumque inventore consectetur porro quidem officia delectus!'
             },
         ]
     },
@@ -182,9 +182,9 @@ const news = [
         comments: [
             {
                 id: 1,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Anna Maley',
+                date: 'February 28, 2020',
+                comment: 'Tempora et quas. Veritatis libero est nam modi distinctio dolores, tenetur molestiae soluta cum, nisi ducimus inventore veniam dignissimos? Perspiciatis, quis earum nemo pariatur beatae excepturi harum deleniti ducimus suscipit assumenda. Incidunt amet pariatur, nesciunt iure totam aliquam! Commodi explicabo perferendis sed iusto ipsum laborum architecto repellendus voluptatum vero!'
             }, 
         ]
     },
@@ -224,15 +224,15 @@ const news = [
         comments: [
             {
                 id: 1,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Kick Nuelo',
+                date: 'January 15, 2020',
+                comment: 'sit amet consectetur adipisicing elit. Cumque recusandae iusto voluptates sapiente. Perspiciatis, alias quibusdam nesciunt minima quia magnam fugit sed? Ab quae doloremque qui reiciendis. Deleniti, itaque eveniet? Assumenda aspernatur...'
             }, 
             {
                 id: 2,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Sandy Cheacks',
+                date: 'January 20, 2020',
+                comment: 'Amet consectetur adipisicing elit. Quasi suscipit perferendis ipsa officiis quam accusamus, sunt vero hic. Voluptate aut maxime debitis ex sint sit pariatur. Excepturi est dolore obcaecati. Aperiam pariatur, earum fugiat.'
             },
         ]
     },
@@ -283,8 +283,7 @@ const news = [
         previewText: 'Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...',
         date: 'December 1, 2019', 
         comments: []
-    },
-    {
+    },{
         id: 1,
         type: 'Industry News',
         img: new URL('/img/news-page-img/news-1.jpg', import.meta.url).href,
@@ -329,27 +328,27 @@ const news = [
         comments: [
             {
                 id: 1,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Peter Griffin',
+                date: 'June 24, 2020',
+                comment: 'Dolor sit amet consectetur adipisicing elit. Error enim quasi corporis quis iste, aliquid ex consequatur nihil debitis dicta quisquam quos voluptatem ratione nobis sit amet consectetur, adipisicing elit. Perspiciatis at aperiam reprehenderit cum dicta. Nesciunt ducimus nam minima placeat voluptatum, dolores mollitia iusto culpa id tempora aut debitis necessitatibus. Maxime?'
             }, 
             {
                 id: 2,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Nick Dameo',
+                date: 'June 30, 2020',
+                comment: 'Ipsum dolor, sit amet consectetur adipisicing elit. Illo nostrum cupiditate libero, porro minus cum tempore et consectetur corporis tenetur rem quo minima quae, repellendus expedita adipisci deleniti, qui atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores neque modi cumque.'
             },
             {
                 id: 3,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Dmitry Stock',
+                date: 'August 5, 2020',
+                comment: 'Amlet consectetur adipisicing elit. Hic unde atque, error earum saepe magni, alias est numquam exercitationem dolorem, ea voluptas soluta! Aperiam sunt architecto fuga dolorum temporibus natus. Omnis totam nesciunt, molestiae fugit placeat, perferendis illo expedita iusto deserunt similique.'
             },
             {
                 id: 4,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Pumell Diin',
+                date: 'Februar 10, 2021',
+                comment: 'Sitquam autem ratione rerum quos nostrum. Quia expedita doloribus fuga dolores labore sapiente, accusamus repellat quas facere eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quibusdam nemo quasi ratione eaque, labore voluptatibus deserunt consectetur. Ratione similique cum voluptate eius cumque inventore consectetur porro quidem officia delectus!'
             },
         ]
     },
@@ -467,9 +466,9 @@ const news = [
         comments: [
             {
                 id: 1,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Anna Maley',
+                date: 'February 28, 2020',
+                comment: 'Tempora et quas. Veritatis libero est nam modi distinctio dolores, tenetur molestiae soluta cum, nisi ducimus inventore veniam dignissimos? Perspiciatis, quis earum nemo pariatur beatae excepturi harum deleniti ducimus suscipit assumenda. Incidunt amet pariatur, nesciunt iure totam aliquam! Commodi explicabo perferendis sed iusto ipsum laborum architecto repellendus voluptatum vero!'
             }, 
         ]
     },
@@ -509,15 +508,15 @@ const news = [
         comments: [
             {
                 id: 1,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Kick Nuelo',
+                date: 'January 15, 2020',
+                comment: 'sit amet consectetur adipisicing elit. Cumque recusandae iusto voluptates sapiente. Perspiciatis, alias quibusdam nesciunt minima quia magnam fugit sed? Ab quae doloremque qui reiciendis. Deleniti, itaque eveniet? Assumenda aspernatur...'
             }, 
             {
                 id: 2,
-                nickname: '',
-                date: '',
-                comment: ''
+                nickname: 'Sandy Cheacks',
+                date: 'January 20, 2020',
+                comment: 'Amet consectetur adipisicing elit. Quasi suscipit perferendis ipsa officiis quam accusamus, sunt vero hic. Voluptate aut maxime debitis ex sint sit pariatur. Excepturi est dolore obcaecati. Aperiam pariatur, earum fugiat.'
             },
         ]
     },
