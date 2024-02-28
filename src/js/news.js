@@ -1,4 +1,5 @@
 import news from "../data/data-news";
+import * as mainForm from "./main-form";
 
 const newsList = document.querySelector("#news-list");
 const newsSection = document.querySelector(".news");

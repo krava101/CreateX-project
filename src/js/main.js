@@ -1,8 +1,8 @@
 import { projects } from "../data/data-projects";
 import activeSimilarProj from "./similar-projects";
 import loadComment from "./comments";
+import * as mainForm from "./main-form";
 
-const form = document.querySelector(".application-form");
 const questionForm = document.querySelector(".question-form");
 const heroList = document.querySelector(".hero-steps-list");
 const heroLeftBtn = document.querySelector(".hero-left-btn");
@@ -11,13 +11,7 @@ const heroPagList = document.querySelector(".hero-pag-list");
 const projectList = document.querySelector("#p-list");
 let heroIndex = 0;
 
-const userInfo = {
-    userName: "", 
-    phone: "",
-    email: "",
-    message: "",
-    receive: ""
-}
+
 
 const userQuestion = {
     userName: "", 
@@ -45,18 +39,6 @@ function loadSimilarProjects() {
 
 loadSimilarProjects();
 loadComment(0);
-
-form.addEventListener("submit", event => {
-    event.preventDefault();
-    userInfo.userName = event.currentTarget.user_name.value;
-    userInfo.phone = event.currentTarget.user_tel.value;
-    userInfo.email = event.currentTarget.user_email.value;
-    userInfo.message = event.currentTarget.user_message.value;
-    userInfo.receive = event.currentTarget.user_receive.checked;
-    console.log(userInfo);
-    event.currentTarget.reset();
-})
-
 
 questionForm.addEventListener("submit", event => {
     event.preventDefault();

@@ -1,15 +1,22 @@
 import news from "../data/data-news";
+import * as mainForm from "./main-form";
 
 const postSection = document.querySelector(".post");
 const heroSection = document.querySelector(".hero");
-const commentsSection = document.querySelector(".comments")
+const commentsSection = document.querySelector(".comments");
+const commentForm = document.querySelector("#commentForm");
 const href = window.location.href;
 const postId = +href[href.length - 1];
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
-console.log(postId);
+const newComment = {
+  id: '',
+  nickname:'',
+  date:'',
+  comment:'',
+}
+
 const currentPost = news.filter(post => post.id === postId)[0];
-console.log(currentPost, postSection);
 
 function loadPost() {
   const markup = `
@@ -160,3 +167,23 @@ function loadComments() {
 loadHero();
 loadPost();
 loadComments();
+
+function formatDate(date) {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  return `${day} ${month}, ${year}`;
+}
+
+commentForm.addEventListener("submit", event => {
+  event.preventDefault();
+  newComment.id = Date.now();
+  newComment.nickname = event.currentTarget.elements.username.value;
+  newComment.date = formatDate(new Date());
+  newComment.comment = event.currentTarget.elements.userComment.value;
+  commentForm.reset();
+  currentPost.comments.push(newComment);
+  loadComments();
+
+})

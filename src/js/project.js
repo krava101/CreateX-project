@@ -1,5 +1,6 @@
 import { projects } from "../data/data-projects";
 import activeSimilarProj from "./similar-projects";
+import * as mainForm from "./main-form";
 
 const section = document.querySelector(".hero");
 const similarProjList = document.querySelector(".project-list");

@@ -1,5 +1,6 @@
 import { projects } from '../data/data-projects.js';
 import loadComment from './comments.js';
+import * as mainForm from "./main-form";
 
 const projectsList = document.querySelector(".projects-list");
 const mediaNavList = document.querySelector(".media-list");

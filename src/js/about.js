@@ -1,5 +1,6 @@
 import history from "../data/data-history";
 import offices from "../data/data-offices";
+import * as mainForm from "./main-form";
 
 const historyImg = document.querySelector(".active-history-img");
 const historySlider = document.querySelector("#history-slider");
@@ -9,6 +10,7 @@ const historyListArr = Array.from(historyList.children);
 const officeLocation = document.querySelector(".map-location div");
 const map = document.querySelector(".map-wrapper");
 let historyIndex = 0;
+
 
 function activeHistorySlider(num) {
     const currentHistory = history[num];

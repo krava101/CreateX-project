@@ -1,6 +1,7 @@
 import { services } from "../data/data-services";
 import { projects } from "../data/data-projects";
 import activeSimilarProj from "./similar-projects";
+import * as mainForm from "./main-form";
 
 const offerSection = document.querySelector(".offer");
 const similarList = document.querySelector("#p-list");
