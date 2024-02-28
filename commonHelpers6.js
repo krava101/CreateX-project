@@ -1,117 +1,117 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{n as p}from"./assets/data-news-fe2df6bb.js";const n=document.querySelector(".post"),u=document.querySelector(".hero"),d=document.querySelector(".comments"),i=window.location.href,a=+i[i.length-1],t=new URL("/CreateX-project/assets/icons-fd326858.svg",self.location).href;console.log(a);const s=p.filter(o=>o.id===a)[0];console.log(s,n);function g(){const o=`
+import"./assets/main-form-2f40e1ce.js";/* empty css                     */import{n as d}from"./assets/data-news-fe2df6bb.js";const g=document.querySelector(".post"),h=document.querySelector(".hero"),v=document.querySelector(".comments"),a=document.querySelector("#commentForm"),r=window.location.href,f=+r[r.length-1],o=new URL("/CreateX-project/assets/icons-fd326858.svg",self.location).href,i={id:"",nickname:"",date:"",comment:""},t=d.filter(e=>e.id===f)[0];function $(){const e=`
     <img
       class="post-img"
-      src="${s.img}"
+      src="${t.img}"
       alt="News image"
     />
     <div class="container">
-      ${s.post.reduce((c,e)=>{let l=`<p class="${e.type}">${e.text}</p>`;return e.type==="quote-text"?l=`<div class="quote">
+      ${t.post.reduce((c,s)=>{let n=`<p class="${s.type}">${s.text}</p>`;return s.type==="quote-text"?n=`<div class="quote">
             <svg class="quote-icon">
-              <use href="${t}#icon-braces"></use>
+              <use href="${o}#icon-braces"></use>
             </svg>
-            <p class="${e.type}">${e.text}</p>
-          </div>`:e.type==="post-list"&&(l=`<ul class="post-list list">
-            ${e.text.reduce((r,m)=>r+`<li>
+            <p class="${s.type}">${s.text}</p>
+          </div>`:s.type==="post-list"&&(n=`<ul class="post-list list">
+            ${s.text.reduce((u,p)=>u+`<li>
                 <svg class="post-list-icon">
-                  <use href="${t}#icon-check"></use>
+                  <use href="${o}#icon-check"></use>
                 </svg>
-                ${m}
+                ${p}
               </li>`,"")}
-          </ul>`),c+l},"")}
+          </ul>`),c+n},"")}
       <div class="post-share">
         <p>Share:</p>
         <ul class="hero-soc-list list">
           <li>
             <a href="">
               <svg>
-                <use href="${t}#icon-facebook"></use>
+                <use href="${o}#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="">
               <svg>
-                <use href="${t}#icon-linked"></use>
+                <use href="${o}#icon-linked"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="">
               <svg>
-                <use href="${t}#icon-twitter"></use>
+                <use href="${o}#icon-twitter"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-    </div>`;n.innerHTML=o}function v(){const o=`<div class="container">
+    </div>`;g.innerHTML=e}function k(){const e=`<div class="container">
     <p class="page-path">
-      <span class="page-path-dark">Homepage / News</span> / ${s.title}
+      <span class="page-path-dark">Homepage / News</span> / ${t.title}
     </p>
     <h1 class="page-title">
-      ${s.title}
+      ${t.title}
     </h1>
     <div class="post-info">
       <ul class="post-date-list list">
-        <li>${s.type}</li>
+        <li>${t.type}</li>
         <li class="post-date-decor-item"></li>
         <li>
           <svg class="post-comment-icon">
-            <use href="${t}#icon-clock"></use>
+            <use href="${o}#icon-clock"></use>
           </svg>
-          ${s.date}
+          ${t.date}
         </li>
         <li class="post-date-decor-item"></li>
         <li class="post-comments">
           <svg class="post-comment-icon">
-            <use href="${t}#icon-comments"></use>
+            <use href="${o}#icon-comments"></use>
           </svg>
-          ${s.comments.length?s.comments.length:"No"} comments
+          ${t.comments.length?t.comments.length:"No"} comments
         </li>
       </ul>
       <ul class="hero-soc-list list">
         <li>
           <a href="">
             <svg>
-              <use href="${t}#icon-facebook"></use>
+              <use href="${o}#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li>
           <a href="">
             <svg>
-              <use href="${t}#icon-linked"></use>
+              <use href="${o}#icon-linked"></use>
             </svg>
           </a>
         </li>
         <li>
           <a href="">
             <svg>
-              <use href="${t}#icon-twitter"></use>
+              <use href="${o}#icon-twitter"></use>
             </svg>
           </a>
         </li>
       </ul>
     </div>
-  </div>`;u.innerHTML=o}function h(){const o=`
+  </div>`;h.innerHTML=e}function m(){const e=`
     <div class="container">
-      <p class="comments-title">${s.comments.length?s.comments.length:"No"} comments</p>
+      <p class="comments-title">${t.comments.length?t.comments.length:"No"} comments</p>
       <ul class="comments-list list">
-        ${s.comments.reverse().reduce((c,e)=>c+`
+        ${t.comments.reverse().reduce((c,s)=>c+`
             <li>
             <div class="comments-info">
-              <p class="comments-nickname">${e.nickname}</p>
-              <p class="comments-date">${e.date}</p>
+              <p class="comments-nickname">${s.nickname}</p>
+              <p class="comments-date">${s.date}</p>
             </div>
             <p class="comment">
-              ${e.comment}
+              ${s.comment}
               <a href="" class="comment-reply">
                 <svg>
-                  <use href="${t}#icon-reply"></use>
+                  <use href="${o}#icon-reply"></use>
                 </svg> Reply
               </a>
             </p>
           </li>`,"")}
       </ul>
-    </div>`;d.innerHTML=o}v();g();h();
+    </div>`;v.innerHTML=e}k();$();m();function y(e){const c=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],s=e.getDate(),n=c[e.getMonth()],l=e.getFullYear();return`${s} ${n}, ${l}`}a.addEventListener("submit",e=>{e.preventDefault(),i.id=Date.now(),i.nickname=e.currentTarget.elements.username.value,i.date=y(new Date),i.comment=e.currentTarget.elements.userComment.value,a.reset(),t.comments.push(i),m()});
 //# sourceMappingURL=commonHelpers6.js.map

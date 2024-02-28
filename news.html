@@ -21,7 +21,7 @@
     
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers4.js"></script>
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-2f40e1ce.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-fe2df6bb.js">
     <link rel="stylesheet" href="/CreateX-project/assets/news-8bb219a3.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-0951c556.css">
@@ -104,37 +104,127 @@
           <h2 class="section-title">Categories</h2>
           <ul class="news-nav-list list">
             <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="all">All News</button>
+              <button class="news-nav-btn" type="button" data-filter="all">
+                All News
+              </button>
             </li>
             <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="Company News">Company News</button>
+              <button
+                class="news-nav-btn"
+                type="button"
+                data-filter="Company News"
+              >
+                Company News
+              </button>
             </li>
             <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="Innovation">Innovation</button>
+              <button
+                class="news-nav-btn"
+                type="button"
+                data-filter="Innovation"
+              >
+                Innovation
+              </button>
             </li>
             <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="Industry News">Industry News</button>
+              <button
+                class="news-nav-btn"
+                type="button"
+                data-filter="Industry News"
+              >
+                Industry News
+              </button>
             </li>
             <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="Expert Tips">Expert Tips</button>
+              <button
+                class="news-nav-btn"
+                type="button"
+                data-filter="Expert Tips"
+              >
+                Expert Tips
+              </button>
             </li>
             <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="Marketing">Marketing</button>
+              <button
+                class="news-nav-btn"
+                type="button"
+                data-filter="Marketing"
+              >
+                Marketing
+              </button>
             </li>
           </ul>
           <ul class="news-list list" id="news-list"></ul>
           <div class="news-pag-wrapper">
             <ul class="news-pagination-list list"></ul>
             <button class="news-arrow-btn" type="button" id="next-page-btn">
-                  <svg class="news-pagination-icon">
-                    <use href="/CreateX-project/assets/icons-fd326858.svg#icon-right-arrow"></use>
-                  </svg>
+              <svg class="news-pagination-icon">
+                <use href="/CreateX-project/assets/icons-fd326858.svg#icon-right-arrow"></use>
+              </svg>
             </button>
           </div>
         </div>
       </section>
-      <!-- NEWS -->
-      <footer>
+      <section class="application" id="application">
+  <div class="container">
+    <form class="application-form">
+      <p class="form-title">A quick way to discuss details</p>
+      <label class="app-label">
+        Name*
+        <input
+          type="text"
+          placeholder="Your name"
+          class="app-input"
+          name="user_name"
+          required
+        />
+      </label>
+      <label class="app-label"
+        >Phone*
+        <input
+          type="tel"
+          placeholder="Your phone number"
+          class="app-input"
+          name="user_tel"
+          required
+        />
+      </label>
+      <label class="app-label"
+        >Email
+        <input
+          type="email"
+          placeholder="Your working email"
+          class="app-input"
+          name="user_email"
+          required
+        />
+      </label>
+      <label class="app-label"
+        >Message*
+        <textarea
+          id=""
+          cols="1"
+          rows="1"
+          placeholder="Your message"
+          name="user_message"
+          class="app-textarea"
+          required
+        ></textarea>
+      </label>
+      <label class="checkbox-label">
+        <input type="checkbox" class="app-checkbox" name="user_receive" />
+        <svg class="decor-checkbox">
+          <use href="/CreateX-project/assets/icons-fd326858.svg#icon-decor-checkbox"></use>
+        </svg>
+        I agree to receive communications from Createx Construction Bureau.
+      </label>
+      <button type="submit" class="app-btn orange-btn">send request</button>
+    </form>
+  </div>
+</section>
+
+    </main>
+    <footer>
   <div class="container">
     <div class="logo-form-container">
       <div class="footer-logo-info">
@@ -279,6 +369,6 @@
   </div>
 </footer>
 
-      
+    
   </body>
 </html>
