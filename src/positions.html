@@ -186,8 +186,8 @@
               about new vacancies.
             </p>
             <div class="positions-form-btn-box">
-              <button class="positions-form-btn">subscribe</button>
-              <button class="positions-form-btn">send cv</button>
+              <button class="positions-form-btn" id="sub-btn">subscribe</button>
+              <button class="positions-form-btn" id="cv-btn">send cv</button>
             </div>
           </div>
         </div>
@@ -235,8 +235,98 @@
         </div>
       </section>
       <load ="./partials/form.html" />
+      <div class="backdrop">
+        <div class="modal sub-modal">
+          <button class="modal-close-btn">
+            <svg>
+              <use href="./img/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal-title">Subscribe to our newsletter</p>
+          <form action="">
+            <label for="">
+              Name*
+              <input type="text" name="username" placeholder="Your name" />
+            </label>
+            <label for="">
+              Email*
+              <input
+                type="text"
+                name="userEmail"
+                placeholder="Your working email"
+              />
+            </label>
+            <button class="modal-btn" type="submit">Send</button>
+          </form>
+        </div>
+        <div class="modal cv-modal">
+          <button class="modal-close-btn">
+            <svg>
+              <use href="./img/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal-title">Send your CV</p>
+          <form action="">
+            <label for="">
+              Name*
+              <input type="text" name="username" placeholder="Your name" />
+            </label>
+            <label class="location-select-label" for="">
+              Location*
+              <input
+                type="text"
+                placeholder="Choose your location"
+                name="userLocation"
+                readonly
+              />
+              <div class="location-select-wrapper">
+                <ul class="location-select-list list">
+                  <li class="location-option">Australia</li>
+                  <li class="location-option">Canada</li>
+                  <li class="location-option">China</li>
+                  <li class="location-option">Germany</li>
+                  <li class="location-option">Ukraine</li>
+                  <li class="location-option">USA</li>
+                </ul>
+              </div>
+            </label>
+            <label for="">
+              Phone*
+              <input
+                type="text"
+                name="userPhone"
+                placeholder="Your phone number"
+              />
+            </label>
+            <label for="">
+              Email*
+              <input
+                type="text"
+                name="userEmail"
+                placeholder="Your working email"
+              />
+            </label>
+            <label for="">
+              Covering letter
+              <textarea
+                name="userLetter"
+                placeholder="Your covering letter"
+              ></textarea>
+            </label>
+            <label class="file-label" for="file-input">
+              <svg>
+                <use href="./img/icons.svg#icon-clip"></use>
+              </svg>
+              Attach your CV*
+              <input type="file" id="file-input" name="userCV" />
+            </label>
+            <button class="modal-btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
     </main>
     <!-- FOOTER -->
     <load ="./partials/footer.html" />
+    <script type="module" src="./js/positions.js"></script>
   </body>
 </html>
