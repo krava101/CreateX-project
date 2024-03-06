@@ -1,4 +1,4 @@
-import"./assets/main-form-2f40e1ce.js";/* empty css                     */import{n as d}from"./assets/data-news-fe2df6bb.js";const g=document.querySelector(".post"),h=document.querySelector(".hero"),v=document.querySelector(".comments"),a=document.querySelector("#commentForm"),r=window.location.href,f=+r[r.length-1],o=new URL("/CreateX-project/assets/icons-fd326858.svg",self.location).href,i={id:"",nickname:"",date:"",comment:""},t=d.filter(e=>e.id===f)[0];function $(){const e=`
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{n as p}from"./assets/data-news-fe2df6bb.js";import"./assets/main-form-80133312.js";const d=document.querySelector(".post"),g=document.querySelector(".hero"),h=document.querySelector(".comments"),a=document.querySelector("#commentForm"),v=window.location.href,f=new URL(v),$=+f.searchParams.get("post"),o=new URL("/CreateX-project/assets/icons-ecf43c34.svg",self.location).href,i={id:"",nickname:"",date:"",comment:""},t=p.filter(e=>e.id===$)[0];function k(){const e=`
     <img
       class="post-img"
       src="${t.img}"
@@ -11,11 +11,11 @@ import"./assets/main-form-2f40e1ce.js";/* empty css                     */import
             </svg>
             <p class="${s.type}">${s.text}</p>
           </div>`:s.type==="post-list"&&(n=`<ul class="post-list list">
-            ${s.text.reduce((u,p)=>u+`<li>
+            ${s.text.reduce((m,u)=>m+`<li>
                 <svg class="post-list-icon">
                   <use href="${o}#icon-check"></use>
                 </svg>
-                ${p}
+                ${u}
               </li>`,"")}
           </ul>`),c+n},"")}
       <div class="post-share">
@@ -44,7 +44,7 @@ import"./assets/main-form-2f40e1ce.js";/* empty css                     */import
           </li>
         </ul>
       </div>
-    </div>`;g.innerHTML=e}function k(){const e=`<div class="container">
+    </div>`;d.innerHTML=e}function y(){const e=`<div class="container">
     <p class="page-path">
       <span class="page-path-dark">Homepage / News</span> / ${t.title}
     </p>
@@ -93,7 +93,7 @@ import"./assets/main-form-2f40e1ce.js";/* empty css                     */import
         </li>
       </ul>
     </div>
-  </div>`;h.innerHTML=e}function m(){const e=`
+  </div>`;g.innerHTML=e}function r(){const e=`
     <div class="container">
       <p class="comments-title">${t.comments.length?t.comments.length:"No"} comments</p>
       <ul class="comments-list list">
@@ -113,5 +113,5 @@ import"./assets/main-form-2f40e1ce.js";/* empty css                     */import
             </p>
           </li>`,"")}
       </ul>
-    </div>`;v.innerHTML=e}k();$();m();function y(e){const c=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],s=e.getDate(),n=c[e.getMonth()],l=e.getFullYear();return`${s} ${n}, ${l}`}a.addEventListener("submit",e=>{e.preventDefault(),i.id=Date.now(),i.nickname=e.currentTarget.elements.username.value,i.date=y(new Date),i.comment=e.currentTarget.elements.userComment.value,a.reset(),t.comments.push(i),m()});
+    </div>`;h.innerHTML=e}y();k();r();function w(e){const c=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],s=e.getDate(),n=c[e.getMonth()],l=e.getFullYear();return`${s} ${n}, ${l}`}a.addEventListener("submit",e=>{e.preventDefault(),i.id=Date.now(),i.nickname=e.currentTarget.elements.username.value,i.date=w(new Date),i.comment=e.currentTarget.elements.userComment.value,a.reset(),t.comments.push(i),r()});
 //# sourceMappingURL=commonHelpers6.js.map

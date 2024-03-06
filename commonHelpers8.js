@@ -1,4 +1,4 @@
-import"./assets/main-form-2f40e1ce.js";/* empty css                     */import{p as c}from"./assets/data-projects-98539dd2.js";import{a as n}from"./assets/similar-projects-ebbc83be.js";const l=[{id:0,type:"Construction",status:"construction",previewImg:new URL("/CreateX-project/assets/construction-73796e43.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]},{id:1,type:"Project Development",status:"development",previewImg:new URL("/CreateX-project/assets/project-development-a7afb9e0.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]},{id:2,type:"Interior Design",status:"design",previewImg:new URL("/CreateX-project/assets/interior-design-4386f777.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]},{id:3,type:"Repairs",status:"repairs",previewImg:new URL("/CreateX-project/assets/repairs-a3af7a95.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]}],f=document.querySelector(".offer"),p=document.querySelector("#p-list"),o=window.location.href,u=o[o.length-1],i=new URL("/CreateX-project/assets/icons-fd326858.svg",self.location).href;function m(e){const s=l[e],r=`
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as a}from"./assets/data-projects-98539dd2.js";import{a as c}from"./assets/similar-projects-ebbc83be.js";import"./assets/main-form-80133312.js";const n=[{id:0,type:"Construction",status:"construction",previewImg:new URL("/CreateX-project/assets/construction-73796e43.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]},{id:1,type:"Project Development",status:"development",previewImg:new URL("/CreateX-project/assets/project-development-a7afb9e0.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]},{id:2,type:"Interior Design",status:"design",previewImg:new URL("/CreateX-project/assets/interior-design-4386f777.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]},{id:3,type:"Repairs",status:"repairs",previewImg:new URL("/CreateX-project/assets/repairs-a3af7a95.jpg",self.location).href,offers:["Interior design of apartments","Interior design of private houses"]}],l=document.querySelector(".offer"),f=document.querySelector("#p-list"),p=window.location.href,u=new URL(p),m=u.searchParams.get("service"),i=new URL("/CreateX-project/assets/icons-ecf43c34.svg",self.location).href;function d(e){const s=n[e],r=`
     <div class="container">
           <img
             class="offer-img"
@@ -8,12 +8,12 @@ import"./assets/main-form-2f40e1ce.js";/* empty css                     */import
           <div class="offer-info">
             <h2 class="section-title">We offer</h2>
             <ul class="offer-list list">
-              ${s.offers.reduce((t,a)=>t+`<li>
+              ${s.offers.reduce((t,o)=>t+`<li>
                 <h4 class="offer-list-title">
                   <svg class="offer-list-icon">
                     <use href=${i+"#icon-plus"}></use>
                   </svg>
-                  ${a}
+                  ${o}
                 </h4>
                 <p class="offer-list-about">
                   Adipiscing nunc arcu enim elit mattis eu placerat proin.
@@ -24,7 +24,7 @@ import"./assets/main-form-2f40e1ce.js";/* empty css                     */import
             </ul>
           </div>
         </div>
-  `;f.innerHTML=r,g(s.status),n()}m(u);const d=document.querySelector(".offer-list");d.addEventListener("click",e=>{e.target.nodeName==="LI"&&(e.target.classList.toggle("visible"),e.target.classList.contains("visible")?e.target.querySelector("use").href.baseVal=i+"#icon-minus":setTimeout(()=>{e.target.querySelector("use").href.baseVal=i+"#icon-plus"},400))});function g(e){const s=c.filter(r=>r.status===e).reduce((r,t)=>r+`
+  `;l.innerHTML=r,v(s.status),c()}d(m);const g=document.querySelector(".offer-list");g.addEventListener("click",e=>{e.target.nodeName==="LI"&&(e.target.classList.toggle("visible"),e.target.classList.contains("visible")?e.target.querySelector("use").href.baseVal=i+"#icon-minus":setTimeout(()=>{e.target.querySelector("use").href.baseVal=i+"#icon-plus"},400))});function v(e){const s=a.filter(r=>r.status===e).reduce((r,t)=>r+`
     <li class="project-card">
       <img
         class="project-img"
@@ -34,7 +34,7 @@ import"./assets/main-form-2f40e1ce.js";/* empty css                     */import
       <div class="project-card-box">
         <h5 class="card-title">${t.name}</h5>
         <p class="project-card-text">${t.type}</p>
-        <a class="project-card-link" href="project.html?project=project${t.id}">view project</a>
+        <a class="project-card-link" href="project.html?project=${t.id}">view project</a>
       </div>
-    </li>`,"");p.innerHTML=s}
+    </li>`,"");f.innerHTML=s}
 //# sourceMappingURL=commonHelpers8.js.map
