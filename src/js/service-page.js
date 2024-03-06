@@ -6,11 +6,12 @@ import * as mainForm from "./main-form";
 const offerSection = document.querySelector(".offer");
 const similarList = document.querySelector("#p-list");
 const href = window.location.href;
-const projectNum = href[href.length - 1];
+const url = new URL(href);
+const serviceNum = url.searchParams.get('service');
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
-function loadService(projectNum){
-  const currentService = services[projectNum];
+function loadService(serviceNum){
+  const currentService = services[serviceNum];
   const markup = `
     <div class="container">
           <img
@@ -46,7 +47,7 @@ function loadService(projectNum){
   activeSimilarProj();
 }
 
-loadService(projectNum);
+loadService(serviceNum);
 
 
 const offersList = document.querySelector(".offer-list");
@@ -76,7 +77,7 @@ function similarProjects(type) {
       <div class="project-card-box">
         <h5 class="card-title">${e.name}</h5>
         <p class="project-card-text">${e.type}</p>
-        <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
+        <a class="project-card-link" href="project.html?project=${e.id}">view project</a>
       </div>
     </li>`, '');
   

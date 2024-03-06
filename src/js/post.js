@@ -6,7 +6,8 @@ const heroSection = document.querySelector(".hero");
 const commentsSection = document.querySelector(".comments");
 const commentForm = document.querySelector("#commentForm");
 const href = window.location.href;
-const postId = +href[href.length - 1];
+const url = new URL(href);
+const postId = +url.searchParams.get('post');
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
 const newComment = {

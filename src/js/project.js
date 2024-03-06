@@ -6,8 +6,11 @@ const section = document.querySelector(".hero");
 const similarProjList = document.querySelector(".project-list");
 const similarProjectsTitle = document.querySelector(".projects-title-container");
 const similarProjectsInfo = document.querySelector(".projects-info");
+
 const href = window.location.href;
-const projectNum = href[href.length - 1];
+const url = new URL(href);
+const projectNum = +url.searchParams.get('project');
+
 const arrowIconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
 function loadProject(projectNum) {
@@ -98,7 +101,7 @@ function loadSimilarProjects(currentProject) {
       <div class="project-card-box">
         <h5 class="card-title">${e.name}</h5>
         <p class="project-card-text">${e.type}</p>
-        <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
+        <a class="project-card-link" href="project.html?project=${e.id}">view project</a>
       </div>
     </li>`, '');
     similarProjList.innerHTML = markup;
