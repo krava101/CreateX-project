@@ -104,3 +104,21 @@ section{
     border-radius: 4px;
     background-color: var(--red-color);
 }
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 1024px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 425px;
+    }
+}
