@@ -39,4 +39,5 @@ button {
 
 svg {
     display: block;
+    pointer-events: none;
 }

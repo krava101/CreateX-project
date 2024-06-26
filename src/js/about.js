@@ -1,5 +1,6 @@
 import history from "../data/data-history";
 import offices from "../data/data-offices";
+import "./controls.js";
 import * as mainForm from "./main-form";
 
 const historyImg = document.querySelector(".active-history-img");
