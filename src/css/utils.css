@@ -25,10 +25,6 @@ section {
   transform: translateX(-50%);
 }
 
-.container {
-  width: 1230px;
-}
-
 .section-title {
   font-size: 46px;
   font-weight: 700;
@@ -88,22 +84,4 @@ section {
   transform: scale(0.95);
   box-shadow: inset 2px 2px 5px rgb(255, 90, 48, 0.1),
     inset -2px -2px 5px rgb(255, 90, 48, 0.1);
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    width: 1024px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .container {
-    width: 768px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    width: 425px;
-  }
 }

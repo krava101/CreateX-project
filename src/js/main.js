@@ -75,15 +75,13 @@ heroList.addEventListener('touchstart', event => {
 heroList.addEventListener('touchend', event => {
   const endX = event.changedTouches[0].clientX;
   if (endX > startX) {
-    heroIndex <= 0 ? (heroIndex = 3) : heroIndex--;
+    if (endX - startX > 70) {
+      heroIndex <= 0 ? (heroIndex = 3) : heroIndex--;
+    }
   } else if (endX < startX) {
-    heroIndex === 3 ? (heroIndex = 0) : heroIndex++;
+    if (startX - endX > 70) {
+      heroIndex === 3 ? (heroIndex = 0) : heroIndex++;
+    }
   }
   activHeroSlider(heroIndex);
-});
-
-heroList.addEventListener('mouseover', event => {
-  heroList.addEventListener('scroll', event => {
-    console.log('d');
-  });
 });
