@@ -24,50 +24,67 @@
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/similar-projects-ebbc83be.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/comments-a49f048a.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-80133312.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/index-4264efd3.css">
-    <link rel="stylesheet" href="/CreateX-project/assets/utils-493ddd77.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/controls-57926c4e.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/index-893b310b.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/utils-ccaec669.css">
   </head>
   <body>
     <header id="header">
-      <div class="container">
-        <nav class="header-nav">
-          <a href="index.html">
-            <svg class="logo">
-              <use href="/CreateX-project/assets/icons-4532af4b.svg#icon-logo-black"></use>
-            </svg>
-          </a>
-          <ul class="header-nav-list list">
-            <li>
-              <a href="./about.html" class="header-nav-links">About Us</a>
-            </li>
-            <li>
-              <a href="./services.html" class="header-nav-links">Services</a>
-            </li>
-            <li><a href="./work.html" class="header-nav-links">Work</a></li>
-            <li><a href="./news.html" class="header-nav-links">News</a></li>
-            <li>
-              <a href="./contacts.html" class="header-nav-links">Contacts</a>
-            </li>
-          </ul>
-          <button class="menu-btn" type="button">
-            <svg class="menu-icon">
-              <use href="/CreateX-project/assets/icons-4532af4b.svg#icon-menu"></use>
-            </svg>
-          </button>
-        </nav>
-      </div>
+      <nav class="header-nav">
+        <a href="index.html">
+          <svg class="logo">
+            <use href="/CreateX-project/assets/icons-0a960791.svg#icon-logo-black"></use>
+          </svg>
+        </a>
+        <ul class="header-nav-list list">
+          <li>
+            <a href="./about.html" class="header-nav-links">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html" class="header-nav-links">Services</a>
+          </li>
+          <li><a href="./work.html" class="header-nav-links">Work</a></li>
+          <li><a href="./news.html" class="header-nav-links">News</a></li>
+          <li>
+            <a href="./contacts.html" class="header-nav-links">Contacts</a>
+          </li>
+        </ul>
+        <button class="open-menu-btn" type="button">
+          <svg class="menu-icon">
+            <use href="/CreateX-project/assets/icons-0a960791.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </nav>
+      <aside class="mobile-menu">
+        <button class="close-menu-btn">
+          <svg class="close-menu-icon">
+            <use href="/CreateX-project/assets/icons-0a960791.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="header-menu-list list">
+          <li>
+            <a href="./about.html" class="header-nav-links">About Us</a>
+          </li>
+          <li>
+            <a href="./services.html" class="header-nav-links">Services</a>
+          </li>
+          <li><a href="./work.html" class="header-nav-links">Work</a></li>
+          <li><a href="./news.html" class="header-nav-links">News</a></li>
+          <li>
+            <a href="./contacts.html" class="header-nav-links">Contacts</a>
+          </li>
+        </ul>
+      </aside>
     </header>
     <main>
       <!-- HERO SECTION -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <div class="hero-steps-list-wrapper">
             <ul class="hero-steps-list list">
               <li class="hero-steps-list-item">
-                <h1 class="page-title">
-                  create<span class="page-title-part">x</span> construction
+                <h1 class="hero-title">
+                  create<span class="hero-title-part">x</span> construction
                 </h1>
                 <p class="hero-text">
                   Our team brings your dreams to life starting with meticulous
@@ -78,8 +95,8 @@
                 </p>
               </li>
               <li class="hero-steps-list-item">
-                <h1 class="page-title">
-                  Preparation <span class="page-title-part">Stage</span>
+                <h1 class="hero-title">
+                  Preparation <span class="hero-title-part">Stage</span>
                 </h1>
                 <p class="hero-text">
                   Our specialists carefully prepare the foundation for your
@@ -89,8 +106,8 @@
                 </p>
               </li>
               <li class="hero-steps-list-item">
-                <h1 class="page-title">
-                  Construction <span class="page-title-part">Phase</span>
+                <h1 class="hero-title">
+                  Construction <span class="hero-title-part">Phase</span>
                 </h1>
                 <p class="hero-text">
                   Construction with our company is the art of turning a project
@@ -100,8 +117,8 @@
                 </p>
               </li>
               <li class="hero-steps-list-item">
-                <h1 class="page-title">
-                  <span class="page-title-part">Project</span> Completion
+                <h1 class="hero-title">
+                  <span class="hero-title-part">Project</span> Completion
                 </h1>
                 <p class="hero-text">
                   We pay special attention to details, giving your home
@@ -113,11 +130,19 @@
               </li>
             </ul>
           </div>
+          <button class="hero-left-btn" type="button">
+            <svg class="hero-left-icon">
+              <use href="/CreateX-project/assets/icons-0a960791.svg#icon-left-arrow"></use>
+            </svg>
+          </button>
+          <button class="hero-right-btn" type="button">
+            <svg class="hero-right-icon">
+              <use href="/CreateX-project/assets/icons-0a960791.svg#icon-right-arrow"></use>
+            </svg>
+          </button>
           <div class="hero-buttons">
             <a href="./about.html" class="hero-link">learn more about us</a>
-            <a href="#application" class="hero-btn orange-btn">
-              submit request
-            </a>
+            <a href="#application" class="hero-btn"> submit request </a>
           </div>
           <ul class="hero-pag-list list">
             <li class="hero-pag-list-item active-hero-pag">
@@ -138,17 +163,7 @@
             </li>
           </ul>
         </div>
-        <button class="hero-left-btn" type="button">
-          <svg class="hero-left-icon">
-            <use href="./img/icons.svg#icon-left-arrow"></use>
-          </svg>
-        </button>
-        <button class="hero-right-btn" type="button">
-          <svg class="hero-right-icon">
-            <use href="./img/icons.svg#icon-right-arrow"></use>
-          </svg>
-        </button>
-      </section> -->
+      </section>
       <!-- WE ARE SECTION -->
       <!-- <section class="we-are">
         <div class="container">
