@@ -14,7 +14,7 @@
   width: 80vw;
   max-width: 1230px;
   aspect-ratio: 123/50;
-  margin-top: 60px;
+  margin: 60px auto 0;
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(
