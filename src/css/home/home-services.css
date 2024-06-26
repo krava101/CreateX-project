@@ -1,0 +1,127 @@
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 212px 0 80px;
+  background-color: #f4f5f6;
+  background-image: url('../img/home-page-img/services-bg.png');
+}
+
+.services .section-title {
+  margin-bottom: 24px;
+}
+
+ul.services-list {
+  display: flex;
+  gap: 30px;
+  margin: 60px 0 80px;
+}
+
+.services-card {
+  width: 285px;
+  height: 285px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 116% 100%;
+  border-radius: 4px;
+  outline: 1px solid #e5e8ed;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  transition: box-shadow 0.25s ease-in-out 0.1s;
+}
+
+.services-card:hover {
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),
+    0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+    0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+    0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+}
+
+.first-services-card {
+  background-image: linear-gradient(
+      to top,
+      rgba(30, 33, 44, 0.6),
+      rgba(30, 33, 44, 0.6)
+    ),
+    url('../img/services-page-img/construction.jpg');
+}
+
+.services-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out 0.1s;
+}
+
+.services-card:hover .services-card-info {
+  background-color: #ffffff00;
+}
+
+.first-services-card {
+  background-image: linear-gradient(
+      to top,
+      rgba(30, 33, 44, 0.6),
+      rgba(30, 33, 44, 0.6)
+    ),
+    url('../img/services-page-img/construction.jpg');
+  background-position: left center;
+}
+
+.second-services-card {
+  background-image: linear-gradient(
+      to top,
+      rgba(30, 33, 44, 0.6),
+      rgba(30, 33, 44, 0.6)
+    ),
+    url('../img/services-page-img/project-development.jpg');
+}
+
+.third-services-card {
+  background-image: linear-gradient(
+      to top,
+      rgba(30, 33, 44, 0.6),
+      rgba(30, 33, 44, 0.6)
+    ),
+    url('../img/services-page-img/interior-design.jpg');
+}
+
+.fourth-services-card {
+  background-image: linear-gradient(
+      to top,
+      rgba(30, 33, 44, 0.6),
+      rgba(30, 33, 44, 0.6)
+    ),
+    url('../img/services-page-img/repairs.jpg');
+}
+
+.services-card .card-title {
+  transition: color 0.25s ease-in-out 0.1s;
+}
+
+.services-card:hover .card-title {
+  color: #fff;
+}
+
+.services-info {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.services-icons {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 24px;
+  fill: var(--red-color);
+  transition: fill 0.25s ease-in-out 0.1s;
+}
+
+.services-card:hover .services-icons {
+  fill: #fff;
+}

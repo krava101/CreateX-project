@@ -1,39 +1,104 @@
 .our-core .section-title {
-    margin-bottom: 24px;
-}
-
-.our-core-card {
-    display: grid;
-    place-items: center;
-    text-align: center;
-}
-
-.our-core-card-title {
-    margin: 24px 0 8px;
-}
-
-.our-core-card-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--secondary-color);
+  margin-bottom: 24px;
 }
 
 ul.our-core-list {
-    display: flex;
-    gap: 94px;
-    margin-top: 60px;
-    text-align: center;
+  display: flex;
+  gap: 94px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.our-core-card {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.our-core-card-title {
+  margin: 24px 0 8px;
+}
+
+.our-core-card-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .our-core-decor-item {
-    height: 188px;
-    width: 1px;
-    border: 1px solid rgba(228, 228, 228, 0.493);
-    border-radius: 50%;
+  min-height: 100%;
+  width: 1px;
+  border: 1px solid rgba(228, 228, 228, 0.493);
+  border-radius: 50%;
 }
 
 .our-core-icons {
-    width: 48px;
-    height: 48px;
-    fill: var(--red-color);
+  width: 48px;
+  height: 48px;
+  fill: var(--red-color);
+}
+
+@media screen and (max-width: 1440px) {
+  ul.our-core-list {
+    gap: 60px;
+  }
+
+  .our-core .section-title {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ul.our-core-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .our-core-card {
+    width: calc((100% - 82px) / 2);
+  }
+
+  .our-core-list li:nth-child(4n) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ul.our-core-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .our-core .section-title {
+    margin-bottom: 12px;
+  }
+
+  .our-core-card {
+    width: 80%;
+  }
+
+  .our-core-card-text {
+    text-align: center;
+    max-width: 380px;
+  }
+
+  .our-core-decor-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  ul.our-core-list {
+    margin-top: 20px;
+  }
+
+  .our-core-card {
+    width: 100%;
+  }
 }

@@ -1,0 +1,45 @@
+.facts-news {
+  display: flex;
+  justify-content: center;
+  background-image: url('../img/home-page-img/facts-bg.png');
+  background-repeat: no-repeat;
+  background-position: 0 -73%;
+}
+
+.facts {
+  color: var(--title-color);
+  text-align: center;
+  padding: 175px 0 90px;
+}
+
+.facts-list {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+}
+
+.facts-card-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.circle-progress {
+  position: relative;
+  margin-bottom: 20px;
+  height: 148px;
+}
+
+.progress-icon {
+  width: 148px;
+  height: 148px;
+}
+
+.circle-progress-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+}

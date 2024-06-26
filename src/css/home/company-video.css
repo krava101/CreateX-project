@@ -1,0 +1,169 @@
+.company-video {
+  display: flex;
+  justify-content: center;
+  padding: 120px 0 90px;
+}
+
+.company-video .section-title {
+  margin-bottom: 24px;
+}
+
+.company-video-wrap {
+  position: relative;
+  border-radius: 4px;
+  width: 80vw;
+  max-width: 1230px;
+  aspect-ratio: 123/50;
+  margin-top: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to top,
+      rgba(30, 33, 44, 0.6),
+      rgba(30, 33, 44, 0.6)
+    ),
+    url('../img/home-page-img/we-are.jpg');
+}
+
+.icon-play-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+
+.icon-volum-off-box {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.icon-volum-off {
+  height: 20px;
+  width: 20px;
+}
+
+.our-core {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0 271px;
+  position: relative;
+}
+
+@media screen and (max-width: 1440px) {
+  .company-video {
+    padding: 120px 100px 90px;
+  }
+
+  .our-core {
+    padding: 90px 100px 271px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .company-video {
+    padding: 80px 80px 60px;
+  }
+
+  .icon-play-video {
+    width: 60px;
+    height: 60px;
+  }
+
+  .company-video .section-title {
+    font-size: 40px;
+  }
+
+  .our-core {
+    padding: 60px 80px 271px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .company-video {
+    padding: 60px 30px 40px;
+  }
+
+  .company-video-wrap {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .icon-play-video {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-volum-off,
+  .icon-volum-off-box {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon-volum-off-box {
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .our-core {
+    padding: 40px 30px 271px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .company-video {
+    padding: 50px 30px 40px;
+  }
+
+  .company-video .section-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .company-video .section-text {
+    font-size: 16px;
+  }
+
+  .icon-play-video {
+    width: 40px;
+    height: 40px;
+  }
+
+  .company-video-video {
+    margin-top: 20px;
+    aspect-ratio: 123/70;
+  }
+
+  .icon-volum-off,
+  .icon-volum-off-box {
+    width: 20px;
+    height: 20px;
+  }
+
+  .our-core {
+    padding: 40px 30px 271px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .company-video {
+    padding: 40px 20px;
+  }
+
+  .company-video .section-title {
+    font-size: 28px;
+  }
+
+  .our-core {
+    padding: 40px 20px 271px;
+  }
+}

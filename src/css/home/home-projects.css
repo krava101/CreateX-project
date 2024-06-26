@@ -1,0 +1,50 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  padding: 120px 0;
+}
+
+.projects .container {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-title {
+  text-align: left;
+  width: 700px;
+}
+
+.projects-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 85px;
+}
+
+.project-slider {
+  position: absolute;
+  right: 0;
+  top: 84px;
+  display: flex;
+}
+
+.project-slider button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  fill: var(--primary-color);
+}
+
+.project-slider .p-right-btn {
+  background-color: var(--red-color);
+  fill: #fff;
+}
+
+.project-slider svg {
+  width: 24px;
+  height: 24px;
+}

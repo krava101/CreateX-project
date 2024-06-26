@@ -1,0 +1,109 @@
+.news {
+  padding: 90px 0 120px;
+}
+
+.news-page {
+  display: flex;
+  gap: 30px;
+}
+
+.main-news {
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  border-radius: 4px;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease-in-out 0.1s;
+}
+
+.main-news-content {
+  padding: 24px 24px 25px;
+}
+
+.main-news-card-title {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.main-news-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-color);
+  margin-top: 16px;
+}
+
+.other-news-card {
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  transition: box-shadow 0.2s ease-in-out 0.1s;
+}
+
+.other-news-card:first-child {
+  margin-bottom: 30px;
+}
+
+.news .card-title {
+  transition: color 0.2s ease-in-out 0.1s;
+}
+
+.other-news-card:first-child:hover .card-title,
+.other-news-card:last-child:hover .card-title,
+.main-news:hover .card-title {
+  color: var(--red-color);
+}
+
+.other-news-content {
+  padding: 16px 24px 24px;
+}
+
+.other-news-card .card-title {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.news-date-list {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--secondary-color);
+}
+
+.news-date-decor-item {
+  outline: 1px solid var(--secondary-color);
+  border-radius: 25%;
+  height: 12px;
+  align-self: center;
+  opacity: 0.8;
+}
+
+.main-news:hover,
+.main-news:focus,
+.other-news-card:hover,
+.other-news-card:focus {
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.08),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.1),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.16);
+}
+
+.news-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.news-comments {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-comment-icon {
+  width: 16px;
+  height: 16px;
+}
