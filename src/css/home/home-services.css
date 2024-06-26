@@ -120,15 +120,21 @@ ul.services-list {
   fill: #fff;
 }
 
+@media screen and (max-width: 1440px) {
+  .services {
+    padding: 260px 100px 60px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .services {
-    padding: 212px 80px 60px;
+    padding: 260px 80px 60px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .services {
-    padding: 212px 30px 40px;
+    padding: 390px 30px 40px;
   }
 
   ul.services-list {
@@ -140,5 +146,11 @@ ul.services-list {
     align-items: center;
     gap: 20px;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .services {
+    padding: 230px 30px 40px;
   }
 }
