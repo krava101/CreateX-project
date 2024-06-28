@@ -20,23 +20,23 @@
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers3.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/modulepreload-polyfill-ec808ebb.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-9aec6acd.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/similar-projects-ebbc83be.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/comments-a49f048a.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/controls-57926c4e.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/index-eba61c61.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/index-40534df9.css">
   </head>
   <body>
     <header id="header">
   <nav class="header-nav">
     <a href="index.html">
       <svg class="logo">
-        <use href="/CreateX-project/assets/icons-0a960791.svg#icon-logo-black"></use>
+        <use href="../img/icons.svg#icon-logo-black"></use>
       </svg>
     </a>
     <ul class="header-nav-list list">
       <li>
-        <a href="./about.html" class="header-nav-links">About Us</a>
+        <a href="./about.html" class="header-nav-links" id="nav-about"
+          >About Us</a
+        >
       </li>
       <li>
         <a href="./services.html" class="header-nav-links">Services</a>
@@ -49,19 +49,21 @@
     </ul>
     <button class="open-menu-btn" type="button">
       <svg class="menu-icon">
-        <use href="/CreateX-project/assets/icons-0a960791.svg#icon-menu"></use>
+        <use href="../img/icons.svg#icon-menu"></use>
       </svg>
     </button>
   </nav>
   <aside class="mobile-menu">
     <button class="close-menu-btn">
       <svg class="close-menu-icon">
-        <use href="/CreateX-project/assets/icons-0a960791.svg#icon-close"></use>
+        <use href="../img/icons.svg#icon-close"></use>
       </svg>
     </button>
     <ul class="header-menu-list list">
       <li>
-        <a href="./about.html" class="header-nav-links">About Us</a>
+        <a href="./about.html" class="header-nav-links" id="nav-about-menu"
+          >About Us</a
+        >
       </li>
       <li>
         <a href="./services.html" class="header-nav-links">Services</a>
@@ -75,6 +77,7 @@
   </aside>
 </header>
 
+    
     <main>
       <section class="hero">
   <div class="container">
@@ -130,12 +133,12 @@
     </div>
     <button class="hero-left-btn" type="button">
       <svg class="hero-left-icon">
-        <use href="/CreateX-project/assets/icons-0a960791.svg#icon-left-arrow"></use>
+        <use href="../../img/icons.svg#icon-left-arrow"></use>
       </svg>
     </button>
     <button class="hero-right-btn" type="button">
       <svg class="hero-right-icon">
-        <use href="/CreateX-project/assets/icons-0a960791.svg#icon-right-arrow"></use>
+        <use href="../../img/icons.svg#icon-right-arrow"></use>
       </svg>
     </button>
     <div class="hero-buttons">
@@ -172,12 +175,12 @@
     </p>
     <div class="company-video-wrap">
       <svg class="icon-play-video">
-        <use href="/CreateX-project/assets/icons-0a960791.svg#icon-play-video"></use>
+        <use href="../../img/icons.svg#icon-play-video"></use>
       </svg>
       <span class="icon-volum-off-box">
         <svg class="icon-volum-off">
           <use
-            href="/CreateX-project/assets/icons-0a960791.svg#icon-volum-off"
+            href="../../img/icons.svg#icon-volum-off"
             class="icon-volum-off-m"
           ></use>
         </svg>
@@ -281,7 +284,7 @@
         <a href="./service-page.html?service=0">
           <div class="services-card-info">
             <svg class="services-icons">
-              <use href="/CreateX-project/assets/icons-0a960791.svg#icon-construction"></use>
+              <use href="../../img/icons.svg#icon-construction"></use>
             </svg>
             <h5 class="card-title">Construction</h5>
           </div>
@@ -291,7 +294,7 @@
         <a href="./service-page.html?service=1">
           <div class="services-card-info">
             <svg class="services-icons">
-              <use href="/CreateX-project/assets/icons-0a960791.svg#icon-plan"></use>
+              <use href="../../img/icons.svg#icon-plan"></use>
             </svg>
             <h5 class="card-title">Project Development</h5>
           </div>
@@ -301,7 +304,7 @@
         <a href="./service-page.html?service=2">
           <div class="services-card-info">
             <svg class="services-icons">
-              <use href="/CreateX-project/assets/icons-0a960791.svg#icon-pantone"></use>
+              <use href="../../img/icons.svg#icon-pantone"></use>
             </svg>
             <h5 class="card-title">Interior Design</h5>
           </div>
@@ -311,7 +314,7 @@
         <a href="./service-page.html?service=3">
           <div class="services-card-info">
             <svg class="services-icons">
-              <use href="/CreateX-project/assets/icons-0a960791.svg#icon-painting"></use>
+              <use href="../../img/icons.svg#icon-painting"></use>
             </svg>
             <h5 class="card-title">Repairs</h5>
           </div>
@@ -327,7 +330,7 @@
   </div>
 </section>
 
-      <!-- <section class="projects">
+      <section class="projects">
   <div class="container">
     <h2 class="projects-title section-title">
       Browse our selected projects and learn more about our work
@@ -335,17 +338,19 @@
     <div class="project-slider">
       <button class="p-left-btn" type="button" id="p-left-btn">
         <svg class="p-left-arrow p-arrow">
-          <use href="./img/icons.svg#icon-left-arrow"></use>
+          <use href="../../img/icons.svg#icon-left-arrow"></use>
         </svg>
       </button>
       <button class="p-right-btn" type="button" id="p-right-btn">
         <svg class="p-right-arrow p-arrow">
-          <use href="./img/icons.svg#icon-right-arrow"></use>
+          <use href="../../img/icons.svg#icon-right-arrow"></use>
         </svg>
       </button>
     </div>
-    <ul class="list" id="p-list"></ul>
-    <div class="projects-info">
+    <div class="p-list-wrap">
+      <ul class="list" id="p-list"></ul>
+    </div>
+    <div class="projects-view">
       <h3 class="view-more-title">Explore all our works</h3>
       <a href="./work.html" class="portfolio-link view-more-link orange-btn"
         >View portfolio</a
@@ -354,7 +359,7 @@
   </div>
 </section>
 
-      <section class="partners">
+      <!-- <section class="partners">
         <div class="container">
           <h2 class="section-title">Supported by 12+ partners</h2>
           <ul class="partners-list list">
@@ -420,19 +425,19 @@
   <div class="container">
     <div class="reviews-info" id="comments"></div>
     <img
-      src="./img/home-page-img/reviews.jpg"
+      src="../../img/home-page-img/reviews.jpg"
       alt="Worker and client"
       class="reviews-img"
     />
     <div class="reviews-slider">
       <button type="button" class="reviews-slider-btn" id="rev-left-btn">
         <svg class="reviews-slider-icons">
-          <use href="./img/icons.svg#icon-left-arrow"></use>
+          <use href="../../img/icons.svg#icon-left-arrow"></use>
         </svg>
       </button>
       <button type="button" class="reviews-slider-btn" id="rev-right-btn">
         <svg class="reviews-slider-icons">
-          <use href="./img/icons.svg#icon-right-arrow"></use>
+          <use href="../../img/icons.svg#icon-right-arrow"></use>
         </svg>
       </button>
     </div>
@@ -447,7 +452,7 @@
     <li class="facts-card">
       <div class="circle-progress">
         <svg class="progress-icon">
-          <use href="./img/icons.svg#icon-circle-progress-orange"></use>
+          <use href="../../img/icons.svg#icon-circle-progress-orange"></use>
         </svg>
         <p class="circle-progress-info">98%</p>
       </div>
@@ -456,7 +461,7 @@
     <li class="facts-card">
       <div class="circle-progress">
         <svg class="progress-icon">
-          <use href="./img/icons.svg#icon-circle-progress-pink"></use>
+          <use href="../../img/icons.svg#icon-circle-progress-pink"></use>
         </svg>
         <p class="circle-progress-info">20</p>
       </div>
@@ -465,7 +470,7 @@
     <li class="facts-card">
       <div class="circle-progress">
         <svg class="progress-icon">
-          <use href="./img/icons.svg#icon-circle-progress-blue"></use>
+          <use href="../../img/icons.svg#icon-circle-progress-blue"></use>
         </svg>
         <p class="circle-progress-info">9452</p>
       </div>
@@ -474,7 +479,7 @@
     <li class="facts-card">
       <div class="circle-progress">
         <svg class="progress-icon">
-          <use href="./img/icons.svg#icon-circle-progress-green"></use>
+          <use href="../../img/icons.svg#icon-circle-progress-green"></use>
         </svg>
         <p class="circle-progress-info">100%</p>
       </div>
@@ -487,7 +492,7 @@
   <h2 class="section-title">Recent news</h2>
   <div class="news-page">
     <div class="main-news">
-      <img src="./img/home-page-img/main-news.jpg" alt="A solar panel" />
+      <img src="../../img/home-page-img/main-news.jpg" alt="A solar panel" />
       <div class="main-news-content">
         <a href="" class="main-news-card-title card-title">
           How to Build Climate Change-Resilient Infrastructure
@@ -499,7 +504,7 @@
           <li class="news-date-decor-item"></li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="./img/icons.svg#icon-comments"></use>
+              <use href="../../img/icons.svg#icon-comments"></use>
             </svg>
             4 comments
           </li>
@@ -514,7 +519,7 @@
     <ul class="other-news-list list">
       <li class="other-news-card">
         <img
-          src="./img/home-page-img/first-other-news.jpg"
+          src="../../img/home-page-img/first-other-news.jpg"
           alt="A construction helmet"
         />
         <div class="other-news-content">
@@ -526,7 +531,7 @@
             <li class="news-date-decor-item"></li>
             <li class="news-comments">
               <svg class="news-comment-icon">
-                <use href="./img/icons.svg#icon-comments"></use>
+                <use href="../../img/icons.svg#icon-comments"></use>
               </svg>
               No comments
             </li>
@@ -535,7 +540,7 @@
       </li>
       <li class="other-news-card">
         <img
-          src="./img/home-page-img/second-other-news.jpg"
+          src="../../img/home-page-img/second-other-news.jpg"
           alt="Flooring materials"
         />
         <div class="other-news-content">
@@ -547,7 +552,7 @@
             <li class="news-date-decor-item"></li>
             <li class="news-comments">
               <svg class="news-comment-icon">
-                <use href="./img/icons.svg#icon-comments"></use>
+                <use href="../../img/icons.svg#icon-comments"></use>
               </svg>
               No comments
             </li>

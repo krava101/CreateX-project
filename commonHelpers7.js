@@ -1,4 +1,4 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as g}from"./assets/data-projects-98539dd2.js";import{a as p}from"./assets/similar-projects-ebbc83be.js";import"./assets/main-form-80133312.js";const d=document.querySelector(".hero"),a=document.querySelector(".project-list"),j=document.querySelector(".projects-title-container"),y=document.querySelector(".projects-info"),h=window.location.href,f=new URL(h),$=+f.searchParams.get("project"),o=new URL("/CreateX-project/assets/icons-0a960791.svg",self.location).href;function b(t){const e=g[t],i=`<div class="container">
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as g}from"./assets/data-projects-98539dd2.js";import"./assets/main-form-80133312.js";const p=document.querySelector(".hero"),a=document.querySelector(".project-list"),d=document.querySelector(".projects-title-container"),j=document.querySelector(".projects-info"),y=window.location.href,h=new URL(y),$=+h.searchParams.get("project"),o=new URL("/CreateX-project/assets/icons-0a960791.svg",self.location).href;function f(t){const e=g[t],i=`<div class="container">
           <p class="page-path">
             <span class="page-path-dark">Homepage / Work</span> / ${e.name}
           </p>
@@ -64,17 +64,17 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
               <li>COMPLETED</li>
               <li>${e.completed}</li>
             </ul>
-          </div>`;d.innerHTML=i,v(e)}b($);function v(t){const e=g.filter(i=>i.type===t.type&&i!=t);if(e.length){const i=e.reduce((u,r)=>u+`
+          </div>`;p.innerHTML=i,b(e)}f($);function b(t){const e=g.filter(i=>i.type===t.type&&i!=t);if(e.length){const i=e.reduce((u,s)=>u+`
     <li class="project-card">
       <img
         class="project-img"
-        src="${r.previewImg}"
+        src="${s.previewImg}"
         alt=""
       />
       <div class="project-card-box">
-        <h5 class="card-title">${r.name}</h5>
-        <p class="project-card-text">${r.type}</p>
-        <a class="project-card-link" href="project.html?project=${r.id}">view project</a>
+        <h5 class="card-title">${s.name}</h5>
+        <p class="project-card-text">${s.type}</p>
+        <a class="project-card-link" href="project.html?project=${s.id}">view project</a>
       </div>
-    </li>`,"");a.innerHTML=i}else a.innerHTML="<li></li>",j.textContent="",y.style.margin="0";p()}const k=document.querySelector(".slider-left-btn"),L=document.querySelector(".slider-right-btn"),s=document.querySelector(".project-img-list"),n=document.querySelector(".project-small-img-list"),m=document.querySelector(".project-small-img-list");let l=0;k.addEventListener("click",()=>{l<=0?l=s.children.length-1:l--,c(l)});L.addEventListener("click",()=>{l===s.children.length-1?l=0:l++,c(l)});function c(t){Array.from(n.children).map(e=>e.classList.remove("active")),s.style.transform=`translateX(-${l*1230}px)`,n.children[t].classList.add("active")}m.addEventListener("click",t=>{t.target!==t.currentTarget&&(l=Array.from(m.children).indexOf(t.target),c(l))});
+    </li>`,"");a.innerHTML=i}else a.innerHTML="<li></li>",d.textContent="",j.style.margin="0";activeSimilarProj()}const v=document.querySelector(".slider-left-btn"),k=document.querySelector(".slider-right-btn"),r=document.querySelector(".project-img-list"),n=document.querySelector(".project-small-img-list"),m=document.querySelector(".project-small-img-list");let l=0;v.addEventListener("click",()=>{l<=0?l=r.children.length-1:l--,c(l)});k.addEventListener("click",()=>{l===r.children.length-1?l=0:l++,c(l)});function c(t){Array.from(n.children).map(e=>e.classList.remove("active")),r.style.transform=`translateX(-${l*1230}px)`,n.children[t].classList.add("active")}m.addEventListener("click",t=>{t.target!==t.currentTarget&&(l=Array.from(m.children).indexOf(t.target),c(l))});
 //# sourceMappingURL=commonHelpers7.js.map
