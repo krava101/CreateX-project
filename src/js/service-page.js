@@ -1,16 +1,16 @@
-import { services } from "../data/data-services";
-import { projects } from "../data/data-projects";
-import activeSimilarProj from "./similar-projects";
-import * as mainForm from "./main-form";
+import { services } from '../data/data-services';
+import { projects } from '../data/data-projects';
+// import activeSimilarProj from "./similar-projects";
+import * as mainForm from './main-form';
 
-const offerSection = document.querySelector(".offer");
-const similarList = document.querySelector("#p-list");
+const offerSection = document.querySelector('.offer');
+const similarList = document.querySelector('#p-list');
 const href = window.location.href;
 const url = new URL(href);
 const serviceNum = url.searchParams.get('service');
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
-function loadService(serviceNum){
+function loadService(serviceNum) {
   const currentService = services[serviceNum];
   const markup = `
     <div class="container">
@@ -23,7 +23,9 @@ function loadService(serviceNum){
             <h2 class="section-title">We offer</h2>
             <ul class="offer-list list">
               ${currentService.offers.reduce((acc, e) => {
-                return acc + `<li>
+                return (
+                  acc +
+                  `<li>
                 <h4 class="offer-list-title">
                   <svg class="offer-list-icon">
                     <use href=${iconUrl + '#icon-plus'}></use>
@@ -36,11 +38,12 @@ function loadService(serviceNum){
                   diam magna ullamcorper morbi semper massa ac facilisis.
                 </p>
               </li>`
-              }, "")}
+                );
+              }, '')}
             </ul>
           </div>
         </div>
-  `
+  `;
   offerSection.innerHTML = markup;
 
   similarProjects(currentService.status);
@@ -49,25 +52,28 @@ function loadService(serviceNum){
 
 loadService(serviceNum);
 
+const offersList = document.querySelector('.offer-list');
 
-const offersList = document.querySelector(".offer-list");
-
-
-offersList.addEventListener("click", event => {
-  if (event.target.nodeName === "LI") {
-    event.target.classList.toggle("visible");
-    if (event.target.classList.contains("visible")) {
-      event.target.querySelector("use").href.baseVal = iconUrl + '#icon-minus';
+offersList.addEventListener('click', event => {
+  if (event.target.nodeName === 'LI') {
+    event.target.classList.toggle('visible');
+    if (event.target.classList.contains('visible')) {
+      event.target.querySelector('use').href.baseVal = iconUrl + '#icon-minus';
     } else {
       setTimeout(() => {
-        event.target.querySelector("use").href.baseVal = iconUrl + '#icon-plus';
-      }, 400); 
+        event.target.querySelector('use').href.baseVal = iconUrl + '#icon-plus';
+      }, 400);
     }
   }
-})
+});
 
 function similarProjects(type) {
-  const markup = projects.filter(e => e.status === type).reduce((acc, e) => acc + `
+  const markup = projects
+    .filter(e => e.status === type)
+    .reduce(
+      (acc, e) =>
+        acc +
+        `
     <li class="project-card">
       <img
         class="project-img"
@@ -79,7 +85,9 @@ function similarProjects(type) {
         <p class="project-card-text">${e.type}</p>
         <a class="project-card-link" href="project.html?project=${e.id}">view project</a>
       </div>
-    </li>`, '');
-  
+    </li>`,
+      ''
+    );
+
   similarList.innerHTML = markup;
 }

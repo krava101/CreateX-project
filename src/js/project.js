@@ -1,11 +1,13 @@
-import { projects } from "../data/data-projects";
-import activeSimilarProj from "./similar-projects";
-import * as mainForm from "./main-form";
+import { projects } from '../data/data-projects';
+// import activeSimilarProj from './similar-projects';
+import * as mainForm from './main-form';
 
-const section = document.querySelector(".hero");
-const similarProjList = document.querySelector(".project-list");
-const similarProjectsTitle = document.querySelector(".projects-title-container");
-const similarProjectsInfo = document.querySelector(".projects-info");
+const section = document.querySelector('.hero');
+const similarProjList = document.querySelector('.project-list');
+const similarProjectsTitle = document.querySelector(
+  '.projects-title-container'
+);
+const similarProjectsInfo = document.querySelector('.projects-info');
 
 const href = window.location.href;
 const url = new URL(href);
@@ -17,7 +19,9 @@ function loadProject(projectNum) {
   const currentProject = projects[projectNum];
   const markup = `<div class="container">
           <p class="page-path">
-            <span class="page-path-dark">Homepage / Work</span> / ${currentProject.name}
+            <span class="page-path-dark">Homepage / Work</span> / ${
+              currentProject.name
+            }
           </p>
           <h1 class="page-title">${currentProject.name}</h1>
           <div class="project-img-list-wrapper">
@@ -53,12 +57,24 @@ function loadProject(projectNum) {
             </button>
           </div>
           <ul class="project-small-img-list list">
-            <li class="project-small-img-item active" style="background-image: url(${currentProject.images[0]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[1]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[2]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[3]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[4]})"></li>
-            <li class="project-small-img-item" style="background-image: url(${currentProject.images[5]})"></li>
+            <li class="project-small-img-item active" style="background-image: url(${
+              currentProject.images[0]
+            })"></li>
+            <li class="project-small-img-item" style="background-image: url(${
+              currentProject.images[1]
+            })"></li>
+            <li class="project-small-img-item" style="background-image: url(${
+              currentProject.images[2]
+            })"></li>
+            <li class="project-small-img-item" style="background-image: url(${
+              currentProject.images[3]
+            })"></li>
+            <li class="project-small-img-item" style="background-image: url(${
+              currentProject.images[4]
+            })"></li>
+            <li class="project-small-img-item" style="background-image: url(${
+              currentProject.images[5]
+            })"></li>
           </ul>
           <div class="project-info-box">
             <div class="project-goal">
@@ -89,9 +105,14 @@ function loadProject(projectNum) {
 loadProject(projectNum);
 
 function loadSimilarProjects(currentProject) {
-  const similarProjects = projects.filter(e => e.type === currentProject.type && e != currentProject);
+  const similarProjects = projects.filter(
+    e => e.type === currentProject.type && e != currentProject
+  );
   if (similarProjects.length) {
-    const markup = similarProjects.reduce((acc, e) => acc + `
+    const markup = similarProjects.reduce(
+      (acc, e) =>
+        acc +
+        `
     <li class="project-card">
       <img
         class="project-img"
@@ -103,43 +124,48 @@ function loadSimilarProjects(currentProject) {
         <p class="project-card-text">${e.type}</p>
         <a class="project-card-link" href="project.html?project=${e.id}">view project</a>
       </div>
-    </li>`, '');
+    </li>`,
+      ''
+    );
     similarProjList.innerHTML = markup;
   } else {
     similarProjList.innerHTML = `<li></li>`;
-    similarProjectsTitle.textContent = "";
-    similarProjectsInfo.style.margin = "0";
+    similarProjectsTitle.textContent = '';
+    similarProjectsInfo.style.margin = '0';
   }
   activeSimilarProj();
 }
 
-
-const leftBtn = document.querySelector(".slider-left-btn");
-const rightBtn = document.querySelector(".slider-right-btn");
-const gallery = document.querySelector(".project-img-list");
-const smallGallery = document.querySelector(".project-small-img-list");
-const projectNavList = document.querySelector(".project-small-img-list");
+const leftBtn = document.querySelector('.slider-left-btn');
+const rightBtn = document.querySelector('.slider-right-btn');
+const gallery = document.querySelector('.project-img-list');
+const smallGallery = document.querySelector('.project-small-img-list');
+const projectNavList = document.querySelector('.project-small-img-list');
 let currentIndex = 0;
 
-leftBtn.addEventListener("click", () => {
-  currentIndex <= 0 ? currentIndex = gallery.children.length - 1 : currentIndex--;
+leftBtn.addEventListener('click', () => {
+  currentIndex <= 0
+    ? (currentIndex = gallery.children.length - 1)
+    : currentIndex--;
   galleryScroll(currentIndex);
-})
+});
 
-rightBtn.addEventListener("click", () => {
-  currentIndex === gallery.children.length - 1 ? currentIndex = 0 : currentIndex++;
+rightBtn.addEventListener('click', () => {
+  currentIndex === gallery.children.length - 1
+    ? (currentIndex = 0)
+    : currentIndex++;
   galleryScroll(currentIndex);
-})
+});
 
 function galleryScroll(index) {
-  Array.from(smallGallery.children).map(e => e.classList.remove("active"));
+  Array.from(smallGallery.children).map(e => e.classList.remove('active'));
   gallery.style.transform = `translateX(-${currentIndex * 1230}px)`;
-  smallGallery.children[index].classList.add("active");
+  smallGallery.children[index].classList.add('active');
 }
 
-projectNavList.addEventListener("click", event => {
+projectNavList.addEventListener('click', event => {
   if (event.target !== event.currentTarget) {
     currentIndex = Array.from(projectNavList.children).indexOf(event.target);
     galleryScroll(currentIndex);
   }
-})
+});
