@@ -3,7 +3,7 @@
   justify-content: center;
   padding: 212px 0 80px;
   background-color: #f4f5f6;
-  background-image: url('../img/home-page-img/services-bg.png');
+  background-image: url('../../img/home-page-img/services-bg.png');
 }
 
 .services .section-title {
@@ -62,7 +62,7 @@ ul.services-list {
       rgba(30, 33, 44, 0.6),
       rgba(30, 33, 44, 0.6)
     ),
-    url('../img/services-page-img/construction.jpg');
+    url('../../img/services-page-img/construction.jpg');
   background-position: left center;
 }
 
@@ -72,7 +72,7 @@ ul.services-list {
       rgba(30, 33, 44, 0.6),
       rgba(30, 33, 44, 0.6)
     ),
-    url('../img/services-page-img/project-development.jpg');
+    url('../../img/services-page-img/project-development.jpg');
 }
 
 .third-services-card {
@@ -81,7 +81,7 @@ ul.services-list {
       rgba(30, 33, 44, 0.6),
       rgba(30, 33, 44, 0.6)
     ),
-    url('../img/services-page-img/interior-design.jpg');
+    url('../../img/services-page-img/interior-design.jpg');
 }
 
 .fourth-services-card {
@@ -90,7 +90,7 @@ ul.services-list {
       rgba(30, 33, 44, 0.6),
       rgba(30, 33, 44, 0.6)
     ),
-    url('../img/services-page-img/repairs.jpg');
+    url('../../img/services-page-img/repairs.jpg');
 }
 
 .services-card .card-title {
