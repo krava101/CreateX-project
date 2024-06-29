@@ -11,20 +11,38 @@ footer {
 
 .logo-form-container {
   display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo-info,
+.footer-email-form {
+  width: 100%;
+  max-width: 494px;
 }
 
 .footer-logo-info {
-  margin-right: 242px;
+  padding-top: 8px;
+}
+
+.footer-email-form {
+  min-width: 400px;
 }
 
 .footer-logo-box {
   display: flex;
+  gap: 20px 60px;
   margin-bottom: 24px;
 }
 
 .footer-logo {
   width: 142px;
   height: 24px;
+}
+
+footer .logo {
+  width: 142px;
+  height: 24px;
+  margin: 0;
 }
 
 .footer-logo-list {
@@ -64,7 +82,7 @@ footer {
 }
 
 .footer-input {
-  min-width: 364px;
+  width: 100%;
   border-radius: 4px 0 0 4px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-right: none;
@@ -84,16 +102,17 @@ footer {
 }
 
 .footer-input-btn {
+  width: 26%;
+  min-width: 90px;
+  height: 44px;
   font-size: 14px;
-  font-weight: 700;
-  line-height: 3.14;
+  font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
   background-color: var(--red-color);
   border-radius: 0px 4px 4px 0px;
   border: none;
-  padding: 0 25px;
 }
 
 .footer-email-text {
@@ -203,3 +222,111 @@ footer {
 }
 
 /* FOOTER */
+
+@media screen and (max-width: 1440px) {
+  footer {
+    padding: 80px 100px;
+  }
+
+  .logo-form-container {
+    gap: 40px;
+  }
+
+  .footer-logo-box {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    padding: 80px;
+  }
+
+  .logo-form-container {
+    flex-wrap: wrap;
+  }
+
+  .footer-logo-info {
+    max-width: none;
+  }
+
+  .footer-logo-text {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .footer-nav-container {
+    gap: 70px;
+  }
+
+  .footer-nav {
+    gap: 50px;
+  }
+
+  .footer-experiense-nav {
+    min-width: 151px;
+  }
+
+  .footer-about-nav {
+    min-width: 125px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 80px 30px 40px;
+  }
+
+  .footer-email-form {
+    min-width: 100%;
+  }
+
+  .footer-nav-container {
+    flex-wrap: wrap;
+    gap: 30px 70px;
+  }
+
+  .copyright-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .to-top-link {
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer-nav {
+    gap: 30px;
+  }
+
+  .to-top-link {
+    font-size: 12px;
+  }
+
+  .to-top-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .to-top-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer-nav {
+    flex-wrap: wrap;
+  }
+
+  .copyright-container {
+    gap: 5px;
+  }
+
+  .copyright-text {
+    flex-wrap: wrap;
+  }
+}
