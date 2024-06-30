@@ -104,16 +104,28 @@ section {
   .section-title {
     font-size: 36px;
   }
+
+  .view-more-title {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 426px) {
   .section-title {
     font-size: 32px;
   }
+
+  .view-more-title {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .section-title {
     font-size: 28px;
+  }
+
+  .view-more-title {
+    font-size: 22px;
   }
 }

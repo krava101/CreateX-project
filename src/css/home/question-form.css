@@ -116,7 +116,7 @@
 
 @media screen and (max-width: 768px) {
   .question {
-    padding: 0 40px;
+    padding: 0 30px;
     bottom: -320px;
   }
 
@@ -153,7 +153,6 @@
 
 @media screen and (max-width: 425px) {
   .question {
-    padding: 0 40px;
     bottom: -160px;
   }
 
@@ -170,10 +169,6 @@
     font-size: 20px;
   }
 
-  .question {
-    padding: 0 30px;
-  }
-
   .question-label {
     gap: 4px;
   }
@@ -186,5 +181,11 @@
 
   .form-btn {
     height: 37px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .question {
+    padding: 0 20px;
   }
 }

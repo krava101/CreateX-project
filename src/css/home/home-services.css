@@ -154,3 +154,9 @@ ul.services-list {
     padding: 230px 30px 40px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .services {
+    padding: 230px 20px 40px;
+  }
+}

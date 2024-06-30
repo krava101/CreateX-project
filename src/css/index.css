@@ -15,10 +15,3 @@
 @import url(./partners-list.css);
 @import url(./core-values.css);
 @import url(./comments.css);
-
-.partners {
-  display: flex;
-  justify-content: center;
-  padding: 80px 0 90px;
-  background-color: var(--cloud);
-}

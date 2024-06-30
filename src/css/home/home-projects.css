@@ -218,4 +218,9 @@
   .project-card {
     min-width: 280px;
   }
+
+  .projects-title,
+  .projects-view {
+    padding: 0 20px;
+  }
 }
