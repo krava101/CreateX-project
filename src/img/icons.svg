@@ -4,6 +4,8 @@
 <path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M4 8h24"></path>
 <path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M4 24h24"></path>
 </symbol>
-
+<symbol id="icon-client-logo-w" viewBox="0 0 60 32">
+<path d="M-12-17.5h87v67h-87v-67z"></path>
+</symbol>
 
 </defs></svg>
