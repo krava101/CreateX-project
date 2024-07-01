@@ -1,22 +1,23 @@
 import { projects } from '../data/data-projects.js';
-import loadComment from './comments.js';
-import * as mainForm from "./main-form";
 
-const projectsList = document.querySelector(".projects-list");
-const mediaNavList = document.querySelector(".media-list");
-const mediaBtns = document.querySelectorAll(".media-btn");
-const loadMoreBtn = document.querySelector(".projects-load-more");
+const projectsList = document.querySelector('.projects-list');
+const mediaNavList = document.querySelector('.media-list');
+const mediaBtns = document.querySelectorAll('.media-btn');
+const loadMoreBtn = document.querySelector('.projects-load-more');
 let page = 1;
 
+const loadProjects = (status = 'all', page = 1) => {
+  loadMoreBtn.style.display = 'flex';
+  page * 9 >= projects.length && (loadMoreBtn.style.display = 'none');
+  let newProjects = projects.slice(0, page * 9);
+  status !== 'all' &&
+    ((newProjects = projects.filter(e => e.status === status)),
+    (loadMoreBtn.style.display = 'none'));
 
-const loadProjects = (status = "all", page = 1) => {
-    loadMoreBtn.style.display = "flex";
-    page * 9 >= projects.length && (loadMoreBtn.style.display = "none" );
-    let newProjects = projects.slice(0, page*9);
-    status !== "all" && (newProjects = projects.filter(e => e.status === status), loadMoreBtn.style.display = "none")
-
-    const markup = newProjects.reduce((acc, proj) => acc +
-        `<li class="projects-card">
+  const markup = newProjects.reduce(
+    (acc, proj) =>
+      acc +
+      `<li class="projects-card">
               <img
                 class="projects-img"
                 src="${proj.previewImg}"
@@ -29,27 +30,24 @@ const loadProjects = (status = "all", page = 1) => {
                   >view project</a
                 >
               </div>
-            </li>`
-        , '')
-    projectsList.innerHTML = markup;
-}
+            </li>`,
+    ''
+  );
+  projectsList.innerHTML = markup;
+};
 
 loadProjects();
-loadComment(0)
 
-mediaNavList.addEventListener("click", event => {
-    mediaBtns.forEach(btn => btn.classList.remove("active"));
-    event.target.classList.add("active");
-    loadProjects(event.target.dataset.media);
-})
+mediaNavList.addEventListener('click', event => {
+  mediaBtns.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  loadProjects(event.target.dataset.media);
+});
 
-
-loadMoreBtn.addEventListener("click", event => {
-    page += 1;
-    loadProjects("all", page);
-    if (page * 9 >= projects.length) {
-        loadMoreBtn.style.display = "none";
-    }
-})
-
-
+loadMoreBtn.addEventListener('click', event => {
+  page += 1;
+  loadProjects('all', page);
+  if (page * 9 >= projects.length) {
+    loadMoreBtn.style.display = 'none';
+  }
+});
