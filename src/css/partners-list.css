@@ -58,3 +58,17 @@
     gap: 40px;
   }
 }
+
+.partners-logo {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.partners-link:hover .partners-logo {
+  filter: invert();
+}
+
+.partners-link:hover .partners-logo {
+  transform: scale(0.95);
+}
+.partners-link:hover .partner-logo-6 {
+}
