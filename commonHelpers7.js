@@ -1,4 +1,4 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as g}from"./assets/data-projects-98539dd2.js";import"./assets/main-form-80133312.js";const p=document.querySelector(".hero"),a=document.querySelector(".project-list"),d=document.querySelector(".projects-title-container"),j=document.querySelector(".projects-info"),y=window.location.href,h=new URL(y),$=+h.searchParams.get("project"),o=new URL("/CreateX-project/assets/icons-0a960791.svg",self.location).href;function f(t){const e=g[t],i=`<div class="container">
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                     */import{p as g}from"./assets/data-projects-98539dd2.js";import"./assets/main-form-80133312.js";const p=document.querySelector(".hero"),a=document.querySelector(".project-list"),d=document.querySelector(".projects-title-container"),j=document.querySelector(".projects-info"),y=window.location.href,h=new URL(y),f=+h.searchParams.get("project"),o=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href;function $(t){const e=g[t],i=`<div class="container">
           <p class="page-path">
             <span class="page-path-dark">Homepage / Work</span> / ${e.name}
           </p>
@@ -64,7 +64,7 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
               <li>COMPLETED</li>
               <li>${e.completed}</li>
             </ul>
-          </div>`;p.innerHTML=i,b(e)}f($);function b(t){const e=g.filter(i=>i.type===t.type&&i!=t);if(e.length){const i=e.reduce((u,s)=>u+`
+          </div>`;p.innerHTML=i,b(e)}$(f);function b(t){const e=g.filter(i=>i.type===t.type&&i!=t);if(e.length){const i=e.reduce((u,s)=>u+`
     <li class="project-card">
       <img
         class="project-img"
