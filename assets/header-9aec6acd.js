@@ -1,2 +1,0 @@
-const t=document.querySelector(".mobile-menu"),n=document.querySelector(".open-menu-btn"),c=document.querySelector(".close-menu-btn"),o=window.location.pathname,a={"/about.html":"nav-about"},e=a[o];e&&(document.getElementById(e).classList.add("active-nav-link"),document.getElementById(e+"-menu").classList.add("active-nav-link"));n.addEventListener("click",()=>{t.classList.add("active")});c.addEventListener("click",()=>{t.classList.remove("active")});
-//# sourceMappingURL=header-9aec6acd.js.map
