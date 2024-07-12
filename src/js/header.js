@@ -5,6 +5,10 @@ const closeMobileMenu = document.querySelector('.close-menu-btn');
 const currentPath = window.location.pathname;
 const navMap = {
   '/about.html': 'nav-about',
+  '/services.html': 'nav-services',
+  '/work.html': 'nav-work',
+  '/news.html': 'nav-news',
+  '/contacts.html': 'nav-contacts',
 };
 
 const activeNavId = navMap[currentPath];
