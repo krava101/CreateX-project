@@ -43,3 +43,40 @@
   font-weight: 700;
   line-height: 1.5;
 }
+
+@media screen and (max-width: 1024px) {
+  .facts {
+    padding: 60px 80px;
+  }
+
+  .facts-list {
+    flex-wrap: wrap;
+    gap: 24px 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .facts {
+    padding: 40px 30px;
+  }
+
+  .facts-list {
+    gap: 24px 40px;
+  }
+
+  .circle-progress {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .facts-list {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .facts {
+    padding: 40px 20px;
+  }
+}
