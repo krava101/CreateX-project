@@ -1,4 +1,4 @@
-import"./assets/header-1301d940.js";import{p as v}from"./assets/data-projects-98539dd2.js";const p=[{id:0,avatar:new URL("/CreateX-project/assets/project-1-68d98b07.jpg",self.location).href,comment:"Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim  laboris cillum laboris voluptate minim proident exercitation ullamco. ",nickname:"Shawn Edwards",position:"HR Manager",companyName:"WiPo"},{id:1,avatar:new URL("/CreateX-project/assets/project-6-5d8ae179.jpg",self.location).href,comment:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ratione delectus adipisci tenetur a exercitationem cumque vitae molestiae ad, odio sit, dignissimos ipsa iusto debitis cupiditate necessitatibus! Aliquam, voluptates iure?",nickname:"Lo Wung",position:"General Director",companyName:"MSU Group"},{id:2,avatar:new URL("/CreateX-project/assets/project-2-999359c8.jpg",self.location).href,comment:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, dolorum, minima earum saepe animi eaque numquam sequi nisi repudiandae ea magnam facilis fuga voluptas doloremque possimus? Nobis repellendus commodi illo.",nickname:"Denn Miller",position:"Owner",companyName:""},{id:3,avatar:new URL("/CreateX-project/assets/project-8-130fc28a.jpg",self.location).href,comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolor, ex mollitia impedit labore sit nam totam officiis odio assumenda, recusandae, deserunt iste cumque! Rem veritatis modi cum dolorem deserunt!",nickname:"Anrew Karlson",position:"Owner",companyName:""}],g=document.querySelector("#comments"),f=document.querySelector("#rev-left-btn"),L=document.querySelector("#rev-right-btn");let c=0;function l(t){const e=p[t],h=`
+import"./assets/header-1301d940.js";import{n as g}from"./assets/data-news-fe2df6bb.js";import{p as f}from"./assets/data-projects-98539dd2.js";const h=[{id:0,avatar:new URL("/CreateX-project/assets/project-1-68d98b07.jpg",self.location).href,comment:"Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim  laboris cillum laboris voluptate minim proident exercitation ullamco. ",nickname:"Shawn Edwards",position:"HR Manager",companyName:"WiPo"},{id:1,avatar:new URL("/CreateX-project/assets/project-6-5d8ae179.jpg",self.location).href,comment:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ratione delectus adipisci tenetur a exercitationem cumque vitae molestiae ad, odio sit, dignissimos ipsa iusto debitis cupiditate necessitatibus! Aliquam, voluptates iure?",nickname:"Lo Wung",position:"General Director",companyName:"MSU Group"},{id:2,avatar:new URL("/CreateX-project/assets/project-2-999359c8.jpg",self.location).href,comment:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, dolorum, minima earum saepe animi eaque numquam sequi nisi repudiandae ea magnam facilis fuga voluptas doloremque possimus? Nobis repellendus commodi illo.",nickname:"Denn Miller",position:"Owner",companyName:""},{id:3,avatar:new URL("/CreateX-project/assets/project-8-130fc28a.jpg",self.location).href,comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolor, ex mollitia impedit labore sit nam totam officiis odio assumenda, recusandae, deserunt iste cumque! Rem veritatis modi cum dolorem deserunt!",nickname:"Anrew Karlson",position:"Owner",companyName:""}],w=document.querySelector("#comments"),L=document.querySelector("#rev-left-btn"),j=document.querySelector("#rev-right-btn");let c=0;function m(t){const e=h[t],l=`
         <div class="review-owner">
           <img
             src="${e.avatar}"
@@ -13,7 +13,34 @@ import"./assets/header-1301d940.js";import{p as v}from"./assets/data-projects-98
         <p class="reviews-text">
           ${e.comment}
         </p>
-    `;g.innerHTML=h}l(c);L.addEventListener("click",t=>{c===p.length-1?c=0:c++,l(c)});f.addEventListener("click",t=>{c>=1&&c--,l(c)});const s=document.querySelector(".hero-steps-list"),j=document.querySelector(".hero-left-btn"),q=document.querySelector(".hero-right-btn"),u=document.querySelector(".hero-pag-list");let i=0,r;function m(t){const e=s.firstElementChild.getBoundingClientRect();u.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),s.style.transform=`translateX(${-t*e.width}px)`,u.children[t].classList.add("active-hero-pag")}j.addEventListener("click",()=>{i<=0?i=3:i--,m(i)});q.addEventListener("click",()=>{i===3?i=0:i++,m(i)});s.addEventListener("touchstart",t=>{r=t.touches[0].clientX});s.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>r?e-r>70&&(i<=0?i=3:i--):e<r&&r-e>70&&(i===3?i=0:i++),m(i)});const o=document.querySelector("#p-list"),y=document.querySelector("#p-left-btn"),w=document.querySelector("#p-right-btn");let n=0,a;const S=v.reduce((t,e)=>t+`<li class="project-card">
+    `;w.innerHTML=l}m(c);j.addEventListener("click",t=>{c===h.length-1?c=0:c++,m(c)});L.addEventListener("click",t=>{c>=1&&c--,m(c)});const y=document.getElementById("newsList"),v=g.slice(0,3).reduce((t,e,l)=>t+`
+    <li class="news-card">
+      <div class="news-card-img-wrapper">
+        <img
+          class="news-card-img"
+          src="${e.img}"
+          alt="${e.title} image"
+        />
+      </div>
+      <div class="news-card-content">
+        <a class="card-title" href="./post.html?post=${e.id}">${e.title}</a>
+        <ul class="news-date-list list">
+          <li>${e.type}</li>
+          <li class="news-date-decor-item"></li>
+          <li>${e.date}</li>
+          <li class="news-date-decor-item"></li>
+          <li class="news-comments">
+            <svg class="news-comment-icon">
+              <use href="./img/icons.svg#icon-comments"></use>
+            </svg>
+            ${e.comments.length?e.comments.length:"No"} comments
+          </li>
+        </ul>
+        <p class="news-card-text" style=${l!==0?"display:none;":""}>
+        ${e.previewText}</p>
+      </div>
+    </li>
+    `,"");y.innerHTML=v;console.log(v);const r=document.querySelector(".hero-steps-list"),q=document.querySelector(".hero-left-btn"),$=document.querySelector(".hero-right-btn"),u=document.querySelector(".hero-pag-list");let i=0,o;function d(t){const e=r.firstElementChild.getBoundingClientRect();u.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),r.style.transform=`translateX(${-t*e.width}px)`,u.children[t].classList.add("active-hero-pag")}q.addEventListener("click",()=>{i<=0?i=3:i--,d(i)});$.addEventListener("click",()=>{i===3?i=0:i++,d(i)});r.addEventListener("touchstart",t=>{o=t.touches[0].clientX});r.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>o?e-o>70&&(i<=0?i=3:i--):e<o&&o-e>70&&(i===3?i=0:i++),d(i)});const s=document.querySelector("#p-list"),S=document.querySelector("#p-left-btn"),k=document.querySelector("#p-right-btn");let n=0,a;const E=f.reduce((t,e)=>t+`<li class="project-card">
         <img
           class="project-img"
           src="${e.previewImg}"
@@ -24,5 +51,5 @@ import"./assets/header-1301d940.js";import{p as v}from"./assets/data-projects-98
           <p class="project-card-text">${e.type}</p>
           <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
         </div>
-    </li>`,"");o.innerHTML=S;y.addEventListener("click",()=>{n<=0?n=o.children.length-2:n--,d(n)});w.addEventListener("click",()=>{n===o.children.length-2?n=0:n++,d(n)});function d(t){if(o.children.length>1){const e=o.children[0].getBoundingClientRect().width+30;o.style.transform=`translateX(${-t*e}px)`}}o.addEventListener("touchstart",t=>{a=t.touches[0].clientX});o.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>a?e-a>70&&(n<=0?n=o.children.length-2:n--):e<a&&a-e>70&&(n===o.children.length-1?n=0:n++),d(n)});
+    </li>`,"");s.innerHTML=E;S.addEventListener("click",()=>{n<=0?n=s.children.length-2:n--,p(n)});k.addEventListener("click",()=>{n===s.children.length-2?n=0:n++,p(n)});function p(t){if(s.children.length>1){const e=s.children[0].getBoundingClientRect().width+30;s.style.transform=`translateX(${-t*e}px)`}}s.addEventListener("touchstart",t=>{a=t.touches[0].clientX});s.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>a?e-a>70&&(n<=0?n=s.children.length-2:n--):e<a&&a-e>70&&(n===s.children.length-1?n=0:n++),p(n)});
 //# sourceMappingURL=commonHelpers3.js.map
