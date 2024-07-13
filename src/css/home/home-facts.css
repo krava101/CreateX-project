@@ -1,5 +1,6 @@
 .facts-news {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background-image: url('../img/home-page-img/facts-bg.png');
   background-repeat: no-repeat;
