@@ -18,17 +18,22 @@ const content = news.slice(0, 3).reduce(
         <a class="card-title" href="./post.html?post=${e.id}">${e.title}</a>
         <ul class="news-date-list list">
           <li>${e.type}</li>
-          <li class="news-date-decor-item"></li>
           <li>${e.date}</li>
-          <li class="news-date-decor-item"></li>
           <li class="news-comments">
             <svg class="news-comment-icon">
               <use href="./img/icons.svg#icon-comments"></use>
             </svg>
-            ${e.comments.length ? e.comments.length : 'No'} comments
+            <p>
+              ${
+                e.comments.length
+                  ? e.comments.length +
+                    (e.comments.length > 1 ? ' comments' : ' comment')
+                  : 'No comments'
+              }
+            </p>
           </li>
         </ul>
-        <p class="news-card-text" style=${i !== 0 ? 'display:none;' : ''}>
+        <p class="news-card-text ${i !== 0 ? 'hidden' : ''}">
         ${e.previewText}</p>
       </div>
     </li>
@@ -37,5 +42,3 @@ const content = news.slice(0, 3).reduce(
 );
 
 newsList.innerHTML = content;
-
-console.log(content);
