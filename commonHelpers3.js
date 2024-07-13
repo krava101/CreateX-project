@@ -29,7 +29,7 @@ import"./assets/header-1301d940.js";import{n as v}from"./assets/data-news-fe2df6
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="./img/icons.svg#icon-comments"></use>
+              <use href="../img/icons.svg#icon-comments"></use>
             </svg>
             <p>
               ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
