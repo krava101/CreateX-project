@@ -3,8 +3,6 @@ import news from '../data/data-news.js';
 const newsList = document.getElementById('newsList');
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
-console.log(iconUrl);
-
 const content = news.slice(0, 3).reduce(
   (acc, e, i) =>
     acc +
