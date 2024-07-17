@@ -318,6 +318,10 @@ footer .logo {
 }
 
 @media screen and (max-width: 375px) {
+  footer {
+    padding: 80px 20px 40px;
+  }
+
   .footer-nav {
     flex-wrap: wrap;
   }
