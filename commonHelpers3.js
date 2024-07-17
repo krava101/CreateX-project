@@ -13,7 +13,7 @@ import"./assets/header-1301d940.js";import{n as v}from"./assets/data-news-fe2df6
         <p class="reviews-text">
           ${e.comment}
         </p>
-    `;f.innerHTML=l}m(c);L.addEventListener("click",t=>{c===h.length-1?c=0:c++,m(c)});w.addEventListener("click",t=>{c>=1&&c--,m(c)});const j=document.getElementById("newsList"),y=new URL("/CreateX-project/assets/icons-97ef5a9b.svg#icon-comments",self.location).href,$=v.slice(0,3).reduce((t,e,l)=>t+`
+    `;f.innerHTML=l}m(c);L.addEventListener("click",t=>{c===h.length-1?c=0:c++,m(c)});w.addEventListener("click",t=>{c>=1&&c--,m(c)});const j=document.getElementById("newsList"),y=v.slice(0,3).reduce((t,e,l)=>t+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img
@@ -29,7 +29,7 @@ import"./assets/header-1301d940.js";import{n as v}from"./assets/data-news-fe2df6
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="${y}"></use>
+              <use href="/img/icons.svg#icon-comments"></use>
             </svg>
             <p>
               ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
@@ -40,7 +40,7 @@ import"./assets/header-1301d940.js";import{n as v}from"./assets/data-news-fe2df6
         ${e.previewText}</p>
       </div>
     </li>
-    `,"");j.innerHTML=$;const r=document.querySelector(".hero-steps-list"),q=document.querySelector(".hero-left-btn"),S=document.querySelector(".hero-right-btn"),u=document.querySelector(".hero-pag-list");let i=0,o;function d(t){const e=r.firstElementChild.getBoundingClientRect();u.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),r.style.transform=`translateX(${-t*e.width}px)`,u.children[t].classList.add("active-hero-pag")}q.addEventListener("click",()=>{i<=0?i=3:i--,d(i)});S.addEventListener("click",()=>{i===3?i=0:i++,d(i)});r.addEventListener("touchstart",t=>{o=t.touches[0].clientX});r.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>o?e-o>70&&(i<=0?i=3:i--):e<o&&o-e>70&&(i===3?i=0:i++),d(i)});const s=document.querySelector("#p-list"),b=document.querySelector("#p-left-btn"),k=document.querySelector("#p-right-btn");let n=0,a;const E=g.reduce((t,e)=>t+`<li class="project-card">
+    `,"");j.innerHTML=y;const r=document.querySelector(".hero-steps-list"),q=document.querySelector(".hero-left-btn"),$=document.querySelector(".hero-right-btn"),u=document.querySelector(".hero-pag-list");let i=0,o;function d(t){const e=r.firstElementChild.getBoundingClientRect();u.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),r.style.transform=`translateX(${-t*e.width}px)`,u.children[t].classList.add("active-hero-pag")}q.addEventListener("click",()=>{i<=0?i=3:i--,d(i)});$.addEventListener("click",()=>{i===3?i=0:i++,d(i)});r.addEventListener("touchstart",t=>{o=t.touches[0].clientX});r.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>o?e-o>70&&(i<=0?i=3:i--):e<o&&o-e>70&&(i===3?i=0:i++),d(i)});const s=document.querySelector("#p-list"),S=document.querySelector("#p-left-btn"),k=document.querySelector("#p-right-btn");let n=0,a;const E=g.reduce((t,e)=>t+`<li class="project-card">
         <img
           class="project-img"
           src="${e.previewImg}"
@@ -51,5 +51,5 @@ import"./assets/header-1301d940.js";import{n as v}from"./assets/data-news-fe2df6
           <p class="project-card-text">${e.type}</p>
           <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
         </div>
-    </li>`,"");s.innerHTML=E;b.addEventListener("click",()=>{n<=0?n=s.children.length-2:n--,p(n)});k.addEventListener("click",()=>{n===s.children.length-2?n=0:n++,p(n)});function p(t){if(s.children.length>1){const e=s.children[0].getBoundingClientRect().width+30;s.style.transform=`translateX(${-t*e}px)`}}s.addEventListener("touchstart",t=>{a=t.touches[0].clientX});s.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>a?e-a>70&&(n<=0?n=s.children.length-2:n--):e<a&&a-e>70&&(n===s.children.length-1?n=0:n++),p(n)});
+    </li>`,"");s.innerHTML=E;S.addEventListener("click",()=>{n<=0?n=s.children.length-2:n--,p(n)});k.addEventListener("click",()=>{n===s.children.length-2?n=0:n++,p(n)});function p(t){if(s.children.length>1){const e=s.children[0].getBoundingClientRect().width+30;s.style.transform=`translateX(${-t*e}px)`}}s.addEventListener("touchstart",t=>{a=t.touches[0].clientX});s.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>a?e-a>70&&(n<=0?n=s.children.length-2:n--):e<a&&a-e>70&&(n===s.children.length-1?n=0:n++),p(n)});
 //# sourceMappingURL=commonHelpers3.js.map
