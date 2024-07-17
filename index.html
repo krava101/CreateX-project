@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAYAAAA/xX6fAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB7VXLUcMwEH3yDGEGLi7BdGA6SDpIbnwOhApIKiCugKQCwoUwwyHpAEpwB7gEn4AZZiJWip1YK/mXs9/F9nq1b/V2tQI6dGgJUfyQ1+EdPMwhkeIPI/EexzgC8iZ8oMgzHWeLgXiLk/yfx+iVk09vAU6wlldhgJYgsjE95vs4Hh6L/z3m7xfeA0rgGW3IVIICT1U+JqFEZHwL9OVtWBlgv3QY+hTtI9tZDiVpVEooVrGS4oUlMaHaDlGHcy1dYNi2mBbrZxFqnGJCJIaTkraqnrpJKDHTiAWRLbmvRSiWcUoEI2ZWcq21bJxsl8ickSX4oQZ0wHMZxSsdB4kpM4eZbIe4ed1MpLR2IDaUeFNCTarqCWxgZq7qeZDuTHdkwHwiXrdGhBo93DvqqXdJUvbpMWYrllmiOI7wl2onLKtf6i+QogZezV+71bPakmyfqJPcGbIE1OqKbMwCLgzJSiSvOkLCSaYWePhiZAmRXcBOLKSH6tSi1Am+cenqVGuHzlZXu6BWhyvj3RGKmDngR6iU8JhWz2ResDUTfd1VEeoRZbd65BpRFnp6spj3p8Cc15PvkM/DmCSboQH0SNzqkVism9/8PtzVbYQW0LJL6twKmIR0nWRtrgd4Vd1KSVexOpt5E8X8PuzQoTX+AZdev0k/lRiGAAAAAElFTkSuQmCC" />
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAYAAAA/xX6fAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB7VXLUcMwEH3yDGEGLi7BdGA6SDpIbnwOhApIKiCugKQCwoUwwyHpAEpwB7gEn4AZZiJWip1YK/mXs9/F9nq1b/V2tQI6dGgJUfyQ1+EdPMwhkeIPI/EexzgC8iZ8oMgzHWeLgXiLk/yfx+iVk09vAU6wlldhgJYgsjE95vs4Hh6L/z3m7xfeA0rgGW3IVIICT1U+JqFEZHwL9OVtWBlgv3QY+hTtI9tZDiVpVEooVrGS4oUlMaHaDlGHcy1dYNi2mBbrZxFqnGJCJIaTkraqnrpJKDHTiAWRLbmvRSiWcUoEI2ZWcq21bJxsl8ickSX4oQZ0wHMZxSsdB4kpM4eZbIe4ed1MpLR2IDaUeFNCTarqCWxgZq7qeZDuTHdkwHwiXrdGhBo93DvqqXdJUvbpMWYrllmiOI7wl2onLKtf6i+QogZezV+71bPakmyfqJPcGbIE1OqKbMwCLgzJSiSvOkLCSaYWePhiZAmRXcBOLKSH6tSi1Am+cenqVGuHzlZXu6BWhyvj3RGKmDngR6iU8JhWz2ResDUTfd1VEeoRZbd65BpRFnp6spj3p8Cc15PvkM/DmCSboQH0SNzqkVism9/8PtzVbYQW0LJL6twKmIR0nWRtrgd4Vd1KSVexOpt5E8X8PuzQoTX+AZdev0k/lRiGAAAAAElFTkSuQmCC" />
     <title>CreateX</title>
     <link
       rel="stylesheet"
@@ -19,10 +21,10 @@
     />
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers3.js"></script>
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-1301d940.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-92b20be3.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-fe2df6bb.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/index-532c24aa.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/index-bedda34f.css">
   </head>
   <body>
     <header id="header">
@@ -39,12 +41,20 @@
         >
       </li>
       <li>
-        <a href="./services.html" class="header-nav-links">Services</a>
+        <a href="./services.html" class="header-nav-links" id="nav-services"
+          >Services</a
+        >
       </li>
-      <li><a href="./work.html" class="header-nav-links">Work</a></li>
-      <li><a href="./news.html" class="header-nav-links">News</a></li>
       <li>
-        <a href="./contacts.html" class="header-nav-links">Contacts</a>
+        <a href="./work.html" class="header-nav-links" id="nav-work">Work</a>
+      </li>
+      <li>
+        <a href="./news.html" class="header-nav-links" id="nav-news">News</a>
+      </li>
+      <li>
+        <a href="./contacts.html" class="header-nav-links" id="nav-contacts"
+          >Contacts</a
+        >
       </li>
     </ul>
     <button class="open-menu-btn" type="button">
