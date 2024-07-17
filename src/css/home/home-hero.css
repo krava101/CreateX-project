@@ -144,11 +144,11 @@
 }
 
 .hero-left-btn {
-  left: -70px;
+  left: 16px;
 }
 
 .hero-right-btn {
-  right: -70px;
+  right: 16px;
 }
 
 .hero-left-btn:hover,
@@ -166,14 +166,6 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .hero {
-    padding: 220px 100px 120px;
-  }
-
-  .hero .container {
-    width: 100%;
-  }
-
   .hero-steps-list-wrapper {
     min-height: 460px;
   }
@@ -189,7 +181,7 @@
 
 @media screen and (max-width: 1024px) {
   .hero {
-    padding: 160px 80px 80px;
+    padding: 160px 0 80px;
   }
 
   .hero-title {
@@ -211,7 +203,7 @@
 
 @media screen and (max-width: 768px) {
   .hero {
-    padding: 100px 30px 60px;
+    padding: 100px 0 60px;
   }
 
   .hero-steps-list-wrapper {
@@ -229,9 +221,9 @@
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 425px) {
   .hero {
-    padding: 80px 30px 50px;
+    padding: 80px 0 50px;
   }
 
   .hero-steps-list-wrapper {
@@ -256,9 +248,9 @@
   }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 375px) {
   .hero {
-    padding: 70px 20px 40px;
+    padding: 70px 0 40px;
   }
 
   .hero-steps-list-wrapper {

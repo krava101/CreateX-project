@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 1024px) {
   .facts {
-    padding: 60px 80px;
+    padding: 60px 0;
   }
 
   .facts-list {
@@ -58,7 +58,7 @@
 
 @media screen and (max-width: 768px) {
   .facts {
-    padding: 40px 30px;
+    padding: 40px 0;
   }
 
   .facts-list {
@@ -78,6 +78,6 @@
 
 @media screen and (max-width: 375px) {
   .facts {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 }

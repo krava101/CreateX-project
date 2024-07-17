@@ -158,7 +158,7 @@
 
 @media screen and (max-width: 1440px) {
   .news {
-    padding: 90px 100px 120px;
+    padding: 90px 0 120px;
   }
 
   .news-list {
@@ -188,7 +188,7 @@
 
 @media screen and (max-width: 1024px) {
   .news {
-    padding: 60px 80px 90px;
+    padding: 60px 0 90px;
   }
 
   .news-list {
@@ -216,7 +216,7 @@
 
 @media screen and (max-width: 768px) {
   .news {
-    padding: 40px 30px 50px;
+    padding: 40px 0 50px;
   }
 
   .news-card {
@@ -255,6 +255,6 @@
 
 @media screen and (max-width: 375px) {
   .news {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 }

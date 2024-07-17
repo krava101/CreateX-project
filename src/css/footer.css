@@ -225,7 +225,7 @@ footer .logo {
 
 @media screen and (max-width: 1440px) {
   footer {
-    padding: 80px 100px;
+    padding: 80px 0;
   }
 
   .logo-form-container {
@@ -238,10 +238,6 @@ footer .logo {
 }
 
 @media screen and (max-width: 1024px) {
-  footer {
-    padding: 80px;
-  }
-
   .logo-form-container {
     flex-wrap: wrap;
   }
@@ -275,7 +271,7 @@ footer .logo {
 
 @media screen and (max-width: 768px) {
   footer {
-    padding: 80px 30px 40px;
+    padding: 80px 0 40px;
   }
 
   .footer-email-form {
@@ -319,7 +315,7 @@ footer .logo {
 
 @media screen and (max-width: 375px) {
   footer {
-    padding: 80px 20px 40px;
+    padding: 80px 0 40px;
   }
 
   .footer-nav {

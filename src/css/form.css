@@ -135,13 +135,13 @@
 
 @media screen and (max-width: 1440px) {
   .application {
-    padding: 80px 100px;
+    padding: 80px 0;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .application {
-    padding: 80px 80px;
+    padding: 80px 0;
   }
 
   .form-title {
@@ -151,7 +151,7 @@
 
 @media screen and (max-width: 768px) {
   .application {
-    padding: 50px 30px;
+    padding: 50px 0;
   }
 
   .application .container {
@@ -192,6 +192,6 @@
 
 @media screen and (max-width: 375px) {
   .application {
-    padding: 50px 20px;
+    padding: 50px 0;
   }
 }
