@@ -13,7 +13,7 @@ import"./assets/header-1301d940.js";import{n as v}from"./assets/data-news-fe2df6
         <p class="reviews-text">
           ${e.comment}
         </p>
-    `;f.innerHTML=l}m(c);L.addEventListener("click",t=>{c===h.length-1?c=0:c++,m(c)});w.addEventListener("click",t=>{c>=1&&c--,m(c)});const j=document.getElementById("newsList"),y=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,$=v.slice(0,3).reduce((t,e,l)=>t+`
+    `;f.innerHTML=l}m(c);L.addEventListener("click",t=>{c===h.length-1?c=0:c++,m(c)});w.addEventListener("click",t=>{c>=1&&c--,m(c)});const j=document.getElementById("newsList"),y=new URL("/CreateX-project/assets/icons-97ef5a9b.svg#icon-comments",self.location).href,$=v.slice(0,3).reduce((t,e,l)=>t+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img
@@ -29,7 +29,7 @@ import"./assets/header-1301d940.js";import{n as v}from"./assets/data-news-fe2df6
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="${y}#icon-comments"></use>
+              <use href="${y}"></use>
             </svg>
             <p>
               ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
