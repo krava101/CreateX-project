@@ -21,7 +21,7 @@ const content = news.slice(0, 3).reduce(
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="./src/img/icons.svg#icon-comments"></use>
+              <use href="../../img/icons.svg#icon-comments"></use>
             </svg>
             <p>
               ${
