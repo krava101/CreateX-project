@@ -2,7 +2,7 @@ import news from '../data/data-news.js';
 
 const newsList = document.getElementById('newsList');
 
-const iconsUrl = new URL('/img/icons.svg', import.meta.url).href;
+const iconsUrl = new URL('/img/icons.svg#icon-comments', import.meta.url).href;
 
 const content = news.slice(0, 3).reduce(
   (acc, e, i) =>
@@ -23,7 +23,7 @@ const content = news.slice(0, 3).reduce(
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="${iconsUrl}#icon-comments"></use>
+              <use href="${iconsUrl}"></use>
             </svg>
             <p>
               ${
