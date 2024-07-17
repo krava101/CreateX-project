@@ -47,16 +47,16 @@
   }
 }
 
-.partners-logo {
-  transition: filter 0.3s ease, transform 0.3s ease;
+.partners-link {
+  opacity: 0.4;
+  transition: opacity 0.25s ease-in-out;
 }
 
-.partners-link:hover .partners-logo {
-  filter: invert();
+.partners-link:hover,
+.partners-link:focus {
+  opacity: 1;
 }
 
-.partners-link:hover .partners-logo {
-  transform: scale(0.95);
-}
-.partners-link:hover .partner-logo-6 {
+.partners-link img {
+  width: 120px;
 }
