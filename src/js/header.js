@@ -14,9 +14,10 @@ const navMap = {
 const activeNavId = navMap[currentPath];
 if (activeNavId) {
   document.getElementById(activeNavId).classList.add('active-nav-link');
-  document
-    .getElementById(activeNavId + '-menu')
-    .classList.add('active-nav-link');
+  const mobileMenu = document.getElementById(activeNavId + '-menu');
+  if (mobileMenu) {
+    mobileMenu.classList.add('active-nav-link');
+  }
 }
 
 openMobileMenu.addEventListener('click', () => {

@@ -1,0 +1,16 @@
+@import url(../reset.css);
+@import url(../utils.css);
+
+@import url(../header.css);
+@import url(./home-hero.css);
+@import url(./company-video.css);
+@import url(./question-form.css);
+@import url(../core-values.css);
+@import url(../partners-list.css);
+@import url(./home-services.css);
+@import url(./home-projects.css);
+@import url(../comments.css);
+@import url(./home-facts.css);
+@import url(./home-news.css);
+@import url(../form.css);
+@import url(../footer.css);

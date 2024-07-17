@@ -1,7 +1,7 @@
-@import url(./form.css);
-@import url(./footer.css);
-@import url(./partners-list.css);
-@import url(./header.css);
+@import url(../form.css);
+@import url(../footer.css);
+@import url(../partners-list.css);
+@import url(../header.css);
 
 /* HERO */
 .hero {
@@ -18,7 +18,7 @@
   max-width: 1920px;
   height: 600px;
   z-index: -1;
-  background-image: url('../img/services-page-img/services-hero-bg-2.png'),
+  background-image: url('../../img/services-page-img/services-hero-bg-2.png'),
     linear-gradient(to bottom, #f4f5f6, #f4f5f6);
   background-repeat: no-repeat;
   background-size: 1100px, contain;
@@ -319,7 +319,7 @@ li.visible .offer-list-about {
 .pricing {
   padding: 80px 0 110px;
   background-color: var(--cloud);
-  background-image: url('../img/services-page-img/pricing-bg.png');
+  background-image: url('../../img/services-page-img/pricing-bg.png');
   background-position: -440px -245px;
   background-size: contain;
   background-repeat: no-repeat;
