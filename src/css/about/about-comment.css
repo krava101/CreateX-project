@@ -1,0 +1,132 @@
+.comment {
+  padding: 60px 0 120px;
+  background-image: url('../../img/about-page-img/comment-bg.png');
+  background-repeat: no-repeat;
+  background-position: right 120px;
+}
+
+.comment-wrapper {
+  position: relative;
+  display: flex;
+  align-items: end;
+  height: 700px;
+}
+
+.ceo-comment {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 80px 105px 80px 135px;
+  width: 100%;
+  max-width: 735px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+}
+
+.comment-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--title-color);
+}
+
+.comment-text:first-child {
+  margin-bottom: 30px;
+}
+
+.comment-nickname {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--title-color);
+  margin: 60px 0 4px;
+}
+
+.comment-position {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--secondary-color);
+}
+
+.comment-img {
+  width: 100%;
+  max-width: 525px;
+  border-radius: 6px;
+}
+
+.comment-braces-icon {
+  position: absolute;
+  top: 80px;
+  left: 77px;
+  width: 28px;
+  height: 20px;
+}
+
+.comment-signature-icon {
+  width: 100px;
+  height: 68px;
+}
+
+.partners-list {
+  margin-top: 40px;
+}
+
+.comment-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .comment {
+    padding: 60px 0;
+  }
+
+  .comment-wrapper {
+    flex-direction: column-reverse;
+    align-items: start;
+    height: 100%;
+  }
+
+  .comment-img {
+    align-self: flex-end;
+  }
+
+  .ceo-comment {
+    position: relative;
+    transform: translateY(-100px);
+    max-width: 85%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ceo-comment {
+    padding: 60px 85px 60px 115px;
+  }
+
+  .comment-braces-icon {
+    top: 40px;
+    left: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comment-img {
+    padding-left: 35px;
+  }
+
+  .ceo-comment {
+    max-width: 95%;
+    padding: 40px 35px 40px 60px;
+  }
+
+  .comment-braces-icon {
+    top: 35px;
+    left: 20px;
+  }
+}

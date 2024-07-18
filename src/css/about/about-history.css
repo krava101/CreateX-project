@@ -1,0 +1,89 @@
+.history {
+  background-color: var(--cloud);
+  padding: 90px 0 100px;
+}
+
+.history .section-title {
+  text-align: left;
+}
+
+.history-wrapper {
+  position: relative;
+  display: flex;
+  gap: 171px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-left: 20px;
+  list-style-type: none;
+  list-style-image: url('../../img/about-page-img/ellipse.svg');
+}
+
+.history-list-item {
+}
+
+.history-list-item.active {
+  list-style-image: url('../../img/about-page-img/red-ellipse.svg');
+}
+
+.history-list-item.active button {
+  color: var(--red-color);
+}
+
+.history-list-item button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+
+  text-align: left;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--light-gray);
+  text-indent: 14px;
+}
+
+.active-history-img {
+  background-repeat: 4px;
+  margin-bottom: 36px;
+}
+
+.history-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-color);
+}
+
+.history-btns-wrapper {
+  position: absolute;
+  display: flex;
+  top: -96px;
+  right: 0;
+}
+
+.history-btn {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.history-btn:last-child {
+  background-color: var(--red-color);
+  fill: #fff;
+}
+
+.history-btn-icon {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
