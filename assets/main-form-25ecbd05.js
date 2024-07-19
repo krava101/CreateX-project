@@ -1,0 +1,2 @@
+const a=document.querySelector(".application-form"),r={userName:"",phone:"",email:"",message:"",receive:""};a.addEventListener("submit",e=>{e.preventDefault(),r.userName=e.currentTarget.user_name.value,r.phone=e.currentTarget.user_tel.value,r.email=e.currentTarget.user_email.value,r.message=e.currentTarget.user_message.value,r.receive=e.currentTarget.user_receive.checked,console.log(r),e.currentTarget.reset()});
+//# sourceMappingURL=main-form-25ecbd05.js.map

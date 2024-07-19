@@ -22,8 +22,10 @@
     
     
     
-    <script type="module" crossorigin src="/CreateX-project/assets/header-92b20be3.js"></script>
-    <link rel="stylesheet" href="/CreateX-project/assets/about-09ba1047.css">
+    <script type="module" crossorigin src="/CreateX-project/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-92b20be3.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-25ecbd05.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/about-ea1f5251.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-f58506f9.css">
   </head>
   <body>
@@ -109,28 +111,28 @@
     <ul class="facts-list list">
       <li class="facts-list-item">
         <svg class="facts-icon">
-          <use href="../../img/icons.svg#icon-like"></use>
+          <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-like"></use>
         </svg>
         <p class="fact-num">60%</p>
         <p class="facts-item-text">Clients on the recommendation of friends</p>
       </li>
       <li class="facts-list-item">
         <svg class="facts-icon">
-          <use href="../../img/icons.svg#icon-painting"></use>
+          <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-painting"></use>
         </svg>
         <p class="fact-num">2400+</p>
         <p class="facts-item-text">Apartments renovated</p>
       </li>
       <li class="facts-list-item">
         <svg class="facts-icon">
-          <use href="../../img/icons.svg#icon-helmet"></use>
+          <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-helmet"></use>
         </svg>
         <p class="fact-num">670</p>
         <p class="facts-item-text">Qualified specialists</p>
       </li>
       <li class="facts-list-item">
         <svg class="facts-icon">
-          <use href="../../img/icons.svg#icon-pantone"></use>
+          <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-pantone"></use>
         </svg>
         <p class="fact-num">150000+m&#178;</p>
         <p class="facts-item-text">Finishing work was carried out</p>
@@ -170,7 +172,7 @@
       <img
         class="comment-img"
         src="../../img/about-page-img/seo-img.jpg"
-        alt="Seo's photo"
+        alt="CEO's photo"
       />
     </div>
   </div>
@@ -223,7 +225,18 @@
   <div class="container">
     <h2 class="section-title">Our history</h2>
     <div class="history-wrapper">
-      <ul class="history-list">
+      <ul class="history-pagination list" id="history-pag">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <ul class="history-list list">
         <li class="history-list-item active">
           <button type="button">Present</button>
         </li>
@@ -255,7 +268,7 @@
       <div class="active-history-card">
         <img
           class="active-history-img"
-          src="../../img/about-page-img/history/history-1.jpg"
+          src="/CreateX-project/assets/history-1-e67c9548.jpg"
           alt="Construction"
         />
         <p class="history-text">
@@ -292,8 +305,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-1.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-1-db7db107.png"
+            alt="InDepth Consulting logo"
           />
         </a>
       </li>
@@ -301,8 +314,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-2.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-2-a4fcce45.png"
+            alt="Higher Fit logo"
           />
         </a>
       </li>
@@ -310,8 +323,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-3.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-3-f12e0c17.png"
+            alt="Sentinal Consulting logo"
           />
         </a>
       </li>
@@ -319,8 +332,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-4.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-4-06bae7f0.png"
+            alt="Happy Home logo"
           />
         </a>
       </li>
@@ -328,8 +341,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-5.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-5-50283d8c.png"
+            alt="ForSale logo"
           />
         </a>
       </li>
@@ -337,8 +350,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-6.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-6-612887c3.png"
+            alt="Sunset Realty logo"
           />
         </a>
       </li>
@@ -346,8 +359,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-7.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-7-e493c617.png"
+            alt="Atlantis Health logo"
           />
         </a>
       </li>
@@ -355,8 +368,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-8.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-8-5e99e9a7.png"
+            alt="Del Mar Strategy logo"
           />
         </a>
       </li>
@@ -364,8 +377,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-9.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-9-d08cf872.png"
+            alt="Complete Health logo"
           />
         </a>
       </li>
@@ -373,8 +386,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-10.png"
-            alt=""
+            src="/CreateX-project/assets/partner-logo-10-11b98e63.png"
+            alt="National logo"
           />
         </a>
       </li>
@@ -382,8 +395,8 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-11.png"
-            alt="United Strategy logo"
+            src="/CreateX-project/assets/partner-logo-11-7955f85e.png"
+            alt="Ultimate gym logo"
           />
         </a>
       </li>
@@ -391,7 +404,7 @@
         <a class="partners-link" href="">
           <img
             class="partners-img"
-            src="../../img/partners-img/partner-logo-12.png"
+            src="/CreateX-project/assets/partner-logo-12-8f2896a7.png"
             alt="United Strategy logo"
           />
         </a>
@@ -707,7 +720,7 @@
     <div class="map-wrapper">
       <img
         class="map-img"
-        src="../../img/about-page-img/world-map.png"
+        src="/CreateX-project/assets/world-map-2808465f.png"
         alt="World map"
       />
     </div>
@@ -918,6 +931,6 @@
   </div>
 </footer>
 
-    <!-- <script type="module" src="./js/about.js"></script> -->
+    
   </body>
 </html>
