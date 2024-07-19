@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -9,35 +9,35 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
+  margin: 0;
 }
 
-
-th, td {
-    padding: 0;
+th,
+td {
+  padding: 0;
 }
 
-.list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 svg {
-    display: block;
-    pointer-events: none;
+  display: block;
+  pointer-events: none;
 }
