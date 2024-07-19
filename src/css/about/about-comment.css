@@ -99,12 +99,16 @@
 
   .ceo-comment {
     position: relative;
-    transform: translateY(-100px);
+    margin-top: -200px;
     max-width: 85%;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  .comment {
+    padding: 20px 0 60px 0;
+  }
+
   .ceo-comment {
     padding: 60px 85px 60px 115px;
   }
@@ -112,6 +116,12 @@
   .comment-braces-icon {
     top: 40px;
     left: 70px;
+  }
+
+  .ceo-comment {
+    position: relative;
+    margin-top: -150px;
+    max-width: 85%;
   }
 }
 

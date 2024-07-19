@@ -1,4 +1,22 @@
 .our-core {
-  padding: 80px 0 90px;
+  padding: 80px 0;
   background-color: var(--cloud);
+}
+
+@media screen and (max-width: 1024px) {
+  .our-core {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-core {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .our-core {
+    padding: 50px 0 40px;
+  }
 }

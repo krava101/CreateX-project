@@ -134,8 +134,7 @@
 
   .reviews-img {
     width: 90%;
-    aspect-ratio: 99/110;
-    max-width: 495px;
+    max-width: 400px;
   }
 }
 
