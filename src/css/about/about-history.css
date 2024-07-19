@@ -1,6 +1,6 @@
 .history {
   background-color: var(--cloud);
-  padding: 90px 0 100px;
+  padding: 80px 0 60px;
 }
 
 .history .section-title {
@@ -10,7 +10,8 @@
 .history-wrapper {
   position: relative;
   display: flex;
-  gap: 171px;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .history-list {
@@ -18,12 +19,13 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  max-width: 250px;
   padding-left: 20px;
   list-style-type: none;
-  list-style-image: url('../../img/about-page-img/ellipse.svg');
 }
 
 .history-list-item {
+  list-style-image: url('../../img/about-page-img/ellipse.svg');
 }
 
 .history-list-item.active {
@@ -48,8 +50,14 @@
   text-indent: 14px;
 }
 
+.active-history-card {
+  width: 100%;
+  max-width: 800px;
+}
+
 .active-history-img {
-  background-repeat: 4px;
+  width: 100%;
+  border-radius: 4px;
   margin-bottom: 36px;
 }
 
@@ -86,4 +94,79 @@
   width: 24px;
   height: 24px;
   pointer-events: none;
+}
+
+.history-pagination {
+  display: none;
+}
+
+.history-pagination li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.history-pagination li.active {
+  background-color: var(--light-gray);
+}
+
+@media screen and (max-width: 1024px) {
+  .history {
+    padding: 60px 0;
+  }
+
+  .history-wrapper {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .active-history-card {
+    max-width: none;
+  }
+
+  .history-list {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .history-list-item,
+  .history-list-item.active {
+    list-style-image: none;
+  }
+
+  .history-list-item button {
+    text-indent: 0;
+  }
+
+  .history-list-item:not(.active) {
+    display: none;
+  }
+
+  .history-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .history {
+    padding: 50px 0;
+  }
+
+  .history-btns-wrapper {
+    top: -70px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .history-btns-wrapper {
+    top: -60px;
+  }
+
+  .history-text {
+    height: 210px;
+  }
 }
