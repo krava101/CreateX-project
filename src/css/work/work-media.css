@@ -1,17 +1,17 @@
 .media-list {
-  position: absolute;
-  top: -59px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
-  z-index: 2;
-  width: 1230px;
+  width: 100%;
+  margin-top: -155px;
+  transform: translateY(-120px);
 }
 
 li:has(.media-btn) {
-  flex-basis: calc((100% - 80px) / 5);
+  width: 230px;
+  height: 154px;
 }
 
 .media-btn {
@@ -25,7 +25,7 @@ li:has(.media-btn) {
 
   border: none;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
     0px 12px 10px -6px rgba(154, 156, 165, 0.04),
     0px 30px 24px -10px rgba(154, 156, 165, 0.05),
@@ -73,4 +73,22 @@ li:has(.media-btn) {
 .media-btn:focus .media-title,
 .media-btn.active .media-title {
   color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  li:has(.media-btn) {
+    width: 209px;
+    height: 154px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  li:has(.media-btn) {
+    width: 173px;
+    height: 154px;
+  }
+
+  .media-btn {
+    padding: 20px;
+  }
 }

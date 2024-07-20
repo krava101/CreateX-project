@@ -132,7 +132,7 @@ a:has(.logo) {
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 425px) {
   .logo {
     width: 120px;
   }

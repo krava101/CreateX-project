@@ -1,4 +1,22 @@
 .partners {
-  background-color: #f4f5f6;
-  padding: 180px 0 120px;
+  background-color: var(--cloud);
+  padding: 140px 0 120px;
+}
+
+@media screen and (max-width: 1024px) {
+  .partners {
+    padding: 140px 0 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .partners {
+    padding: 120px 0 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .partners {
+    padding: 100px 0 50px;
+  }
 }

@@ -29,3 +29,9 @@
   line-height: 1.5;
   color: var(--secondary-color);
 }
+
+@media screen and (max-width: 425px) {
+  .bg-container {
+    height: 570px;
+  }
+}
