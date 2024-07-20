@@ -152,38 +152,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .projects .container {
-    padding: 0 20px;
-  }
-
   .projects-list {
     gap: 20px;
-  }
-
-  .projects-card {
-    width: calc((100% - 20px) / 2);
-    height: calc(((100vw - 60px) / 2) * 1.12);
-    border-radius: 2px;
-  }
-
-  .projects-card-box {
-    padding: 10px 8px 16px;
-    transform: translateY(36px);
-    border-radius: 0;
-  }
-
-  .card-title {
-    font-size: 12px;
-  }
-
-  .projects-card-text {
-    font-size: 10px;
-  }
-
-  .projects-card-link {
-    width: 100px;
-    height: 20px;
-    font-size: 8px;
-    margin-top: 8px;
   }
 }
