@@ -14,12 +14,15 @@ header {
   width: 100%;
 }
 
+a:has(.logo) {
+  margin-right: 60px;
+}
+
 .logo {
   display: grid;
   place-items: center;
   width: 130px;
   height: 22px;
-  margin-right: 60px;
 }
 
 .header-nav-list {
@@ -81,7 +84,7 @@ header {
 
 .header-menu-list a {
   display: block;
-  font-size: 20pt;
+  font-size: 16pt;
 }
 
 .close-menu-btn {
