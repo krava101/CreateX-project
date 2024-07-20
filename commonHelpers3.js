@@ -1,19 +1,4 @@
-import"./assets/header-92b20be3.js";import{n as v}from"./assets/data-news-fe2df6bb.js";import{p as g}from"./assets/data-projects-98539dd2.js";import"./assets/main-form-25ecbd05.js";const h=[{id:0,avatar:new URL("/CreateX-project/assets/project-1-68d98b07.jpg",self.location).href,comment:"Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim  laboris cillum laboris voluptate minim proident exercitation ullamco. ",nickname:"Shawn Edwards",position:"HR Manager",companyName:"WiPo"},{id:1,avatar:new URL("/CreateX-project/assets/project-6-5d8ae179.jpg",self.location).href,comment:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ratione delectus adipisci tenetur a exercitationem cumque vitae molestiae ad, odio sit, dignissimos ipsa iusto debitis cupiditate necessitatibus! Aliquam, voluptates iure?",nickname:"Lo Wung",position:"General Director",companyName:"MSU Group"},{id:2,avatar:new URL("/CreateX-project/assets/project-2-999359c8.jpg",self.location).href,comment:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, dolorum, minima earum saepe animi eaque numquam sequi nisi repudiandae ea magnam facilis fuga voluptas doloremque possimus? Nobis repellendus commodi illo.",nickname:"Denn Miller",position:"Owner",companyName:""},{id:3,avatar:new URL("/CreateX-project/assets/project-8-130fc28a.jpg",self.location).href,comment:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolor, ex mollitia impedit labore sit nam totam officiis odio assumenda, recusandae, deserunt iste cumque! Rem veritatis modi cum dolorem deserunt!",nickname:"Anrew Karlson",position:"Owner",companyName:""}],f=document.querySelector("#comments"),w=document.querySelector("#rev-left-btn"),L=document.querySelector("#rev-right-btn");let c=0;function m(t){const e=h[t],l=`
-        <div class="review-owner">
-          <img
-            src="${e.avatar}"
-            alt="Client's avatar"
-            class="reviews-avatar"
-          />
-          <span>
-            <p class="reviews-nickname">${e.nickname}</p>
-            <p class="reviews-position">${e.position+(e.companyName!==""?", "+e.companyName:"")}</p>
-          </span>
-        </div>
-        <p class="reviews-text">
-          ${e.comment}
-        </p>
-    `;f.innerHTML=l}m(c);L.addEventListener("click",t=>{c===h.length-1?c=0:c++,m(c)});w.addEventListener("click",t=>{c>=1&&c--,m(c)});const j=document.getElementById("newsList"),y=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,$=v.slice(0,3).reduce((t,e,l)=>t+`
+import"./assets/header-92b20be3.js";import"./assets/comments-accae290.js";import{n as m}from"./assets/data-news-fe2df6bb.js";import{p}from"./assets/data-projects-98539dd2.js";import"./assets/main-form-25ecbd05.js";const g=document.getElementById("newsList"),u=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,f=m.slice(0,3).reduce((t,e,h)=>t+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img
@@ -29,18 +14,18 @@ import"./assets/header-92b20be3.js";import{n as v}from"./assets/data-news-fe2df6
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="${y}#icon-comments"></use>
+              <use href="${u}#icon-comments"></use>
             </svg>
             <p>
               ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
             </p>
           </li>
         </ul>
-        <p class="news-card-text ${l!==0?"hidden":""}">
+        <p class="news-card-text ${h!==0?"hidden":""}">
         ${e.previewText}</p>
       </div>
     </li>
-    `,"");j.innerHTML=$;const r=document.querySelector(".hero-steps-list"),q=document.querySelector(".hero-left-btn"),S=document.querySelector(".hero-right-btn"),u=document.querySelector(".hero-pag-list");let i=0,o;function d(t){const e=r.firstElementChild.getBoundingClientRect();u.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),r.style.transform=`translateX(${-t*e.width}px)`,u.children[t].classList.add("active-hero-pag")}q.addEventListener("click",()=>{i<=0?i=3:i--,d(i)});S.addEventListener("click",()=>{i===3?i=0:i++,d(i)});r.addEventListener("touchstart",t=>{o=t.touches[0].clientX});r.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>o?e-o>70&&(i<=0?i=3:i--):e<o&&o-e>70&&(i===3?i=0:i++),d(i)});const s=document.querySelector("#p-list"),b=document.querySelector("#p-left-btn"),k=document.querySelector("#p-right-btn");let n=0,a;const E=g.reduce((t,e)=>t+`<li class="project-card">
+    `,"");g.innerHTML=f;const o=document.querySelector(".hero-steps-list"),v=document.querySelector(".hero-left-btn"),L=document.querySelector(".hero-right-btn"),d=document.querySelector(".hero-pag-list");let c=0,i;function l(t){const e=o.firstElementChild.getBoundingClientRect();d.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),o.style.transform=`translateX(${-t*e.width}px)`,d.children[t].classList.add("active-hero-pag")}v.addEventListener("click",()=>{c<=0?c=3:c--,l(c)});L.addEventListener("click",()=>{c===3?c=0:c++,l(c)});o.addEventListener("touchstart",t=>{i=t.touches[0].clientX});o.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>i?e-i>70&&(c<=0?c=3:c--):e<i&&i-e>70&&(c===3?c=0:c++),l(c)});const n=document.querySelector("#p-list"),w=document.querySelector("#p-left-btn"),$=document.querySelector("#p-right-btn");let s=0,r;const j=p.reduce((t,e)=>t+`<li class="project-card">
         <img
           class="project-img"
           src="${e.previewImg}"
@@ -51,5 +36,5 @@ import"./assets/header-92b20be3.js";import{n as v}from"./assets/data-news-fe2df6
           <p class="project-card-text">${e.type}</p>
           <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
         </div>
-    </li>`,"");s.innerHTML=E;b.addEventListener("click",()=>{n<=0?n=s.children.length-2:n--,p(n)});k.addEventListener("click",()=>{n===s.children.length-2?n=0:n++,p(n)});function p(t){if(s.children.length>1){const e=s.children[0].getBoundingClientRect().width+30;s.style.transform=`translateX(${-t*e}px)`}}s.addEventListener("touchstart",t=>{a=t.touches[0].clientX});s.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>a?e-a>70&&(n<=0?n=s.children.length-2:n--):e<a&&a-e>70&&(n===s.children.length-1?n=0:n++),p(n)});
+    </li>`,"");n.innerHTML=j;w.addEventListener("click",()=>{s<=0?s=n.children.length-2:s--,a(s)});$.addEventListener("click",()=>{s===n.children.length-2?s=0:s++,a(s)});function a(t){if(n.children.length>1){const e=n.children[0].getBoundingClientRect().width+30;n.style.transform=`translateX(${-t*e}px)`}}n.addEventListener("touchstart",t=>{r=t.touches[0].clientX});n.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>r?e-r>70&&(s<=0?s=n.children.length-2:s--):e<r&&r-e>70&&(s===n.children.length-1?s=0:s++),a(s)});
 //# sourceMappingURL=commonHelpers3.js.map
