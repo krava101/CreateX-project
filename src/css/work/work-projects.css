@@ -149,6 +149,14 @@
   .projects-card {
     width: 390px;
   }
+
+  .projects-card-box {
+    transform: translate(0);
+  }
+
+  .projects-card-link {
+    margin-top: 12px;
+  }
 }
 
 @media screen and (max-width: 425px) {

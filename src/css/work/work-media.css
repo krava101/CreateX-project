@@ -90,8 +90,29 @@ li:has(.media-btn) {
 }
 
 @media screen and (max-width: 425px) {
+  .media-list {
+    gap: 16px;
+    margin-top: -200px;
+    transform: translateY(-60px);
+  }
+
   li:has(.media-btn) {
-    width: calc((100% - 20px) / 2);
+    width: calc((100% - 16px) / 2);
+    min-width: 122px;
     height: 140px;
+  }
+
+  .media-btn {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .media-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .media-title {
+    font-size: 14px;
   }
 }
