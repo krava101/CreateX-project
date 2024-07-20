@@ -17,11 +17,11 @@ li:has(.media-btn) {
 .media-btn {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
   gap: 16px;
-  padding: 32px 0;
-  height: 154px;
 
   border: none;
   border-radius: 4px;
@@ -84,11 +84,14 @@ li:has(.media-btn) {
 
 @media screen and (max-width: 768px) {
   li:has(.media-btn) {
-    width: 173px;
+    width: 172px;
     height: 154px;
   }
+}
 
-  .media-btn {
-    padding: 20px;
+@media screen and (max-width: 425px) {
+  li:has(.media-btn) {
+    width: calc((100% - 20px) / 2);
+    height: 140px;
   }
 }
