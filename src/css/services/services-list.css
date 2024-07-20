@@ -1,0 +1,143 @@
+.services {
+  padding: 120px 0 180px;
+  background-image: url('../../img/services-page-img/services-bg-1.png'),
+    url('../../img/services-page-img/services-bg-2.png');
+  background-repeat: no-repeat;
+  background-position: right 531px, left bottom -250px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.services-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.services-card:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.services-card img {
+  width: 100%;
+  aspect-ratio: 115/84;
+}
+
+.services-title {
+  color: var(--title-color);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.services-text {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.services-link {
+  display: grid;
+  place-items: center;
+  width: 160px;
+  height: 44px;
+  border: 1px solid var(--red-color);
+  border-radius: 4px;
+  margin-top: 48px;
+
+  color: var(--primary, #ff5a30);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 314.3%;
+  letter-spacing: 0.036em;
+  text-transform: uppercase;
+
+  transition: background-color 0.25s ease-in-out 0.1s,
+    color 0.25s ease-in-out 0.1s;
+}
+
+.services-link:hover,
+.services-link:focus {
+  background-color: var(--red-color);
+  color: #fff;
+}
+
+@media screen and (max-width: 1440px) {
+  .services-card {
+    align-items: start;
+    gap: 50px;
+  }
+
+  .services-list {
+    gap: 90px;
+  }
+
+  .services-card > div,
+  .services-card > img {
+    width: calc((100% - 50px) / 2);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services {
+    padding: 90px 0 120px;
+  }
+
+  .services-list {
+    gap: 60px;
+  }
+
+  .services-link {
+    margin-top: 20px;
+  }
+
+  .services-title {
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 60px 0 80px;
+  }
+
+  .services-list {
+    align-items: center;
+    gap: 70px;
+  }
+
+  .services-card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    gap: 30px;
+  }
+
+  .services-card:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .services-card > img,
+  .services-card > div {
+    width: 100%;
+  }
+
+  .services-title {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .services {
+    padding: 60px 0;
+  }
+}
