@@ -10,7 +10,7 @@
 .facts {
   color: var(--title-color);
   text-align: center;
-  padding: 175px 0 90px;
+  padding: 140px 0 90px;
 }
 
 .facts-list {
@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 1024px) {
   .facts {
-    padding: 60px 0;
+    padding: 100px 0 60px;
   }
 
   .facts-list {
@@ -58,7 +58,7 @@
 
 @media screen and (max-width: 768px) {
   .facts {
-    padding: 40px 0;
+    padding: 100px 0 40px;
   }
 
   .facts-list {
@@ -73,11 +73,5 @@
 @media screen and (max-width: 425px) {
   .facts-list {
     gap: 20px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .facts {
-    padding: 40px 0;
   }
 }
