@@ -1,4 +1,4 @@
-import"./assets/header-92b20be3.js";import"./assets/comments-accae290.js";import{n as m}from"./assets/data-news-fe2df6bb.js";import{p}from"./assets/data-projects-98539dd2.js";import"./assets/main-form-25ecbd05.js";const g=document.getElementById("newsList"),u=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,f=m.slice(0,3).reduce((t,e,h)=>t+`
+import"./assets/header-92b20be3.js";import"./assets/comments-accae290.js";import{n as l}from"./assets/data-news-fe2df6bb.js";import{l as a}from"./assets/projects-slider-3f6c7301.js";import"./assets/main-form-25ecbd05.js";import"./assets/data-projects-98539dd2.js";const d=document.getElementById("newsList"),m=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,h=l.slice(0,3).reduce((s,e,r)=>s+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img
@@ -14,27 +14,16 @@ import"./assets/header-92b20be3.js";import"./assets/comments-accae290.js";import
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="${u}#icon-comments"></use>
+              <use href="${m}#icon-comments"></use>
             </svg>
             <p>
               ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
             </p>
           </li>
         </ul>
-        <p class="news-card-text ${h!==0?"hidden":""}">
+        <p class="news-card-text ${r!==0?"hidden":""}">
         ${e.previewText}</p>
       </div>
     </li>
-    `,"");g.innerHTML=f;const o=document.querySelector(".hero-steps-list"),v=document.querySelector(".hero-left-btn"),L=document.querySelector(".hero-right-btn"),d=document.querySelector(".hero-pag-list");let c=0,i;function l(t){const e=o.firstElementChild.getBoundingClientRect();d.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),o.style.transform=`translateX(${-t*e.width}px)`,d.children[t].classList.add("active-hero-pag")}v.addEventListener("click",()=>{c<=0?c=3:c--,l(c)});L.addEventListener("click",()=>{c===3?c=0:c++,l(c)});o.addEventListener("touchstart",t=>{i=t.touches[0].clientX});o.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>i?e-i>70&&(c<=0?c=3:c--):e<i&&i-e>70&&(c===3?c=0:c++),l(c)});const n=document.querySelector("#p-list"),w=document.querySelector("#p-left-btn"),$=document.querySelector("#p-right-btn");let s=0,r;const j=p.reduce((t,e)=>t+`<li class="project-card">
-        <img
-          class="project-img"
-          src="${e.previewImg}"
-          alt=""
-        />
-        <div class="project-card-box">
-          <h5 class="card-title">${e.name}</h5>
-          <p class="project-card-text">${e.type}</p>
-          <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
-        </div>
-    </li>`,"");n.innerHTML=j;w.addEventListener("click",()=>{s<=0?s=n.children.length-2:s--,a(s)});$.addEventListener("click",()=>{s===n.children.length-2?s=0:s++,a(s)});function a(t){if(n.children.length>1){const e=n.children[0].getBoundingClientRect().width+30;n.style.transform=`translateX(${-t*e}px)`}}n.addEventListener("touchstart",t=>{r=t.touches[0].clientX});n.addEventListener("touchend",t=>{const e=t.changedTouches[0].clientX;e>r?e-r>70&&(s<=0?s=n.children.length-2:s--):e<r&&r-e>70&&(s===n.children.length-1?s=0:s++),a(s)});
+    `,"");d.innerHTML=h;const c=document.querySelector(".hero-steps-list"),p=document.querySelector(".hero-left-btn"),g=document.querySelector(".hero-right-btn"),o=document.querySelector(".hero-pag-list");let t=0,n;function i(s){const e=c.firstElementChild.getBoundingClientRect();o.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),c.style.transform=`translateX(${-s*e.width}px)`,o.children[s].classList.add("active-hero-pag")}p.addEventListener("click",()=>{t<=0?t=3:t--,i(t)});g.addEventListener("click",()=>{t===3?t=0:t++,i(t)});c.addEventListener("touchstart",s=>{n=s.touches[0].clientX});c.addEventListener("touchend",s=>{const e=s.changedTouches[0].clientX;e>n?e-n>70&&(t<=0?t=3:t--):e<n&&n-e>70&&(t===3?t=0:t++),i(t)});a();
 //# sourceMappingURL=commonHelpers3.js.map
