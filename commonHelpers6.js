@@ -1,4 +1,4 @@
-import"./assets/header-40f70231.js";/* empty css                     */import{n as p}from"./assets/data-news-fe2df6bb.js";import"./assets/main-form-25ecbd05.js";const d=document.querySelector(".post"),g=document.querySelector(".hero"),h=document.querySelector(".comments"),a=document.querySelector("#commentForm"),v=window.location.href,f=new URL(v),$=+f.searchParams.get("post"),o=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,i={id:"",nickname:"",date:"",comment:""},t=p.filter(e=>e.id===$)[0];function k(){const e=`
+import"./assets/header-4ffb22f8.js";/* empty css                     */import{n as p}from"./assets/data-news-fe2df6bb.js";import"./assets/main-form-25ecbd05.js";const d=document.querySelector(".post"),g=document.querySelector(".hero"),h=document.querySelector(".comments"),a=document.querySelector("#commentForm"),v=window.location.href,f=new URL(v),$=+f.searchParams.get("post"),o=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,i={id:"",nickname:"",date:"",comment:""},t=p.filter(e=>e.id===$)[0];function k(){const e=`
     <img
       class="post-img"
       src="${t.img}"

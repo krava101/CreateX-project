@@ -1,4 +1,4 @@
-import"./assets/header-40f70231.js";import"./assets/comments-accae290.js";import{n as l}from"./assets/data-news-fe2df6bb.js";import{l as a}from"./assets/projects-slider-224b71ac.js";import"./assets/main-form-25ecbd05.js";import"./assets/data-projects-98539dd2.js";const d=document.getElementById("newsList"),m=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,h=l.slice(0,3).reduce((s,e,r)=>s+`
+import"./assets/header-4ffb22f8.js";import"./assets/comments-accae290.js";import{n as l}from"./assets/data-news-fe2df6bb.js";import{l as a}from"./assets/projects-slider-224b71ac.js";import"./assets/main-form-25ecbd05.js";import"./assets/data-projects-98539dd2.js";const d=document.getElementById("newsList"),m=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,h=l.slice(0,3).reduce((s,e,r)=>s+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img

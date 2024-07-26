@@ -1,4 +1,4 @@
-import"./assets/header-40f70231.js";/* empty css                     */import{n as r}from"./assets/data-news-fe2df6bb.js";const o=document.querySelector("#news-list"),u=document.querySelector(".news"),t=document.querySelector(".news-pagination-list"),h=document.querySelector("#next-page-btn"),w=document.querySelector(".news-nav-list");let d=Math.ceil(r.length/6),c="all",i=1;function m(e,s="all"){let n=0;s==="all"?n=e:n=e.filter(g=>g.type.toLowerCase()===s.toLowerCase());const a=n.slice((i-1)*6,i*6).reduce((g,l)=>g+`
+import"./assets/header-4ffb22f8.js";/* empty css                     */import{n as r}from"./assets/data-news-fe2df6bb.js";const o=document.querySelector("#news-list"),u=document.querySelector(".news"),t=document.querySelector(".news-pagination-list"),h=document.querySelector("#next-page-btn"),w=document.querySelector(".news-nav-list"),f=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href;let d=Math.ceil(r.length/6),c="all",i=1;function m(e,s="all"){let n=0;s==="all"?n=e:n=e.filter(g=>g.type.toLowerCase()===s.toLowerCase());const a=n.slice((i-1)*6,i*6).reduce((g,l)=>g+`
     <li class="news-card">
       <img
         class="news-card-img"
@@ -14,7 +14,7 @@ import"./assets/header-40f70231.js";/* empty css                     */import{n 
           <li class="news-date-decor-item"></li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="./img/icons.svg#icon-comments"></use>
+              <use href="${f}#icon-comments"></use>
             </svg>
             ${l.comments.length?l.comments.length:"No"} comments
           </li>
