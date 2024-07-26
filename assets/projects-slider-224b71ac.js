@@ -9,5 +9,5 @@ import{p as o}from"./data-projects-98539dd2.js";const e=document.querySelector("
           <p class="project-card-text">${l.type}</p>
           <a class="project-card-link" href="project.html?project=project${l.id}">view project</a>
         </div>
-    </li>`,"");e.innerHTML=a};p.addEventListener("click",()=>{t<=0?t=e.children.length-2:t--,d(t)});h.addEventListener("click",()=>{t===e.children.length-2?t=0:t++,d(t)});function d(r){if(e.children.length>1){const c=e.children[0].getBoundingClientRect().width+30;e.style.transform=`translateX(${-r*c}px)`}}e.addEventListener("touchstart",r=>{i=r.touches[0].clientX});e.addEventListener("touchend",r=>{const c=r.changedTouches[0].clientX;c>i?c-i>70&&(t<=0?t=e.children.length-2:t--):c<i&&i-c>70&&(t===e.children.length-1?t=0:t++),d(t)});export{f as l};
-//# sourceMappingURL=projects-slider-3f6c7301.js.map
+    </li>`,"");e.innerHTML=a};p.addEventListener("click",()=>{t<=0?t=e.children.length-1:t--,d(t)});h.addEventListener("click",()=>{t===e.children.length-1?t=0:t++,d(t)});function d(r){if(e.children.length>1){const c=e.children[0].getBoundingClientRect().width+30;e.style.transform=`translateX(${-r*c}px)`}}e.addEventListener("touchstart",r=>{i=r.touches[0].clientX});e.addEventListener("touchend",r=>{const c=r.changedTouches[0].clientX;c>i?c-i>70&&(t<=0?t=e.children.length-2:t--):c<i&&i-c>70&&(t===e.children.length-1?t=0:t++),d(t)});export{f as l};
+//# sourceMappingURL=projects-slider-224b71ac.js.map
