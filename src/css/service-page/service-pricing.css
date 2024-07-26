@@ -7,20 +7,20 @@
   background-repeat: no-repeat;
 }
 
-.pricing .section-title {
+.pricing__title {
   margin-bottom: 24px;
 }
 
-.pricing-text {
+.pricing__text {
   color: var(--secondary-color);
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
 }
 
-.pricing-table {
+.pricing__table {
   display: grid;
-  grid-template-columns: 495px 685px;
+  grid-template-columns: 40% 60%;
   width: 100%;
   margin-top: 60px;
 
@@ -36,19 +36,22 @@
     0px 80px 80px -20px rgba(154, 156, 165, 0.08);
 }
 
-.pricing-table thead tr {
+.pricing__head tr {
   display: grid;
+  min-width: 200px;
+  max-width: 495px;
 }
 
-.pricing-table th {
+.pricing__table th {
   display: grid;
   place-items: center start;
   width: 100%;
   height: 58px;
   padding-left: 24px;
+  text-align: left;
 }
 
-.pricing-table th:first-child {
+.pricing__table th:first-child {
   display: grid;
   align-items: end;
   color: var(--title-color);
@@ -59,35 +62,35 @@
   padding: 24px;
 }
 
-.pricing-table th:nth-child(2n) {
+.pricing__table th:nth-child(2n) {
   background-color: var(--cloud);
 }
 
-.pricing-table tbody {
+.pricing__body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
 }
 
-.pricing-table tbody td {
+.pricing__body td {
   display: grid;
   place-items: center;
-  width: 245px;
+  width: 100%;
   height: 58px;
 }
 
-.pricing-table tbody td:first-child {
+.pricing__body td:first-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 121px;
 }
 
-.pricing-table tbody td:nth-child(2n) {
+.pricing__body td:nth-child(2n) {
   background-color: var(--cloud);
 }
 
-.pricing-table tbody tr p {
+.pricing__column-title {
   color: var(--title-color);
   font-size: 24px;
   font-weight: 700;
@@ -96,20 +99,21 @@
   margin-bottom: 2px;
 }
 
-.pricing-table tbody td:first-child {
+.pricing__body td:first-child {
   color: var(--secondary-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 1.5;
 }
 
-.pricing-table tbody td:has(.price-btn) {
+.pricing__body td:has(.price-btn) {
   height: 100px;
 }
 
-.price-btn {
-  width: 143px;
-  height: 36px;
+.price__btn {
+  width: 80%;
+  max-width: 143px;
+  height: 30px;
   border: 1px solid var(--red-color);
   border-radius: 4px;
   background-color: transparent;
@@ -117,12 +121,61 @@
   color: var(--red-color);
   font-size: 12px;
   font-weight: 700;
-  line-height: 36px;
   text-transform: uppercase;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-.price-btn:hover {
+.price__btn:hover {
   background-color: var(--red-color);
   color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .pricing {
+    padding: 60px 0 80px;
+  }
+
+  .pricing__table {
+    grid-template-columns: 30% 70%;
+    margin-top: 40px;
+  }
+
+  .pricing__column-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing {
+    padding: 60px 0 0;
+  }
+
+  .pricing__wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+  }
+
+  .pricing__wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .pricing__wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--red-color);
+    border-radius: 10px;
+  }
+
+  .pricing__table {
+    margin-top: 30px;
+    min-width: 600px;
+    box-shadow: none;
+  }
+
+  .pricing__column-title {
+    font-size: 18px;
+  }
+
+  .pricing__column-price {
+    font-size: 16px;
+  }
 }

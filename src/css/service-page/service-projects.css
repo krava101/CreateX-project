@@ -30,3 +30,21 @@
   width: 24px;
   height: 24px;
 }
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 140px 0 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    padding: 90px 0 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .projects {
+    padding: 60px 0;
+  }
+}

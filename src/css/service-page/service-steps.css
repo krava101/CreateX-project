@@ -1,22 +1,23 @@
 .steps {
-  padding: 90px 0 120px;
+  padding: 90px 0;
 }
 
-.steps-list {
+.steps__list {
   display: flex;
   gap: 30px;
 }
 
-.steps-item {
+.steps__item {
   position: relative;
   width: calc((100% - 90px) / 4);
-  padding-top: 76px;
 }
 
-.steps-num {
-  position: absolute;
-  left: -15px;
-  top: -12px;
+.steps__item > div {
+  display: flex;
+  align-items: center;
+}
+
+.steps__num {
   display: grid;
   place-items: center;
   width: 84px;
@@ -30,11 +31,10 @@
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: 0;
-  transition: color 0.2s 0.1s, backgraund-color 0.5s 0.1s, outline-color 0.3s;
-  transition-timing-function: linear;
+  transition: color 1s ease, backgraund-color 0.8s ease, outline-color 1.2s ease;
 }
 
-.steps-item-title {
+.steps__item-title {
   color: var(--title-color);
   font-size: 20px;
   font-weight: 700;
@@ -42,7 +42,7 @@
   letter-spacing: 0;
 }
 
-.steps-txt {
+.steps__item-txt {
   color: var(--secondary-color);
   font-size: 16px;
   font-weight: 400;
@@ -50,18 +50,47 @@
   letter-spacing: 0;
 }
 
-.steps-item hr {
-  position: absolute;
-  right: 0;
-  top: 30px;
-  width: 209px;
+.steps__item hr {
+  width: calc(100% - 84px);
   border: 1px dashed rgb(215, 218, 221);
   margin: 0;
 }
 
-.steps-item:hover .steps-num,
-.steps-item:focus .steps-num {
+.steps__item:hover .steps__num,
+.steps__item:focus .steps__num {
+  color: #ff5930;
   background-color: rgb(255, 90, 48, 0.12);
   outline-color: rgb(255, 90, 48, 0.06);
-  color: #ff5930;
+}
+
+@media screen and (max-width: 1024px) {
+  .steps {
+    padding: 80px 0;
+  }
+
+  .steps__list {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .steps__item {
+    width: 300px;
+  }
+
+  .steps__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .steps {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .steps {
+    padding: 50px 0;
+  }
 }

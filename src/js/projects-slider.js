@@ -36,13 +36,13 @@ export const loadProjects = (type, status) => {
 
 projectsLeftBtn.addEventListener('click', () => {
   projectsIndex <= 0
-    ? (projectsIndex = projectsList.children.length - 2)
+    ? (projectsIndex = projectsList.children.length - 1)
     : projectsIndex--;
   activeProjectsSlider(projectsIndex);
 });
 
 projectsRightBtn.addEventListener('click', () => {
-  projectsIndex === projectsList.children.length - 2
+  projectsIndex === projectsList.children.length - 1
     ? (projectsIndex = 0)
     : projectsIndex++;
   activeProjectsSlider(projectsIndex);

@@ -6,30 +6,30 @@
   text-align: center;
 }
 
-.benefits .section-title {
+.benefits__title {
   margin-bottom: 24px;
   color: var(--white);
 }
 
-.benefits-text {
+.benefits__text {
   font-size: 18px;
   line-height: 1.5;
   opacity: 0.6;
   margin-bottom: 60px;
 }
 
-.benefits-list {
+.benefits__list {
   display: flex;
   gap: 94px;
 }
 
-.benefits-list li {
+.benefits__item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.benefits-decor {
+.benefits__decor {
   width: 0px;
   min-height: 100%;
   border-left: 1px solid;
@@ -37,25 +37,28 @@
   opacity: 0.1;
 }
 
-.benefits-icon {
+.benefits__icon {
   width: 48px;
   height: 48px;
   fill: var(--red-color);
 }
 
-.benefits-title {
+.benefits__item-title {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
   margin: 24px 0 8px;
 }
 
-.benefits-list-text {
+.benefits__item-text {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
   line-height: 1.6;
   opacity: 0.6;
 }
 
-.benefits-btn {
+.benefits__btn {
   position: absolute;
   bottom: -26px;
   left: 50%;
@@ -73,7 +76,67 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.benefits-btn:hover,
-.benefits-btn:focus {
+.benefits__btn:hover,
+.benefits__btn:focus {
   transform: translateX(-50%) scale(0.95);
+}
+
+@media screen and (max-width: 1440px) {
+  .benefits__list {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .benefits {
+    padding: 60px 0 100px;
+  }
+
+  .benefits__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 30px;
+  }
+
+  .benefits__item {
+    width: calc((100% - 61px) / 2);
+  }
+
+  .benefits__list li:nth-child(4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .benefits {
+    padding: 60px 0 100px;
+  }
+
+  .benefits__text {
+    margin-bottom: 40px;
+  }
+
+  .benefits__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits__item {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .benefits__decor {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .benefits {
+    padding: 60px 0 80px;
+  }
+
+  .benefits__btn {
+    width: 80%;
+  }
 }
