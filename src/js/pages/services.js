@@ -1,1 +1,1 @@
-console.log('services');
+import '../main-form.js';

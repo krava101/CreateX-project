@@ -5,6 +5,7 @@ const newsSection = document.querySelector('.news');
 const pagList = document.querySelector('.news-pagination-list');
 const nextBtn = document.querySelector('#next-page-btn');
 const filterList = document.querySelector('.news-nav-list');
+const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 let maxPages = Math.ceil(news.length / 6);
 let newsType = 'all';
 let pageIndex = 1;
@@ -35,7 +36,7 @@ function loadNews(newsArr, type = 'all') {
           <li class="news-date-decor-item"></li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="./img/icons.svg#icon-comments"></use>
+              <use href="${iconUrl}#icon-comments"></use>
             </svg>
             ${e.comments.length ? e.comments.length : 'No'} comments
           </li>
