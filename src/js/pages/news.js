@@ -1,4 +1,4 @@
-import news from '../data/data-news';
+import news from '../../data/data-news';
 
 const newsList = document.querySelector('#news-list');
 const newsSection = document.querySelector('.news');

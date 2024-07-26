@@ -1,10 +1,10 @@
-import news from "../data/data-news";
-import * as mainForm from "./main-form";
+import news from '../../data/data-news';
+import * as mainForm from '../main-form';
 
-const postSection = document.querySelector(".post");
-const heroSection = document.querySelector(".hero");
-const commentsSection = document.querySelector(".comments");
-const commentForm = document.querySelector("#commentForm");
+const postSection = document.querySelector('.post');
+const heroSection = document.querySelector('.hero');
+const commentsSection = document.querySelector('.comments');
+const commentForm = document.querySelector('#commentForm');
 const href = window.location.href;
 const url = new URL(href);
 const postId = +url.searchParams.get('post');
@@ -12,10 +12,10 @@ const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
 const newComment = {
   id: '',
-  nickname:'',
-  date:'',
-  comment:'',
-}
+  nickname: '',
+  date: '',
+  comment: '',
+};
 
 const currentPost = news.filter(post => post.id === postId)[0];
 
@@ -29,30 +29,30 @@ function loadPost() {
     <div class="container">
       ${currentPost.post.reduce((acc, e) => {
         let text = `<p class="${e.type}">${e.text}</p>`;
-        if (e.type === "quote-text") {
-          text =
-          `<div class="quote">
+        if (e.type === 'quote-text') {
+          text = `<div class="quote">
             <svg class="quote-icon">
               <use href="${iconUrl}#icon-braces"></use>
             </svg>
             <p class="${e.type}">${e.text}</p>
           </div>`;
-        } else if (e.type === "post-list") {
-          const listMarkup = e.text.reduce((accum, li) =>
-            accum +
-            `<li>
+        } else if (e.type === 'post-list') {
+          const listMarkup = e.text.reduce(
+            (accum, li) =>
+              accum +
+              `<li>
                 <svg class="post-list-icon">
                   <use href="${iconUrl}#icon-check"></use>
                 </svg>
                 ${li}
-              </li>`
-          , '')
-          text =
-          `<ul class="post-list list">
+              </li>`,
+            ''
+          );
+          text = `<ul class="post-list list">
             ${listMarkup}
-          </ul>`
+          </ul>`;
         }
-        return acc + text
+        return acc + text;
       }, '')}
       <div class="post-share">
         <p>Share:</p>
@@ -80,13 +80,12 @@ function loadPost() {
           </li>
         </ul>
       </div>
-    </div>`
+    </div>`;
   postSection.innerHTML = markup;
 }
 
 function loadHero() {
-  const markup =
-  `<div class="container">
+  const markup = `<div class="container">
     <p class="page-path">
       <span class="page-path-dark">Homepage / News</span> / ${currentPost.title}
     </p>
@@ -108,7 +107,9 @@ function loadHero() {
           <svg class="post-comment-icon">
             <use href="${iconUrl}#icon-comments"></use>
           </svg>
-          ${currentPost.comments.length ? currentPost.comments.length : 'No' } comments
+          ${
+            currentPost.comments.length ? currentPost.comments.length : 'No'
+          } comments
         </li>
       </ul>
       <ul class="hero-soc-list list">
@@ -135,17 +136,21 @@ function loadHero() {
         </li>
       </ul>
     </div>
-  </div>`
+  </div>`;
   heroSection.innerHTML = markup;
 }
 
 function loadComments() {
   const markup = `
     <div class="container">
-      <p class="comments-title">${currentPost.comments.length ? currentPost.comments.length : 'No'} comments</p>
+      <p class="comments-title">${
+        currentPost.comments.length ? currentPost.comments.length : 'No'
+      } comments</p>
       <ul class="comments-list list">
-        ${currentPost.comments.reverse().reduce((acc, com) =>
-          acc + `
+        ${currentPost.comments.reverse().reduce(
+          (acc, com) =>
+            acc +
+            `
             <li>
             <div class="comments-info">
               <p class="comments-nickname">${com.nickname}</p>
@@ -159,7 +164,9 @@ function loadComments() {
                 </svg> Reply
               </a>
             </p>
-          </li>`, '')}
+          </li>`,
+          ''
+        )}
       </ul>
     </div>`;
   commentsSection.innerHTML = markup;
@@ -170,14 +177,27 @@ loadPost();
 loadComments();
 
 function formatDate(date) {
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
   const day = date.getDate();
   const month = months[date.getMonth()];
   const year = date.getFullYear();
   return `${day} ${month}, ${year}`;
 }
 
-commentForm.addEventListener("submit", event => {
+commentForm.addEventListener('submit', event => {
   event.preventDefault();
   newComment.id = Date.now();
   newComment.nickname = event.currentTarget.elements.username.value;
@@ -186,5 +206,4 @@ commentForm.addEventListener("submit", event => {
   commentForm.reset();
   currentPost.comments.push(newComment);
   loadComments();
-
-})
+});
