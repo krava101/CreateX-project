@@ -12,6 +12,8 @@ const navMap = {
 };
 
 const activeNavId = navMap[currentPath];
+console.log(currentPath);
+console.log(activeNavId);
 if (activeNavId) {
   document.getElementById(activeNavId).classList.add('active-nav-link');
   const mobileMenu = document.getElementById(activeNavId + '-menu');
