@@ -1,0 +1,67 @@
+.steps {
+  padding: 90px 0 120px;
+}
+
+.steps-list {
+  display: flex;
+  gap: 30px;
+}
+
+.steps-item {
+  position: relative;
+  width: calc((100% - 90px) / 4);
+  padding-top: 76px;
+}
+
+.steps-num {
+  position: absolute;
+  left: -15px;
+  top: -12px;
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: 16px solid transparent;
+
+  color: #d7dadd;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+  transition: color 0.2s 0.1s, backgraund-color 0.5s 0.1s, outline-color 0.3s;
+  transition-timing-function: linear;
+}
+
+.steps-item-title {
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.steps-txt {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.steps-item hr {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 209px;
+  border: 1px dashed rgb(215, 218, 221);
+  margin: 0;
+}
+
+.steps-item:hover .steps-num,
+.steps-item:focus .steps-num {
+  background-color: rgb(255, 90, 48, 0.12);
+  outline-color: rgb(255, 90, 48, 0.06);
+  color: #ff5930;
+}

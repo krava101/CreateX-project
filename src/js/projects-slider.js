@@ -6,10 +6,18 @@ const projectsRightBtn = document.querySelector('#p-right-btn');
 let projectsIndex = 0;
 let startX;
 
-const markup = projects.reduce(
-  (acc, e) =>
-    acc +
-    `<li class="project-card">
+export const loadProjects = (type, status) => {
+  let list = projects;
+  if (type) {
+    list = projects.filter(e => e.type === type);
+  }
+  if (status) {
+    list = projects.filter(e => e.status === status);
+  }
+  const markup = list.reduce(
+    (acc, e) =>
+      acc +
+      `<li class="project-card">
         <img
           class="project-img"
           src="${e.previewImg}"
@@ -21,9 +29,10 @@ const markup = projects.reduce(
           <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
         </div>
     </li>`,
-  ''
-);
-projectsList.innerHTML = markup;
+    ''
+  );
+  projectsList.innerHTML = markup;
+};
 
 projectsLeftBtn.addEventListener('click', () => {
   projectsIndex <= 0

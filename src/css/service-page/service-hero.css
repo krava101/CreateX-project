@@ -1,0 +1,8 @@
+.bg-container {
+  background-image: url('../../img/services-page-img/services-hero-bg-2.png');
+  background-size: 1100px, contain;
+  background-position: 965px -176px, right;
+}
+
+.hero-text {
+}

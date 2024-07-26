@@ -1,0 +1,32 @@
+.projects {
+  padding: 180px 0 100px;
+}
+
+.projects__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.projects .section-title {
+  text-align: left;
+  margin: 0;
+}
+
+.projects-controls {
+  display: flex;
+  gap: 24px;
+}
+
+.projects-controls-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.projects-controls-btn svg {
+  width: 24px;
+  height: 24px;
+}

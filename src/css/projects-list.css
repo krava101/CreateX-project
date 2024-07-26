@@ -75,9 +75,9 @@
 
 .project-card {
   position: relative;
-  width: 100%;
   min-width: 390px;
-  aspect-ratio: 39/44;
+  max-width: 390px;
+  height: 440px;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0px 5px 10px rgba(30, 33, 44, 0.06);
@@ -89,26 +89,23 @@
   aspect-ratio: 78/69;
 }
 
+.project-card .card-title {
+  margin-bottom: 5px;
+}
+
 .project-card-box {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
   padding: 16px 0 24px;
   text-align: center;
   background-color: #fff;
-  border-radius: none;
+  border-radius: 0;
   width: 100%;
-  transform: translateY(70px);
+  transform: translateY(0px);
   transition: transform 0.25s ease-in-out 0.1s;
 }
 
 .project-card:hover .project-card-box,
 .project-card:focus .project-card-box {
-  transform: translateY(0);
-}
-
-.project .card-title {
-  margin-bottom: 4px;
+  transform: translateY(-72px);
 }
 
 .project-card-text {
@@ -124,7 +121,7 @@
   height: 44px;
   border: 1px solid var(--red-color);
   border-radius: 4px;
-  margin-top: 24px;
+  margin-top: 28px;
 
   color: var(--red-color);
   text-align: center;
@@ -153,31 +150,21 @@
   }
 
   .projects-title {
-    padding: 0 100px;
     max-width: 1000px;
   }
 
   .projects-view {
     padding: 0 100px;
   }
-
-  .p-list-wrap ul {
-    margin: 0 100px;
-  }
 }
 
 @media screen and (max-width: 1024px) {
   .projects-title {
-    padding: 0 80px;
     max-width: 780px;
   }
 
   .projects-view {
     padding: 0 80px;
-  }
-
-  .p-list-wrap ul {
-    margin: 0 80px;
   }
 
   .project-slider {
@@ -190,36 +177,26 @@
     padding: 40px 0;
   }
 
-  .projects-title,
   .projects-view {
     padding: 0 30px;
   }
 
   .project-card {
     min-width: 339px;
+    height: 395px;
   }
 
   .project-slider {
     display: none;
-  }
-
-  .p-list-wrap ul {
-    margin: 0 30px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .p-list-wrap ul {
-    margin: 0 18px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .project-card {
     min-width: 280px;
+    height: 340px;
   }
 
-  .projects-title,
   .projects-view {
     padding: 0 20px;
   }
