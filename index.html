@@ -23,10 +23,10 @@
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/comments-accae290.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-fe2df6bb.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-224b71ac.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-25ecbd05.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/index-8d632197.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-efec6661.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/index-4532ccfc.css">
   </head>
   <body>
     <header id="header">
@@ -293,7 +293,7 @@
     </p>
     <ul class="services-list list">
       <li class="first-services-card services-card">
-        <a href="./service-page.html?service=0">
+        <a href="./service.html?service=0">
           <div class="services-card-info">
             <svg class="services-icons">
               <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-construction"></use>
@@ -303,7 +303,7 @@
         </a>
       </li>
       <li class="second-services-card services-card">
-        <a href="./service-page.html?service=1">
+        <a href="./service.html?service=1">
           <div class="services-card-info">
             <svg class="services-icons">
               <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-plan"></use>
@@ -313,7 +313,7 @@
         </a>
       </li>
       <li class="third-services-card services-card">
-        <a href="./service-page.html?service=2">
+        <a href="./service.html?service=2">
           <div class="services-card-info">
             <svg class="services-icons">
               <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-pantone"></use>
@@ -323,7 +323,7 @@
         </a>
       </li>
       <li class="fourth-services-card services-card">
-        <a href="./service-page.html?service=3">
+        <a href="./service.html?service=3">
           <div class="services-card-info">
             <svg class="services-icons">
               <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-painting"></use>
@@ -343,28 +343,40 @@
 </section>
 
       <section class="projects">
-  <div class="container">
-    <h2 class="projects-title section-title">
-      Browse our selected projects and learn more about our work
-    </h2>
-    <div class="project-slider">
-      <button class="p-left-btn" type="button" id="p-left-btn">
-        <svg class="p-left-arrow p-arrow">
-          <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-left-arrow"></use>
-        </svg>
-      </button>
-      <button class="p-right-btn" type="button" id="p-right-btn">
-        <svg class="p-right-arrow p-arrow">
-          <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-right-arrow"></use>
-        </svg>
-      </button>
+  <div class="projects__container container">
+    <div class="projects__title-container">
+      <h2 class="projects__title section-title" id="p__title"></h2>
+      <div class="projects__slider">
+        <button
+          class="projects__btn-left projects__btn"
+          type="button"
+          id="p-left-btn"
+        >
+          <svg class="projects__icon-left projects__icon">
+            <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-left-arrow"></use>
+          </svg>
+        </button>
+        <button
+          class="projects__btn-right projects__btn"
+          type="button"
+          id="p-right-btn"
+        >
+          <svg class="projects__icon-right projects__icon">
+            <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="p-list-wrap">
-      <ul class="list" id="p-list"></ul>
+    <div class="projects__list-wrapper">
+      <ul class="projects__list list" id="p-list"></ul>
     </div>
-    <div class="projects-view">
-      <h3 class="view-more-title">Explore all our works</h3>
-      <a href="./work.html" class="portfolio-link view-more-link orange-btn"
+    <div class="projects__view">
+      <h3 class="projects__view-title view-more-title">
+        Explore all our works
+      </h3>
+      <a
+        href="./work.html"
+        class="projects__view-link view-more-link orange-btn"
         >View portfolio</a
       >
     </div>

@@ -24,8 +24,8 @@
     <script type="module" crossorigin src="/CreateX-project/commonHelpers8.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-98539dd2.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-224b71ac.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/service-page-8b095171.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-efec6661.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/service-b94fe657.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-fb15a8c6.css">
   </head>
   <body>
@@ -94,10 +94,11 @@
       <section class="hero">
   <div class="container">
     <p class="page-path">
-      <span class="page-path-dark">Homepage / Services</span> / Interior Design
+      <span class="page-path-dark">Homepage / Services</span> /
+      <span id="service-path">Interior Design</span>
     </p>
-    <h1 class="page-title">INTERIOR DESIGN</h1>
-    <p class="hero-text">
+    <h1 class="page-title" id="service-title"></h1>
+    <p class="hero-text" id="service-text">
       Dui augue nec mi mi. Ut ac lectus donec fames pellentesque. Laoreet aenean
       vulputate elementum blandit amet.
     </p>
@@ -203,28 +204,40 @@
 </section>
 
       <section class="projects">
-  <div class="container">
+  <div class="projects__container container">
     <div class="projects__title-container">
-      <h2 class="section-title">Related projects</h2>
-      <div class="projects-controls">
-        <button class="projects-controls-btn" id="p-left-btn" type="button">
-          <svg>
+      <h2 class="projects__title section-title" id="p__title"></h2>
+      <div class="projects__slider">
+        <button
+          class="projects__btn-left projects__btn"
+          type="button"
+          id="p-left-btn"
+        >
+          <svg class="projects__icon-left projects__icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-left-arrow"></use>
           </svg>
         </button>
-        <button class="projects-controls-btn" id="p-right-btn" type="button">
-          <svg>
+        <button
+          class="projects__btn-right projects__btn"
+          type="button"
+          id="p-right-btn"
+        >
+          <svg class="projects__icon-right projects__icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-right-arrow"></use>
           </svg>
         </button>
       </div>
     </div>
-    <div class="p-list-wrap">
-      <ul class="list" id="p-list"></ul>
+    <div class="projects__list-wrapper">
+      <ul class="projects__list list" id="p-list"></ul>
     </div>
-    <div class="projects-view">
-      <h3 class="view-more-title">Explore all our works</h3>
-      <a href="./work.html" class="portfolio-link view-more-link orange-btn"
+    <div class="projects__view">
+      <h3 class="projects__view-title view-more-title">
+        Explore all our works
+      </h3>
+      <a
+        href="./work.html"
+        class="projects__view-link view-more-link orange-btn"
         >View portfolio</a
       >
     </div>
