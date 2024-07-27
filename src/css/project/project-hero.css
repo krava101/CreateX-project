@@ -16,17 +16,7 @@
   z-index: -1;
 }
 
-.page-path {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--light-gray);
-}
-
-.page-path-dark {
-  color: var(--primary-color);
-}
-
-.page-title {
+.project-title {
   font-size: 64px;
   font-weight: 700;
   line-height: 1.2;
@@ -34,6 +24,7 @@
   color: var(--title-color);
   text-transform: uppercase;
   margin: 40px 0 60px;
+  max-width: 700px;
 }
 
 .project-img-list-wrapper {
@@ -127,11 +118,12 @@ ul.project-small-img-list {
 .project-info-box {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   margin-top: 100px;
 }
 
 .project-goal .section-title {
+  text-align: left;
   margin-bottom: 40px;
 }
 
@@ -167,5 +159,4 @@ ul.project-info-list {
   width: 248px;
   text-transform: none;
   color: var(--secondary-color);
-  font-weight: 400;
 }

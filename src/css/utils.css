@@ -105,6 +105,16 @@ section {
     inset -2px -2px 5px rgb(255, 90, 48, 0.1);
 }
 
+.page-path {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--light-gray);
+}
+
+.page-path-dark {
+  color: var(--primary-color);
+}
+
 @media screen and (max-width: 1440px) {
   .container {
     padding: 0 100px;
