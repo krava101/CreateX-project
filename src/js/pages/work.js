@@ -18,19 +18,19 @@ const loadProjects = (status = 'all', page = 1) => {
     (acc, proj) =>
       acc +
       `<li class="projects-card">
-              <img
-                class="projects-img"
-                src="${proj.previewImg}"
-                alt="${proj.name}"
-              />
-              <div class="projects-card-box">
-                <h5 class="card-title">${proj.name}</h5>
-                <p class="projects-card-text">${proj.type}</p>
-                <a class="projects-card-link" href="./project.html?project=${proj.id}"
-                  >view project</a
-                >
-              </div>
-            </li>`,
+        <img
+          class="projects-img"
+          src="${proj.previewImg}"
+          alt="${proj.name}"
+        />
+        <div class="projects-card-box">
+          <h5 class="card-title">${proj.name}</h5>
+          <p class="projects-card-text">${proj.type}</p>
+          <a class="projects-card-link" href="./project.html?project=${proj.id}"
+            >view project</a
+          >
+        </div>
+      </li>`,
     ''
   );
   projectsList.innerHTML = markup;

@@ -1,0 +1,38 @@
+.decisions {
+  padding: 80px 0 114px;
+  background-color: var(--cloud);
+}
+
+.decisions .container {
+  position: relative;
+  padding-left: 630px;
+}
+
+.decisions-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 495px;
+  height: 550px;
+  border-radius: 6px;
+}
+
+.decisions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.decisions-item {
+  display: flex;
+  gap: 16px;
+
+  color: var(--gray-800, #424551);
+  font-size: 16px;
+  line-height: 1.63;
+}
+
+.decision-check-icon {
+  width: 20px;
+  height: 20px;
+}

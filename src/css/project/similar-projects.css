@@ -1,21 +1,21 @@
 .projects {
-  padding: 180px 0 100px;
+  padding: 180px 0 120px;
 }
 
 @media screen and (max-width: 1024px) {
   .projects {
-    padding: 140px 0 80px;
+    padding: 140px 0 100px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .projects {
-    padding: 90px 0 60px;
+    padding: 100px 0 60px;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .projects {
-    padding: 60px 0;
+    padding: 80px 0 60px;
   }
 }

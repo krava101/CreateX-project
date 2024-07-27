@@ -9,6 +9,12 @@ const serviceNum = url.searchParams.get('service');
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
 const currentService = services[serviceNum];
+
+const serviceTitle = document.getElementById('service-title');
+const servicePath = document.getElementById('service-path');
+serviceTitle.textContent = currentService.type;
+servicePath.textContent = currentService.type;
+
 const markup = `
     <img
       class="offer__img"

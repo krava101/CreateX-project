@@ -1,15 +1,31 @@
 import { projects } from '../data/data-projects.js';
 
-const projectsList = document.querySelector('#p-list');
-const projectsLeftBtn = document.querySelector('#p-left-btn');
-const projectsRightBtn = document.querySelector('#p-right-btn');
+const projectsList = document.getElementById('p-list');
+const projectsLeftBtn = document.getElementById('p-left-btn');
+const projectsRightBtn = document.getElementById('p-right-btn');
+const projectsTitle = document.getElementById('p__title');
 let projectsIndex = 0;
 let startX;
 
-export const loadProjects = (type, status) => {
+const currentPath = window.location.pathname;
+const navMap = {
+  '/CreateX-project/index.html':
+    'Browse our selected projects and learn more about our work',
+  '/CreateX-project/service.html': 'Related projects',
+  '/CreateX-project/project.html': 'Similar projects',
+  '/index.html': 'Browse our selected projects and learn more about our work',
+  '/service.html': 'Related projects',
+  '/project.html': 'Similar projects',
+};
+
+projectsTitle.textContent = navMap[currentPath];
+
+export const loadProjects = (project, status) => {
   let list = projects;
-  if (type) {
-    list = projects.filter(e => e.type === type);
+  if (project) {
+    list = projects.filter(
+      e => e.type === project.type && e.name !== project.name
+    );
   }
   if (status) {
     list = projects.filter(e => e.status === status);
@@ -17,16 +33,16 @@ export const loadProjects = (type, status) => {
   const markup = list.reduce(
     (acc, e) =>
       acc +
-      `<li class="project-card">
+      `<li class="projects__card">
         <img
-          class="project-img"
+          class="projects__card-img"
           src="${e.previewImg}"
           alt=""
         />
-        <div class="project-card-box">
+        <div class="projects__card-box">
           <h5 class="card-title">${e.name}</h5>
-          <p class="project-card-text">${e.type}</p>
-          <a class="project-card-link" href="project.html?project=project${e.id}">view project</a>
+          <p class="projects__card-text">${e.type}</p>
+          <a class="projects__card-link" href="project.html?project=${e.id}">view project</a>
         </div>
     </li>`,
     ''
