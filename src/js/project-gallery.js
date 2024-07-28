@@ -1,8 +1,8 @@
 const projectGallery = document.getElementById('project-gallery');
 const projectSmallGallery = document.getElementById('project-small-gallery');
 const projectInfo = document.getElementById('project-info');
-const leftBtn = document.querySelector('.slider-left-btn');
-const rightBtn = document.querySelector('.slider-right-btn');
+const leftBtn = document.querySelector('.project__gallery-btn_left');
+const rightBtn = document.querySelector('.project__gallery-btn_right');
 let currentIndex = 0;
 
 leftBtn.addEventListener('click', () => {
@@ -20,9 +20,10 @@ rightBtn.addEventListener('click', () => {
 });
 
 projectSmallGallery.addEventListener('click', event => {
-  if (event.target !== event.currentTarget) {
+  const target = event.target;
+  if (target.nodeName === 'BUTTON') {
     currentIndex = Array.from(projectSmallGallery.children).indexOf(
-      event.target
+      target.parentNode
     );
     galleryScroll(currentIndex);
   }
@@ -30,6 +31,7 @@ projectSmallGallery.addEventListener('click', event => {
 
 function galleryScroll(index) {
   projectSmallGallery.querySelector('.active').classList.remove('active');
-  projectGallery.style.transform = `translateX(-${currentIndex * 1230}px)`;
+  const imgWidth = projectGallery.children[0].getBoundingClientRect().width;
+  projectGallery.style.transform = `translateX(-${currentIndex * imgWidth}px)`;
   projectSmallGallery.children[index].classList.add('active');
 }

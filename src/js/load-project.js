@@ -14,35 +14,55 @@ const projectInfo = document.getElementById('project-info');
 const projectDescription = document.getElementById('project-description');
 
 projectTitle.textContent = currentProject.name;
-projectPath.textContent = currentProject.name;
+projectTitle.classList.remove('project__title_loader');
+projectPath.textContent = `/ ${currentProject.name}`;
 
 projectGallery.innerHTML = `
-  <li
-    style="background-image: url(${currentProject.images[0]})"
-  ></li>
-  <li
-    style="background-image: url(${currentProject.images[1]})"
-  ></li>
-  <li
-    style="background-image: url(${currentProject.images[2]})"
-  ></li>
-  <li
-    style="background-image: url(${currentProject.images[3]})"
-  ></li>
-  <li
-    style="background-image: url(${currentProject.images[4]})"
-  ></li>
-  <li
-    style="background-image: url(${currentProject.images[5]})"
-  ></li>`;
+  <li>
+    <img src="${currentProject.images[0]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${currentProject.images[1]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${currentProject.images[2]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${currentProject.images[3]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${currentProject.images[4]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${currentProject.images[5]}" alt="Project photo">
+  </li>`;
 
 projectSmallGallery.innerHTML = `
-  <li class="project-small-img-item active" style="background-image: url(${currentProject.images[0]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${currentProject.images[1]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${currentProject.images[2]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${currentProject.images[3]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${currentProject.images[4]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${currentProject.images[5]})"></li>`;
+  <li class="project__gallery-small-item active">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${currentProject.images[0]}" alt="Project small photo pagination">
+    </button>
+  </li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${currentProject.images[1]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${currentProject.images[2]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item"> 
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${currentProject.images[3]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${currentProject.images[4]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${currentProject.images[5]}" alt="Project small photo pagination">
+    </button></li>`;
 
 projectInfo.innerHTML = `
   <li>Location</li>
