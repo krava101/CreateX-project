@@ -1,11 +1,14 @@
 .hero {
+  position: relative;
   padding: 60px 0;
   height: 508px;
 }
 
-.bg-container {
+.hero::after {
+  content: '';
   position: absolute;
-  top: 0;
+  top: -68px;
+  left: 0;
   width: 100%;
   height: 577px;
   z-index: -1;
@@ -28,10 +31,13 @@
   font-size: 20px;
   line-height: 1.5;
   color: var(--secondary-color);
+  background-color: #f4f5f6af;
+  border-radius: 10px;
+  padding: 20px 10px;
 }
 
 @media screen and (max-width: 425px) {
-  .bg-container {
+  .hero::after {
     height: 570px;
   }
 }

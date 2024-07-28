@@ -1,12 +1,6 @@
-.bg-container {
+.hero::after {
   background-image: url('../../img/services-page-img/services-hero-bg.png');
   background-repeat: no-repeat;
   background-size: contain cover;
   background-position: right;
-}
-
-.hero-text {
-  background-color: #f4f5f69d;
-  border-radius: 10px;
-  padding: 20px 10px;
 }
