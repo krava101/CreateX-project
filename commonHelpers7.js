@@ -1,38 +1,57 @@
-import"./assets/header-4ffb22f8.js";/* empty css                     */import{p as o}from"./assets/data-projects-98539dd2.js";import{l as n}from"./assets/projects-slider-efec6661.js";const a=window.location.href,s=new URL(a),m=+s.searchParams.get("project"),e=o[m],g=document.getElementById("project-title"),d=document.getElementById("project-path"),u=document.getElementById("project-gallery"),p=document.getElementById("project-small-gallery"),y=document.getElementById("project-info"),j=document.getElementById("project-description");g.textContent=e.name;d.textContent=e.name;u.innerHTML=`
-  <li
-    style="background-image: url(${e.images[0]})"
-  ></li>
-  <li
-    style="background-image: url(${e.images[1]})"
-  ></li>
-  <li
-    style="background-image: url(${e.images[2]})"
-  ></li>
-  <li
-    style="background-image: url(${e.images[3]})"
-  ></li>
-  <li
-    style="background-image: url(${e.images[4]})"
-  ></li>
-  <li
-    style="background-image: url(${e.images[5]})"
-  ></li>`;p.innerHTML=`
-  <li class="project-small-img-item active" style="background-image: url(${e.images[0]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${e.images[1]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${e.images[2]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${e.images[3]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${e.images[4]})"></li>
-  <li class="project-small-img-item" style="background-image: url(${e.images[5]})"></li>`;y.innerHTML=`
+import"./assets/header-4ffb22f8.js";/* empty css                     */import{p as a}from"./assets/data-projects-2fb17aac.js";import{l as s}from"./assets/projects-slider-1d3c6a1b.js";const m=window.location.href,p=new URL(m),g=+p.searchParams.get("project"),t=a[g],n=document.getElementById("project-title"),j=document.getElementById("project-path"),d=document.getElementById("project-gallery"),y=document.getElementById("project-small-gallery"),u=document.getElementById("project-info"),_=document.getElementById("project-description");n.textContent=t.name;n.classList.remove("project__title_loader");j.textContent=`/ ${t.name}`;d.innerHTML=`
+  <li>
+    <img src="${t.images[0]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${t.images[1]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${t.images[2]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${t.images[3]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${t.images[4]}" alt="Project photo">
+  </li>
+  <li>
+    <img src="${t.images[5]}" alt="Project photo">
+  </li>`;y.innerHTML=`
+  <li class="project__gallery-small-item active">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${t.images[0]}" alt="Project small photo pagination">
+    </button>
+  </li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${t.images[1]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${t.images[2]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item"> 
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${t.images[3]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${t.images[4]}" alt="Project small photo pagination">
+    </button></li>
+  <li class="project__gallery-small-item">
+    <button class="project__gallery-small-btn" type="button">
+      <img src="${t.images[5]}" alt="Project small photo pagination">
+    </button></li>`;u.innerHTML=`
   <li>Location</li>
-  <li>${e.location}</li>
+  <li>${t.location}</li>
   <li>CLIENT</li>
-  <li>${e.client}</li>
+  <li>${t.client}</li>
   <li>ARCHITECT</li>
-  <li>${e.architect}</li>
+  <li>${t.architect}</li>
   <li>SIZE</li>
-  <li>${e.size}</li>
+  <li>${t.size}</li>
   <li>VALUE</li>
-  <li>${e.value}</li>
+  <li>${t.value}</li>
   <li>COMPLETED</li>
-  <li>${e.completed}</li>`;j.textContent=e.description;n(e);const r=document.getElementById("project-gallery"),i=document.getElementById("project-small-gallery");document.getElementById("project-info");const $=document.querySelector(".slider-left-btn"),E=document.querySelector(".slider-right-btn");let t=0;$.addEventListener("click",()=>{t<=0?t=r.children.length-1:t--,c(t)});E.addEventListener("click",()=>{t===r.children.length-1?t=0:t++,c(t)});i.addEventListener("click",l=>{l.target!==l.currentTarget&&(t=Array.from(i.children).indexOf(l.target),c(t))});function c(l){i.querySelector(".active").classList.remove("active"),r.style.transform=`translateX(-${t*1230}px)`,i.children[l].classList.add("active")}
+  <li>${t.completed}</li>`;_.textContent=t.description;s(t);const o=document.getElementById("project-gallery"),i=document.getElementById("project-small-gallery");document.getElementById("project-info");const h=document.querySelector(".project__gallery-btn_left"),b=document.querySelector(".project__gallery-btn_right");let e=0;h.addEventListener("click",()=>{e<=0?e=o.children.length-1:e--,r(e)});b.addEventListener("click",()=>{e===o.children.length-1?e=0:e++,r(e)});i.addEventListener("click",c=>{const l=c.target;l.nodeName==="BUTTON"&&(e=Array.from(i.children).indexOf(l.parentNode),r(e))});function r(c){i.querySelector(".active").classList.remove("active");const l=o.children[0].getBoundingClientRect().width;o.style.transform=`translateX(-${e*l}px)`,i.children[c].classList.add("active")}
 //# sourceMappingURL=commonHelpers7.js.map
