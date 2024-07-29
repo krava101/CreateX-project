@@ -12,7 +12,7 @@
 }
 
 .team-list-item {
-  flex-basis: calc((100% - 90px) / 4);
+  width: calc((100% - 90px) / 4);
 }
 
 .team-img {
@@ -73,8 +73,13 @@
   }
 
   .team-list {
+    flex-wrap: wrap;
     margin: 50px 0 70px;
     gap: 50px 30px;
+  }
+
+  .team-list-item {
+    width: calc((100% - 60px) / 3);
   }
 }
 
@@ -90,6 +95,11 @@
 
   .team-info-list {
     transform: translateY(0);
+  }
+
+  .team-list-item {
+    width: 100%;
+    max-width: 220px;
   }
 }
 
