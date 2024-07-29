@@ -30,6 +30,17 @@ export const loadProjects = (project, status) => {
   if (status) {
     list = projects.filter(e => e.status === status);
   }
+  if (list.length < 1) {
+    document.querySelector('.projects__title-container').style.display = 'none';
+    document.querySelector('.projects__list-wrapper').style.display = 'none';
+    const projectsSection = document.querySelector('.projects');
+    projectsSection.style.paddingTop = '0';
+    projectsSection.style.backgroundColor = '#f4f5f6';
+  }
+  if (list.length === 1) {
+    projectsLeftBtn.style.display = 'none';
+    projectsRightBtn.style.display = 'none';
+  }
   const markup = list.reduce(
     (acc, e) =>
       acc +

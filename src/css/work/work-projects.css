@@ -36,11 +36,12 @@
 .projects-card-box {
   position: absolute;
   bottom: 0;
+  left: 0;
   z-index: 1;
   padding: 16px 0 24px;
   text-align: center;
   background-color: #fff;
-  width: 100%;
+  width: 102%;
   transform: translateY(70px);
   transition: transform 0.25s ease-in-out 0.1s;
 }
@@ -162,5 +163,11 @@
 @media screen and (max-width: 425px) {
   .projects-list {
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .projects-img {
+    height: 67%;
   }
 }

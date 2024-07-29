@@ -15,12 +15,12 @@ function activHeroSlider(index) {
 }
 
 heroLeftBtn.addEventListener('click', () => {
-  heroIndex <= 0 ? (heroIndex = 3) : heroIndex--;
+  heroIndex <= 0 ? (heroIndex = heroList.children.length - 1) : heroIndex--;
   activHeroSlider(heroIndex);
 });
 
 heroRightBtn.addEventListener('click', () => {
-  heroIndex === 3 ? (heroIndex = 0) : heroIndex++;
+  heroIndex === heroList.children.length - 1 ? (heroIndex = 0) : heroIndex++;
   activHeroSlider(heroIndex);
 });
 
@@ -32,11 +32,13 @@ heroList.addEventListener('touchend', event => {
   const endX = event.changedTouches[0].clientX;
   if (endX > startX) {
     if (endX - startX > 70) {
-      heroIndex <= 0 ? (heroIndex = 3) : heroIndex--;
+      heroIndex <= 0 ? (heroIndex = heroList.children.length - 1) : heroIndex--;
     }
   } else if (endX < startX) {
     if (startX - endX > 70) {
-      heroIndex === 3 ? (heroIndex = 0) : heroIndex++;
+      heroIndex === heroList.children.length - 1
+        ? (heroIndex = 0)
+        : heroIndex++;
     }
   }
   activHeroSlider(heroIndex);
