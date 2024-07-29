@@ -2,11 +2,9 @@ import { touchSlider } from './helpers/touch-slider';
 
 const projectGallery = document.getElementById('project-gallery');
 const projectSmallGallery = document.getElementById('project-small-gallery');
-const projectInfo = document.getElementById('project-info');
 const leftBtn = document.querySelector('.project__gallery-btn_left');
 const rightBtn = document.querySelector('.project__gallery-btn_right');
 let currentIndex = 0;
-let startX;
 
 leftBtn.addEventListener('click', () => {
   currentIndex <= 0

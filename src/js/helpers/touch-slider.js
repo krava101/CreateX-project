@@ -7,13 +7,14 @@ export function touchSlider(list, callback, index) {
 
   list.addEventListener('touchend', event => {
     const endX = event.changedTouches[0].clientX;
+    const length = list.children.length;
     if (endX > startX) {
       if (endX - startX > 70) {
-        index <= 0 ? (index = list.children.length - 1) : index--;
+        index <= 0 ? (index = length - 1) : index--;
       }
     } else if (endX < startX) {
       if (startX - endX > 70) {
-        index === list.children.length - 1 ? (index = 0) : index++;
+        index === length - 1 ? (index = 0) : index++;
       }
     }
     callback(index);

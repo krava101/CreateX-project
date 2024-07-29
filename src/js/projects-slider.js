@@ -1,11 +1,13 @@
 import { projects } from '../data/data-projects.js';
+import { touchSlider } from './helpers/touch-slider.js';
 
 const projectsList = document.getElementById('p-list');
 const projectsLeftBtn = document.getElementById('p-left-btn');
 const projectsRightBtn = document.getElementById('p-right-btn');
 const projectsTitle = document.getElementById('p__title');
 let projectsIndex = 0;
-let startX;
+
+touchSlider(projectsList, activeProjectsSlider, projectsIndex);
 
 const currentPath = window.location.pathname;
 const navMap = {
@@ -82,25 +84,3 @@ function activeProjectsSlider(index) {
     projectsList.style.transform = `translateX(${-index * cardWidth}px)`;
   }
 }
-
-projectsList.addEventListener('touchstart', event => {
-  startX = event.touches[0].clientX;
-});
-
-projectsList.addEventListener('touchend', event => {
-  const endX = event.changedTouches[0].clientX;
-  if (endX > startX) {
-    if (endX - startX > 70) {
-      projectsIndex <= 0
-        ? (projectsIndex = projectsList.children.length - 2)
-        : projectsIndex--;
-    }
-  } else if (endX < startX) {
-    if (startX - endX > 70) {
-      projectsIndex === projectsList.children.length - 1
-        ? (projectsIndex = 0)
-        : projectsIndex++;
-    }
-  }
-  activeProjectsSlider(projectsIndex);
-});
