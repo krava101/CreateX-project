@@ -24,6 +24,7 @@
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/touch-slider-a3d169cb.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-25ecbd05.js">
     <link rel="stylesheet" href="/CreateX-project/assets/about-824cf851.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-d88b116a.css">
@@ -264,7 +265,7 @@
           <button type="button">June 2000</button>
         </li>
       </ul>
-      <div class="active-history-card">
+      <div class="active-history-card" id="history-slider">
         <img
           class="active-history-img"
           src="/CreateX-project/assets/history-1-e67c9548.jpg"
@@ -277,13 +278,13 @@
           Eu nec vitae.
         </p>
       </div>
-      <div class="history-btns-wrapper" id="history-slider">
-        <button class="history-btn" type="button" data-btn="l">
+      <div class="history-btns-wrapper">
+        <button class="history-btn" type="button" id="history-btn-left">
           <svg class="history-btn-icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-left-arrow"></use>
           </svg>
         </button>
-        <button class="history-btn" type="button" data-btn="r">
+        <button class="history-btn" type="button" id="history-btn-right">
           <svg class="history-btn-icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-right-arrow"></use>
           </svg>
