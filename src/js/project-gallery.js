@@ -23,9 +23,7 @@ rightBtn.addEventListener('click', () => {
 projectSmallGallery.addEventListener('click', event => {
   const target = event.target;
   if (target.nodeName === 'BUTTON') {
-    currentIndex = Array.from(projectSmallGallery.children).indexOf(
-      target.parentNode
-    );
+    currentIndex = [...projectSmallGallery.children].indexOf(target.parentNode);
     galleryScroll(currentIndex);
   }
 });

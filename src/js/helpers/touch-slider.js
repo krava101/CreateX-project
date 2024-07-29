@@ -1,4 +1,4 @@
-export function touchSlider(list, callback, index) {
+export function touchSlider(list, callback, index, arrLength) {
   let startX;
 
   list.addEventListener('touchstart', event => {
@@ -7,7 +7,10 @@ export function touchSlider(list, callback, index) {
 
   list.addEventListener('touchend', event => {
     const endX = event.changedTouches[0].clientX;
-    const length = list.children.length;
+    let length = list.children.length;
+    if (arrLength) {
+      length = arrLength;
+    }
     if (endX > startX) {
       if (endX - startX > 70) {
         index <= 0 ? (index = length - 1) : index--;
