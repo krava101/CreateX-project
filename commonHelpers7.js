@@ -1,4 +1,4 @@
-import"./assets/header-4ffb22f8.js";/* empty css                     */import{p as g}from"./assets/data-projects-2fb17aac.js";import{l as j}from"./assets/projects-slider-4f04f248.js";const d=window.location.href,u=new URL(d),y=+u.searchParams.get("project"),t=g[y],p=document.getElementById("project-title"),h=document.getElementById("project-path"),_=document.getElementById("project-gallery"),b=document.getElementById("project-small-gallery"),$=document.getElementById("project-info"),E=document.getElementById("project-description");p.textContent=t.name;p.classList.remove("project__title_loader");h.textContent=`/ ${t.name}`;_.innerHTML=`
+import"./assets/header-4ffb22f8.js";/* empty css                     */import{p as n}from"./assets/data-projects-2fb17aac.js";import{l as s,t as m}from"./assets/projects-slider-4b2993c8.js";const p=window.location.href,g=new URL(p),j=+g.searchParams.get("project"),t=n[j],a=document.getElementById("project-title"),d=document.getElementById("project-path"),y=document.getElementById("project-gallery"),u=document.getElementById("project-small-gallery"),_=document.getElementById("project-info"),h=document.getElementById("project-description");a.textContent=t.name;a.classList.remove("project__title_loader");d.textContent=`/ ${t.name}`;y.innerHTML=`
   <li>
     <img src="${t.images[0]}" alt="Project photo">
   </li>
@@ -16,7 +16,7 @@ import"./assets/header-4ffb22f8.js";/* empty css                     */import{p 
   </li>
   <li>
     <img src="${t.images[5]}" alt="Project photo">
-  </li>`;b.innerHTML=`
+  </li>`;u.innerHTML=`
   <li class="project__gallery-small-item active">
     <button class="project__gallery-small-btn" type="button">
       <img src="${t.images[0]}" alt="Project small photo pagination">
@@ -41,7 +41,7 @@ import"./assets/header-4ffb22f8.js";/* empty css                     */import{p 
   <li class="project__gallery-small-item">
     <button class="project__gallery-small-btn" type="button">
       <img src="${t.images[5]}" alt="Project small photo pagination">
-    </button></li>`;$.innerHTML=`
+    </button></li>`;_.innerHTML=`
   <li>Location</li>
   <li>${t.location}</li>
   <li>CLIENT</li>
@@ -53,5 +53,5 @@ import"./assets/header-4ffb22f8.js";/* empty css                     */import{p 
   <li>VALUE</li>
   <li>${t.value}</li>
   <li>COMPLETED</li>
-  <li>${t.completed}</li>`;E.textContent=t.description;j(t);function f(l,c,o){let i;l.addEventListener("touchstart",m=>{i=m.touches[0].clientX}),l.addEventListener("touchend",m=>{const n=m.changedTouches[0].clientX;n>i?n-i>70&&(o<=0?o=l.children.length-1:o--):n<i&&i-n>70&&(o===l.children.length-1?o=0:o++),c(o)})}const r=document.getElementById("project-gallery"),a=document.getElementById("project-small-gallery");document.getElementById("project-info");const P=document.querySelector(".project__gallery-btn_left"),L=document.querySelector(".project__gallery-btn_right");let e=0;P.addEventListener("click",()=>{e<=0?e=r.children.length-1:e--,s(e)});L.addEventListener("click",()=>{e===r.children.length-1?e=0:e++,s(e)});a.addEventListener("click",l=>{const c=l.target;c.nodeName==="BUTTON"&&(e=Array.from(a.children).indexOf(c.parentNode),s(e))});f(r,s,e);function s(l){a.querySelector(".active").classList.remove("active");const c=r.children[0].getBoundingClientRect().width;r.style.transform=`translateX(-${l*c}px)`,a.children[l].classList.add("active")}
+  <li>${t.completed}</li>`;h.textContent=t.description;s(t);const l=document.getElementById("project-gallery"),c=document.getElementById("project-small-gallery"),b=document.querySelector(".project__gallery-btn_left"),$=document.querySelector(".project__gallery-btn_right");let e=0;b.addEventListener("click",()=>{e<=0?e=l.children.length-1:e--,r(e)});$.addEventListener("click",()=>{e===l.children.length-1?e=0:e++,r(e)});c.addEventListener("click",o=>{const i=o.target;i.nodeName==="BUTTON"&&(e=Array.from(c.children).indexOf(i.parentNode),r(e))});m(l,r,e);function r(o){c.querySelector(".active").classList.remove("active");const i=l.children[0].getBoundingClientRect().width;l.style.transform=`translateX(-${o*i}px)`,c.children[o].classList.add("active")}
 //# sourceMappingURL=commonHelpers7.js.map

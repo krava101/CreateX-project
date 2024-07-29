@@ -1,4 +1,4 @@
-import"./assets/header-4ffb22f8.js";import"./assets/comments-accae290.js";import{n as r}from"./assets/data-news-fe2df6bb.js";import"./assets/main-form-25ecbd05.js";import{l as a}from"./assets/projects-slider-4f04f248.js";import"./assets/data-projects-2fb17aac.js";const d=document.getElementById("newsList"),m=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,h=r.slice(0,3).reduce((s,e,l)=>s+`
+import"./assets/header-4ffb22f8.js";import"./assets/comments-accae290.js";import{n as r}from"./assets/data-news-fe2df6bb.js";import{t as l,l as a}from"./assets/projects-slider-4b2993c8.js";import"./assets/main-form-25ecbd05.js";import"./assets/data-projects-2fb17aac.js";const m=document.getElementById("newsList"),d=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,h=r.slice(0,3).reduce((n,e,i)=>n+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img
@@ -14,16 +14,16 @@ import"./assets/header-4ffb22f8.js";import"./assets/comments-accae290.js";import
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="${m}#icon-comments"></use>
+              <use href="${d}#icon-comments"></use>
             </svg>
             <p>
               ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
             </p>
           </li>
         </ul>
-        <p class="news-card-text ${l!==0?"hidden":""}">
+        <p class="news-card-text ${i!==0?"hidden":""}">
         ${e.previewText}</p>
       </div>
     </li>
-    `,"");d.innerHTML=h;const n=document.querySelector(".hero-steps-list"),g=document.querySelector(".hero-left-btn"),p=document.querySelector(".hero-right-btn"),o=document.querySelector(".hero-pag-list");let t=0,c;function i(s){const e=n.firstElementChild.getBoundingClientRect();o.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),n.style.transform=`translateX(${-s*e.width}px)`,o.children[s].classList.add("active-hero-pag")}g.addEventListener("click",()=>{t<=0?t=n.children.length-1:t--,i(t)});p.addEventListener("click",()=>{t===n.children.length-1?t=0:t++,i(t)});n.addEventListener("touchstart",s=>{c=s.touches[0].clientX});n.addEventListener("touchend",s=>{const e=s.changedTouches[0].clientX;e>c?e-c>70&&(t<=0?t=n.children.length-1:t--):e<c&&c-e>70&&(t===n.children.length-1?t=0:t++),i(t)});a();
+    `,"");m.innerHTML=h;const s=document.querySelector(".hero-steps-list"),p=document.querySelector(".hero-left-btn"),g=document.querySelector(".hero-right-btn"),o=document.querySelector(".hero-pag-list");let t=0;l(s,c,t);p.addEventListener("click",()=>{t<=0?t=s.children.length-1:t--,c(t)});g.addEventListener("click",()=>{t===s.children.length-1?t=0:t++,c(t)});function c(n){const e=s.firstElementChild.getBoundingClientRect();o.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),s.style.transform=`translateX(${-n*e.width}px)`,o.children[n].classList.add("active-hero-pag")}a();
 //# sourceMappingURL=commonHelpers3.js.map
