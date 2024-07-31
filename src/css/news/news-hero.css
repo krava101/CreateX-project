@@ -1,0 +1,5 @@
+.hero::after {
+  background-image: url('../../img/news-page-img/news-hero-bg.jpg');
+  background-size: contain cover;
+  background-position: right;
+}

@@ -26,87 +26,8 @@
     <load href="./partials/header.html" />
     <script type="module" src="./js/header.js"></script>
     <main>
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container">
-          <p class="page-path">
-            <span class="page-path-dark">Homepage</span> / News
-          </p>
-          <h1 class="page-title">news</h1>
-          <p class="hero-text">
-            Stay tuned with our news, expert tips and articles.
-          </p>
-        </div>
-      </section>
-      <div class="bg-container"></div>
-      <!-- HERO -->
-      <!-- NEWS -->
-      <section class="news">
-        <div class="container">
-          <h2 class="section-title">Categories</h2>
-          <ul class="news-nav-list list">
-            <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="all">
-                All News
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Company News"
-              >
-                Company News
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Innovation"
-              >
-                Innovation
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Industry News"
-              >
-                Industry News
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Expert Tips"
-              >
-                Expert Tips
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Marketing"
-              >
-                Marketing
-              </button>
-            </li>
-          </ul>
-          <ul class="news-list list" id="news-list"></ul>
-          <div class="news-pag-wrapper">
-            <ul class="news-pagination-list list"></ul>
-            <button class="news-arrow-btn" type="button" id="next-page-btn">
-              <svg class="news-pagination-icon">
-                <use href="./img/icons.svg#icon-right-arrow"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
+      <load href="./partials/news/news-hero.html" />
+      <load href="./partials/news/news-list.html" />
       <load href="./partials/form.html" />
     </main>
     <load href="partials/footer.html" />
