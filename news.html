@@ -23,8 +23,8 @@
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers4.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-fe2df6bb.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/news-a42ad75b.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-2a056899.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/news-53d355e6.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-d88b116a.css">
   </head>
   <body>
@@ -90,87 +90,67 @@
 
     
     <main>
-      <!-- HERO -->
       <section class="hero">
-        <div class="container">
-          <p class="page-path">
-            <span class="page-path-dark">Homepage</span> / News
-          </p>
-          <h1 class="page-title">news</h1>
-          <p class="hero-text">
-            Stay tuned with our news, expert tips and articles.
-          </p>
-        </div>
-      </section>
-      <div class="bg-container"></div>
-      <!-- HERO -->
-      <!-- NEWS -->
+  <div class="container">
+    <p class="page-path"><span class="page-path-dark">Homepage</span> / News</p>
+    <h1 class="page-title">news</h1>
+    <p class="hero-text">Stay tuned with our news, expert tips and articles.</p>
+  </div>
+</section>
+
       <section class="news">
-        <div class="container">
-          <h2 class="section-title">Categories</h2>
-          <ul class="news-nav-list list">
-            <li class="news-nav-item">
-              <button class="news-nav-btn" type="button" data-filter="all">
-                All News
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Company News"
-              >
-                Company News
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Innovation"
-              >
-                Innovation
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Industry News"
-              >
-                Industry News
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Expert Tips"
-              >
-                Expert Tips
-              </button>
-            </li>
-            <li class="news-nav-item">
-              <button
-                class="news-nav-btn"
-                type="button"
-                data-filter="Marketing"
-              >
-                Marketing
-              </button>
-            </li>
-          </ul>
-          <ul class="news-list list" id="news-list"></ul>
-          <div class="news-pag-wrapper">
-            <ul class="news-pagination-list list"></ul>
-            <button class="news-arrow-btn" type="button" id="next-page-btn">
-              <svg class="news-pagination-icon">
-                <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-right-arrow"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
+  <div class="container">
+    <div class="news__tilte-wrap">
+      <h2 class="news__tilte section-title">Categories</h2>
+    </div>
+    <ul class="news__filter list" id="news-filter">
+      <li class="news__filter-item active">
+        <button class="news__filter-btn" type="button" data-filter="all">
+          All News
+        </button>
+      </li>
+      <li class="news__filter-item">
+        <button
+          class="news__filter-btn"
+          type="button"
+          data-filter="Company News"
+        >
+          Company News
+        </button>
+      </li>
+      <li class="news__filter-item">
+        <button class="news__filter-btn" type="button" data-filter="Innovation">
+          Innovation
+        </button>
+      </li>
+      <li class="news__filter-item">
+        <button
+          class="news__filter-btn"
+          type="button"
+          data-filter="Industry News"
+        >
+          Industry News
+        </button>
+      </li>
+      <li class="news__filter-item">
+        <button
+          class="news__filter-btn"
+          type="button"
+          data-filter="Expert Tips"
+        >
+          Expert Tips
+        </button>
+      </li>
+      <li class="news__filter-item">
+        <button class="news__filter-btn" type="button" data-filter="Marketing">
+          Marketing
+        </button>
+      </li>
+    </ul>
+    <ul class="news__list list" id="news-list"></ul>
+  </div>
+</section>
+
       <section class="application" id="application">
   <div class="container">
     <form class="application-form">

@@ -1,32 +1,28 @@
-import"./assets/header-4ffb22f8.js";/* empty css                     */import{n as r}from"./assets/data-news-fe2df6bb.js";const o=document.querySelector("#news-list"),u=document.querySelector(".news"),t=document.querySelector(".news-pagination-list"),h=document.querySelector("#next-page-btn"),w=document.querySelector(".news-nav-list"),f=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href;let d=Math.ceil(r.length/6),c="all",i=1;function m(e,s="all"){let n=0;s==="all"?n=e:n=e.filter(g=>g.type.toLowerCase()===s.toLowerCase());const a=n.slice((i-1)*6,i*6).reduce((g,l)=>g+`
-    <li class="news-card">
-      <img
-        class="news-card-img"
-        src="${l.img}"
-        alt="News image"
-      />
-      <div class="news-card-box">
-        <a class="card-title" href="./post.html?post=${l.id}">${l.title}</a>
-        <ul class="news-date-list list">
-          <li>${l.type}</li>
-          <li class="news-date-decor-item"></li>
-          <li>${l.date}</li>
-          <li class="news-date-decor-item"></li>
-          <li class="news-comments">
-            <svg class="news-comment-icon">
-              <use href="${f}#icon-comments"></use>
-            </svg>
-            ${l.comments.length?l.comments.length:"No"} comments
-          </li>
-        </ul>
-        <p class="news-card-text">
-          ${l.previewText}
-        </p>
-      </div>
-    </li>
-    `,"");o.innerHTML=a,d=Math.ceil(n.length/6),setTimeout(()=>{o.style.height="100%"},200)}function p(){if(d===1)return h.style.display="none",t.innerHTML="";const s=Array.from({length:d},(n,a)=>a+1).slice(0,4).reduce((n,a)=>n+` 
-      <li class="news-pag-item">
-        <button class="news-pagination-btn" type="button">${a}</button>
-      </li>
-  `,"");t.innerHTML=s}m(r,c);p();t.children.length&&t.children[0].classList.add("active");t.addEventListener("click",e=>{e.target!==e.currentTarget&&(Array.from(t.children).forEach(s=>s.classList.remove("active")),o.style.height="1564px",i=+e.target.textContent,e.target.parentNode.classList.add("active"),u.scrollIntoView({block:"start"}),m(r,c))});h.addEventListener("click",()=>{Array.from(t.children).forEach(e=>e.classList.remove("active")),i<d&&(i++,i<=t.children.length&&t.children[i-1].classList.add("active"),o.style.height="1564px",u.scrollIntoView({block:"start"}),m(r,c))});w.addEventListener("click",e=>{Array.from(e.currentTarget.children).forEach(s=>s.classList.remove("active")),e.target.parentNode.classList.add("active"),i=1,c=e.target.dataset.filter,h.style.display="block",m(r,c),p(),t.children.length&&t.children[0].classList.add("active")});
+import"./assets/header-4ffb22f8.js";/* empty css                     */import{n as o}from"./assets/data-news-2a056899.js";const d=document.querySelector("#news-list"),a=document.getElementById("news-filter"),w=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href;let i=1,n="all";r(o,n);function r(t,s="all"){let l=0;s==="all"?l=t:l=t.filter(c=>c.type.toLowerCase()===s.toLowerCase());const m=l.slice((i-1)*6,i*6).reduce((c,e)=>c+`
+      <li class="news__card">
+        <div class="news__card-img-wrapper">
+          <img
+            class="news__card-img"
+            src="${e.img}"
+            alt="${e.title} image"
+          />
+        </div>
+        <div class="news__card-box">
+          <a class="news__card-title card-title" href="./post.html?post=${e.id}">${e.title}</a>
+          <ul class="news__date-list list">
+            <li>${e.type}</li>
+            <li>${e.date}</li>
+            <li class="news__comments">
+              <svg class="news__comment-icon">
+                <use href="${w}#icon-comments"></use>
+              </svg>
+              <p>
+                ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
+              </p>
+            </li>
+          </ul>
+          <p class="news__card-text">
+          ${e.previewText}</p>
+        </div>
+      </li>`,"");d.innerHTML=m}a.addEventListener("click",t=>{if(t.target.nodeName==="BUTTON"){const s=t.target;a.querySelector(".active").classList.remove("active"),i=1,n=s.dataset.filter,r(o,n),s.parentNode.classList.add("active")}});
 //# sourceMappingURL=commonHelpers4.js.map
