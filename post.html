@@ -25,7 +25,7 @@
     <script type="module" crossorigin src="/CreateX-project/commonHelpers6.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-d0acb961.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/post-3f1d4be8.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/post-96a0137f.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-d88b116a.css">
   </head>
   <body>
@@ -98,23 +98,23 @@
       <span id="post-path">/ Path</span>
     </p>
     <h1 class="post__title page-title" id="post-title">Name of the post</h1>
-    <div class="post-info">
-      <ul class="post-date-list list">
+    <div class="post__info">
+      <ul class="post__date-list list">
         <li><p id="post-type">Constructions</p></li>
         <li>
-          <svg class="post-comment-icon">
+          <svg class="post__comment-icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-clock"></use>
           </svg>
           <p id="post-date">June 24, 2020</p>
         </li>
-        <li class="post-comments">
-          <svg class="post-comment-icon">
+        <li class="post__comments">
+          <svg class="post__comment-icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-comments"></use>
           </svg>
           <p id="post-comments-num">No comments</p>
         </li>
       </ul>
-      <ul class="hero-soc-list list">
+      <ul class="post__social-list list">
         <li>
           <a href="">
             <svg>
@@ -141,12 +141,20 @@
   </div>
 </section>
 
-      <!-- <section class="post">
+      <section class="post">
   <div class="container">
-    <img class="post-img" src="" alt="News image" />
+    <div class="post__img-loader"></div>
+    <img class="post__img hidden" src="" alt id="post-img" />
+    <ul class="post__text-list loader" id="post-text">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </div>
 </section>
- -->
+
       <!-- <section class="comments"></section>
  -->
       <!-- <section class="leave-comment">
