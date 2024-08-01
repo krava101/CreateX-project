@@ -3,8 +3,7 @@
 }
 
 .hero {
-  padding: 60px 0 160px;
-  min-height: 508px;
+  padding: 54px 0 160px;
   background-color: var(--cloud);
 }
 
@@ -18,21 +17,21 @@
   color: var(--primary-color);
 }
 
-.page-title {
+.post__title {
   font-size: 64px;
   line-height: 1.2;
   margin: 40px 0 48px;
   max-width: none;
 }
 
-.post-info {
+.post__info {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px 80px;
 }
 
-.post-date-list {
+.post__date-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -41,74 +40,85 @@
   line-height: 1.6;
 }
 
-.post-date-list li:first-child {
+.post__date-list li:first-child {
   color: var(--red-color);
 }
 
-.post-date-list li {
+.post__date-list li {
   display: flex;
   align-items: center;
   gap: 9px;
 }
 
-.post-date-list li:not(:last-child) {
+.post__date-list li:not(:last-child) {
   position: relative;
   padding-right: 12px;
 }
 
-.post-date-list li:not(:last-child)::after {
+.post__date-list li:not(:last-child)::after {
   position: absolute;
   top: 50%;
   right: 0;
   content: '';
   transform: translateY(-50%);
   width: 0px;
-  height: 12px;
+  height: 16px;
   background-color: var(--secondary-color);
   border-right: 1px solid var(--secondary-color);
 }
 
-.post-date-list svg {
+.post__date-list svg {
   width: 20px;
   height: 20px;
   fill: var(--secondary-color);
 }
 
-ul.hero-soc-list {
+.post__social-list {
   display: flex;
   gap: 12px;
 }
 
-.hero-soc-list li {
+.post__social-list li {
   height: 24px;
 }
 
-.hero-soc-list svg {
+.post__social-list svg {
   width: 24px;
   height: 24px;
   fill: var(--secondary-color);
 }
 
 @media screen and (max-width: 1024px) {
-  .page-title {
-    font-size: 54px;
+  .hero {
+    padding: 54px 0 140px;
+  }
+
+  .post__title {
+    font-size: 48px;
+    margin: 40px 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .page-title {
-    font-size: 42px;
+  .hero {
+    padding: 54px 0 120px;
+  }
+
+  .post__title {
+    font-size: 40px;
+    margin: 30px 0;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .page-title {
-    font-size: 36px;
+  .post__title {
+    font-size: 30px;
+    margin: 20px 0;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .page-title {
-    font-size: 32px;
+  .post__title {
+    font-size: 28px;
   }
 }

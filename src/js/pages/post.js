@@ -1,87 +1,13 @@
 import news from '../../data/data-news';
 import '../post-hero.js';
-import { dateFormater } from '../helpers/date-formater.js';
+import '../post-content.js';
 
 const href = window.location.href;
 const postId = new URL(href).searchParams.get('post');
 const currentPost = news.find(post => post.id === postId);
+const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
-const postSection = document.querySelector('.post');
 const commentsSection = document.querySelector('.comments');
-const commentForm = document.querySelector('#commentForm');
-
-// const newComment = {
-//   id: '',
-//   nickname: '',
-//   date: '',
-//   comment: '',
-// };
-
-function loadPost() {
-  const markup = `
-    <div class="container">
-      <img
-        class="post-img"
-        src="${currentPost.img}"
-        alt="News image"
-      />
-      ${currentPost.post.reduce((acc, e) => {
-        let text = `<p class="${e.type}">${e.text}</p>`;
-        if (e.type === 'quote-text') {
-          text = `
-          <div class="quote">
-            <svg class="quote-icon">
-              <use href="${iconUrl}#icon-braces"></use>
-            </svg>
-            <p class="${e.type}">${e.text}</p>
-          </div>`;
-        } else if (e.type === 'post-list') {
-          const listMarkup = e.text.reduce(
-            (accum, li) =>
-              accum +
-              `<li>
-                <svg class="post-list-icon">
-                  <use href="${iconUrl}#icon-check"></use>
-                </svg>
-                ${li}
-              </li>`,
-            ''
-          );
-          text = `<ul class="post-list list">
-            ${listMarkup}
-          </ul>`;
-        }
-        return acc + text;
-      }, '')}
-      <div class="post-share">
-        <p>Share:</p>
-        <ul class="hero-soc-list list">
-          <li>
-            <a href="">
-              <svg>
-                <use href="${iconUrl}#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <svg>
-                <use href="${iconUrl}#icon-linked"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <svg>
-                <use href="${iconUrl}#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>`;
-  postSection.innerHTML = markup;
-}
 
 function loadComments() {
   const markup = `
@@ -114,6 +40,13 @@ function loadComments() {
     </div>`;
   commentsSection.innerHTML = markup;
 }
+
+// const newComment = {
+//   id: '',
+//   nickname: '',
+//   date: '',
+//   comment: '',
+// };
 
 // commentForm.addEventListener('submit', event => {
 //   event.preventDefault();
