@@ -1,0 +1,39 @@
+<section class="leave-comment">
+  <div class="container">
+    <p class="section-title">Leave your comment</p>
+    <form action="" id="commentForm">
+      <div class="user-info">
+        <label for="commentUsername">
+          Name*
+          <input
+            type="text"
+            name="username"
+            id="commentUsername"
+            placeholder="Your name"
+            required
+          />
+        </label>
+        <label for="commentUserEmail">
+          Email*
+          <input
+            type="text"
+            name="userEmail"
+            id="commentUserEmail"
+            placeholder="Your email"
+            required
+          />
+        </label>
+      </div>
+      <label for="commentUserComment">
+        Your comment*
+        <textarea
+          name="userComment"
+          id="commentUserComment"
+          placeholder="Type comment here"
+          required
+        ></textarea>
+      </label>
+      <button type="submit">Post comment</button>
+    </form>
+  </div>
+</section>

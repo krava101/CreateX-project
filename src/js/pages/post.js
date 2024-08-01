@@ -1,36 +1,35 @@
 import news from '../../data/data-news';
-import * as mainForm from '../main-form';
+import '../post-hero.js';
+import { dateFormater } from '../helpers/date-formater.js';
+
+const href = window.location.href;
+const postId = new URL(href).searchParams.get('post');
+const currentPost = news.find(post => post.id === postId);
 
 const postSection = document.querySelector('.post');
-const heroSection = document.querySelector('.hero');
 const commentsSection = document.querySelector('.comments');
 const commentForm = document.querySelector('#commentForm');
-const href = window.location.href;
-const url = new URL(href);
-const postId = +url.searchParams.get('post');
-const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
-const newComment = {
-  id: '',
-  nickname: '',
-  date: '',
-  comment: '',
-};
-
-const currentPost = news.filter(post => post.id === postId)[0];
+// const newComment = {
+//   id: '',
+//   nickname: '',
+//   date: '',
+//   comment: '',
+// };
 
 function loadPost() {
   const markup = `
-    <img
-      class="post-img"
-      src="${currentPost.img}"
-      alt="News image"
-    />
     <div class="container">
+      <img
+        class="post-img"
+        src="${currentPost.img}"
+        alt="News image"
+      />
       ${currentPost.post.reduce((acc, e) => {
         let text = `<p class="${e.type}">${e.text}</p>`;
         if (e.type === 'quote-text') {
-          text = `<div class="quote">
+          text = `
+          <div class="quote">
             <svg class="quote-icon">
               <use href="${iconUrl}#icon-braces"></use>
             </svg>
@@ -84,62 +83,6 @@ function loadPost() {
   postSection.innerHTML = markup;
 }
 
-function loadHero() {
-  const markup = `<div class="container">
-    <p class="page-path">
-      <span class="page-path-dark">Homepage / News</span> / ${currentPost.title}
-    </p>
-    <h1 class="page-title">
-      ${currentPost.title}
-    </h1>
-    <div class="post-info">
-      <ul class="post-date-list list">
-        <li>${currentPost.type}</li>
-        <li class="post-date-decor-item"></li>
-        <li>
-          <svg class="post-comment-icon">
-            <use href="${iconUrl}#icon-clock"></use>
-          </svg>
-          ${currentPost.date}
-        </li>
-        <li class="post-date-decor-item"></li>
-        <li class="post-comments">
-          <svg class="post-comment-icon">
-            <use href="${iconUrl}#icon-comments"></use>
-          </svg>
-          ${
-            currentPost.comments.length ? currentPost.comments.length : 'No'
-          } comments
-        </li>
-      </ul>
-      <ul class="hero-soc-list list">
-        <li>
-          <a href="">
-            <svg>
-              <use href="${iconUrl}#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <svg>
-              <use href="${iconUrl}#icon-linked"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <svg>
-              <use href="${iconUrl}#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>`;
-  heroSection.innerHTML = markup;
-}
-
 function loadComments() {
   const markup = `
     <div class="container">
@@ -172,38 +115,13 @@ function loadComments() {
   commentsSection.innerHTML = markup;
 }
 
-loadHero();
-loadPost();
-loadComments();
-
-function formatDate(date) {
-  const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
-  const day = date.getDate();
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  return `${day} ${month}, ${year}`;
-}
-
-commentForm.addEventListener('submit', event => {
-  event.preventDefault();
-  newComment.id = Date.now();
-  newComment.nickname = event.currentTarget.elements.username.value;
-  newComment.date = formatDate(new Date());
-  newComment.comment = event.currentTarget.elements.userComment.value;
-  commentForm.reset();
-  currentPost.comments.push(newComment);
-  loadComments();
-});
+// commentForm.addEventListener('submit', event => {
+//   event.preventDefault();
+//   newComment.id = Date.now();
+//   newComment.nickname = event.currentTarget.elements.username.value;
+//   newComment.date = dateFormater(new Date());
+//   newComment.comment = event.currentTarget.elements.userComment.value;
+//   commentForm.reset();
+//   currentPost.comments.push(newComment);
+//   loadComments();
+// });

@@ -1,0 +1,114 @@
+#header {
+  background-color: var(--cloud);
+}
+
+.hero {
+  padding: 60px 0 160px;
+  min-height: 508px;
+  background-color: var(--cloud);
+}
+
+.page-path {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--light-gray);
+}
+
+.page-path-dark {
+  color: var(--primary-color);
+}
+
+.page-title {
+  font-size: 64px;
+  line-height: 1.2;
+  margin: 40px 0 48px;
+  max-width: none;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px 80px;
+}
+
+.post-date-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.post-date-list li:first-child {
+  color: var(--red-color);
+}
+
+.post-date-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.post-date-list li:not(:last-child) {
+  position: relative;
+  padding-right: 12px;
+}
+
+.post-date-list li:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: '';
+  transform: translateY(-50%);
+  width: 0px;
+  height: 12px;
+  background-color: var(--secondary-color);
+  border-right: 1px solid var(--secondary-color);
+}
+
+.post-date-list svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--secondary-color);
+}
+
+ul.hero-soc-list {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-soc-list li {
+  height: 24px;
+}
+
+.hero-soc-list svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--secondary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .page-title {
+    font-size: 54px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .page-title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .page-title {
+    font-size: 32px;
+  }
+}

@@ -1,6 +1,6 @@
 const news = [
   {
-    id: 1,
+    id: '1',
     type: 'Industry News',
     img: new URL('/img/news-page-img/news-1.jpg', import.meta.url).href,
     title: 'How to Build Climate Change-Resilient Infrastructure',
@@ -74,7 +74,7 @@ const news = [
     ],
   },
   {
-    id: 2,
+    id: '2',
     type: 'Innovation',
     img: new URL('/img/news-page-img/news-2.jpg', import.meta.url).href,
     title: 'How Construction Can Help Itself',
@@ -116,7 +116,7 @@ const news = [
     comments: [],
   },
   {
-    id: 3,
+    id: '3',
     type: 'Expert Tips',
     img: new URL('/img/news-page-img/news-3.jpg', import.meta.url).href,
     title: 'The Difference Between a Digger and an Excavator',
@@ -152,7 +152,7 @@ const news = [
     comments: [],
   },
   {
-    id: 4,
+    id: '4',
     type: 'Company News',
     img: new URL('/img/news-page-img/news-4.jpg', import.meta.url).href,
     title: 'Building Construction Hand Tools',
@@ -198,7 +198,7 @@ const news = [
     ],
   },
   {
-    id: 5,
+    id: '5',
     type: 'Marketing',
     img: new URL('/img/news-page-img/news-5.jpg', import.meta.url).href,
     title: 'Top 10 Construction Trends',
@@ -249,7 +249,7 @@ const news = [
     ],
   },
   {
-    id: 6,
+    id: '6',
     type: 'Company News',
     img: new URL('/img/news-page-img/news-6.jpg', import.meta.url).href,
     title: 'Types of Flooring Materials',
