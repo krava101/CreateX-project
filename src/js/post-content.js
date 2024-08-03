@@ -12,7 +12,7 @@ const postImgLoader = document.querySelector('.post__img-loader');
 postImg.src = currentPost.img;
 postImg.alt = `${currentPost.title} image`;
 postImg.classList.remove('hidden');
-postImgLoader.classList.add('hidden');
+postImgLoader.remove('hidden');
 
 const postTextMarkup = currentPost.post.reduce((acc, e) => {
   let text = '';

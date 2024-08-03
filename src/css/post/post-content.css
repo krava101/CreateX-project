@@ -5,22 +5,17 @@
 
 .post__img,
 .post__img-loader {
-  margin: -200px 0 80px;
+  display: block;
+  margin: -100px 0 60px;
   aspect-ratio: 2/1;
   background-color: var(--loading-bg);
   pointer-events: all;
   opacity: 1;
 }
 
-.post__img-loader {
-  margin: -80px 0 140px;
-}
-
 .post__img.hidden,
 .post__img-loader.hidden {
-  pointer-events: none;
-  height: 0;
-  opacity: 0;
+  display: none;
 }
 
 .post__text-list {
@@ -122,18 +117,16 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .post__img {
-    margin: -140px 0 60px;
-  }
-
+  .post__img,
   .post__img-loader {
-    margin: -80px 0 60px;
+    margin: -70px 0 60px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .post__img {
-    margin: -150px 0 40px;
+  .post__img,
+  .post__img-loader {
+    margin: -80px 0 40px;
   }
 
   .post__text-list {
@@ -152,8 +145,9 @@
 }
 
 @media screen and (max-width: 425px) {
-  .post__img {
-    margin: -180px 0 30px;
+  .post__img,
+  .post__img-loader {
+    margin: -100px 0 30px;
   }
 
   .post__text-list {
