@@ -8,9 +8,11 @@ const currentPost = news.find(post => post.id === postId);
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
 
 const commentsSection = document.querySelector('.comments');
+if (currentPost.comments.length === 0) {
+  commentsSection.classList.add('hidden');
+}
 
-function loadComments() {
-  const markup = `
+const markup = `
     <div class="container">
       <p class="comments-title">${
         currentPost.comments.length ? currentPost.comments.length : 'No'
@@ -38,8 +40,7 @@ function loadComments() {
         )}
       </ul>
     </div>`;
-  commentsSection.innerHTML = markup;
-}
+commentsSection.innerHTML = markup;
 
 // const newComment = {
 //   id: '',
