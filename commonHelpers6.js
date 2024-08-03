@@ -1,7 +1,7 @@
-import"./assets/header-4ffb22f8.js";/* empty css                     */import{n as m}from"./assets/data-news-d0acb961.js";const $=window.location.href,v=new URL($).searchParams.get("post"),o=m.find(t=>t.id===v),r=document.getElementById("post-path"),p=document.getElementById("post-title"),d=document.getElementById("post-type"),u=document.getElementById("post-date"),_=document.getElementById("post-comments-num");p.textContent=o.title;p.classList.remove("loader");r.textContent=`/ ${o.title}`;r.classList.remove("loader");d.textContent=o.type;d.classList.remove("loader");u.textContent=o.date;u.classList.remove("loader");const n=o.comments.length;_.textContent=n?n>1?`${n} comments`:"1 comment":"No comments";_.classList.remove("loader");const y=window.location.href,L=new URL(y).searchParams.get("post"),a=m.find(t=>t.id===L),i=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,l=document.getElementById("post-img"),g=document.getElementById("post-text"),w=document.querySelector(".post__img-loader");l.src=a.img;l.alt=`${a.title} image`;l.classList.remove("hidden");w.classList.add("hidden");const I=a.post.reduce((t,e)=>{let s="";switch(e.type){case"preview-text":s=`<p class="post__preview-text">${e.text}</p>`;break;case"quote-text":s=`
+import"./assets/header-4ffb22f8.js";/* empty css                     */import{n as m}from"./assets/data-news-d0acb961.js";const $=window.location.href,v=new URL($).searchParams.get("post"),o=m.find(t=>t.id===v),i=document.getElementById("post-path"),p=document.getElementById("post-title"),d=document.getElementById("post-type"),u=document.getElementById("post-date"),_=document.getElementById("post-comments-num");p.textContent=o.title;p.classList.remove("loader");i.textContent=`/ ${o.title}`;i.classList.remove("loader");d.textContent=o.type;d.classList.remove("loader");u.textContent=o.date;u.classList.remove("loader");const n=o.comments.length;_.textContent=n?n>1?`${n} comments`:"1 comment":"No comments";_.classList.remove("loader");const y=window.location.href,L=new URL(y).searchParams.get("post"),a=m.find(t=>t.id===L),r=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,l=document.getElementById("post-img"),g=document.getElementById("post-text"),w=document.querySelector(".post__img-loader");l.src=a.img;l.alt=`${a.title} image`;l.classList.remove("hidden");w.remove("hidden");const I=a.post.reduce((t,e)=>{let s="";switch(e.type){case"preview-text":s=`<p class="post__preview-text">${e.text}</p>`;break;case"quote-text":s=`
         <p class="post__quote">
           <svg class="post__quote-icon">
-            <use href="${i}#icon-braces"></use>
+            <use href="${r}#icon-braces"></use>
           </svg>
           <p class="post__quote-text">${e.text}</p>
         </p>`;break;case"post-list":s=`
@@ -9,7 +9,7 @@ import"./assets/header-4ffb22f8.js";/* empty css                     */import{n 
           ${e.text.reduce((f,x)=>f+`
           <li class="post__subtext-item">
             <svg class="post__subtext-icon">
-              <use href="${i}#icon-check"></use>
+              <use href="${r}#icon-check"></use>
             </svg>
             <p>${x}</p>
           </li>`,"")}
