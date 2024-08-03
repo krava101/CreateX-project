@@ -25,8 +25,8 @@
     <script type="module" crossorigin src="/CreateX-project/commonHelpers6.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-d0acb961.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/post-96a0137f.css">
-    <link rel="stylesheet" href="/CreateX-project/assets/utils-d88b116a.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/post-dff4ebc7.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/utils-e460a520.css">
   </head>
   <body>
     <header id="header">
@@ -95,23 +95,25 @@
   <div class="container">
     <p class="page-path">
       <span class="page-path-dark">Homepage / News</span>
-      <span id="post-path">/ Path</span>
+      <span class="post-path loader" id="post-path"></span>
     </p>
-    <h1 class="post__title page-title" id="post-title">Name of the post</h1>
+    <h1 class="post__title page-title loader" id="post-title"></h1>
     <div class="post__info">
       <ul class="post__date-list list">
-        <li><p id="post-type">Constructions</p></li>
+        <li>
+          <p class="post__date-text loader" id="post-type"></p>
+        </li>
         <li>
           <svg class="post__comment-icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-clock"></use>
           </svg>
-          <p id="post-date">June 24, 2020</p>
+          <p class="post__date-text loader" id="post-date"></p>
         </li>
         <li class="post__comments">
           <svg class="post__comment-icon">
             <use href="/CreateX-project/assets/icons-97ef5a9b.svg#icon-comments"></use>
           </svg>
-          <p id="post-comments-num">No comments</p>
+          <p class="post__date-text loader" id="post-comments-num"></p>
         </li>
       </ul>
       <ul class="post__social-list list">
@@ -155,9 +157,9 @@
   </div>
 </section>
 
-      <!-- <section class="comments"></section>
- -->
-      <!-- <section class="leave-comment">
+      <section class="comments"></section>
+
+      <section class="leave-comment">
   <div class="container">
     <p class="section-title">Leave your comment</p>
     <form action="" id="commentForm">
@@ -196,7 +198,7 @@
     </form>
   </div>
 </section>
- -->
+
       <section class="application" id="application">
   <div class="container">
     <form class="application-form">
