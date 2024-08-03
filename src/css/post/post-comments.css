@@ -75,6 +75,7 @@
 @media screen and (max-width: 1024px) {
   .comments__title {
     margin-bottom: 40px;
+    font-size: 40px;
   }
 
   .comments__list {
@@ -89,6 +90,7 @@
 @media screen and (max-width: 768px) {
   .comments__title {
     margin-bottom: 30px;
+    font-size: 36px;
   }
 
   .comments__list {
@@ -102,5 +104,17 @@
 
   .comments__info {
     max-width: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .comments__title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .comments__title {
+    font-size: 28px;
   }
 }
