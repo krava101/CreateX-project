@@ -71,7 +71,10 @@ label.file-label {
   background-color: var(--cloud);
 
   transform: translateY(-150%);
-  transition: transform 0.8s linear;
+}
+
+.location-select-list.active {
+  transform: translateY(0);
 }
 
 .location-select-wrapper:has(.location-select-list.active) {
