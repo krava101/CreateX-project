@@ -1,0 +1,95 @@
+.cv-modal {
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.cv-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cv-modal textarea {
+  width: 100%;
+  height: 86px;
+  border: 1px solid #d7dadd;
+  border-radius: 4px;
+  background: var(--cloud);
+  resize: none;
+  padding: 11px 16px;
+  outline: none;
+}
+
+label.file-label {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 11px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.file-label svg {
+  width: 26px;
+  height: 26px;
+}
+
+#file-input {
+  display: none;
+}
+
+.cv-modal .modal-btn {
+  margin-top: 20px;
+}
+
+.location-select-label {
+  position: relative;
+}
+
+.location-select-label input {
+  cursor: pointer;
+  outline: none;
+}
+
+.location-select-wrapper {
+  position: absolute;
+  top: 80px;
+  overflow: hidden;
+  z-index: 999;
+  width: 100%;
+  height: 0;
+}
+
+.location-select-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid #d7dadd;
+  background-color: var(--cloud);
+
+  transform: translateY(-150%);
+  transition: transform 0.8s linear;
+}
+
+.location-select-wrapper:has(.location-select-list.active) {
+  pointer-events: all;
+  height: 314px;
+}
+
+.location-option {
+  width: 100%;
+  height: 52px;
+  padding: 13px 16px;
+  border-bottom: 1px solid #d7dadd;
+  background-color: var(--cloud);
+  outline: none;
+  color: #424551;
+  cursor: pointer;
+}
+
+.location-option:last-child {
+  border: none;
+}

@@ -1,0 +1,223 @@
+.positions {
+  padding: 120px 0 90px;
+}
+
+.positions__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.positions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 705px;
+}
+
+.positions__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 40px;
+  border-radius: 4px;
+  border: 1px solid #e5e8ed;
+  background: #fff;
+  transition: box-shadow 0.25s ease-in-out 0.1s;
+}
+
+.positions__item:hover,
+.positions__item:focus {
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03),
+    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+}
+
+.positions__title {
+  color: var(--title-color);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.positions__info-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--secondary-color);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.positions__info-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.positions__info-item:first-child {
+  position: relative;
+  padding-right: 8px;
+}
+
+.positions__info-item:first-child::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 12px;
+  transform: translateY(-50%);
+  background-color: var(--secondary-color);
+}
+
+.positions__form {
+  max-width: 380px;
+}
+
+.positions__form-title {
+  color: var(--title-color);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.positions__form-text {
+  color: var(--primary-color);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.positions__form-btn-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 20px;
+  margin-top: 48px;
+}
+
+.positions__btn {
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+  background-color: transparent;
+  outline: none;
+  width: 150px;
+  height: 44px;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.036em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease-in-out 0.1s,
+    color 0.25s ease-in-out 0.1s;
+}
+
+.positions__form-btn {
+  width: calc((100% - 20px) / 2);
+  height: 52px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid var(--red-color);
+
+  color: var(--red-color);
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.031em;
+  text-transform: uppercase;
+
+  transition: background-color 0.25s ease-in-out 0.1s,
+    color 0.25s ease-in-out 0.1s;
+}
+
+.positions__btn:hover,
+.positions__btn:focus,
+.positions__form-btn:hover,
+.positions__form-btn:focus {
+  background-color: var(--red-color);
+  color: var(--white);
+}
+
+.positions__info-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .positions {
+    padding: 90px 0 60px;
+  }
+
+  .positions__container {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .positions {
+    padding: 80px 0 60px;
+  }
+
+  .positions__item {
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+  }
+
+  .positions__info-list {
+    font-size: 16px;
+    gap: 13px;
+  }
+
+  .positions__info-item:first-child {
+    padding-right: 13px;
+  }
+
+  .positions__btn {
+    align-self: end;
+    width: 240px;
+  }
+
+  .positions__title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .positions__item {
+    padding: 20px;
+  }
+
+  .positions__btn {
+    width: 100%;
+    max-width: 240px;
+    align-self: center;
+  }
+
+  .positions__title {
+    font-size: 22px;
+  }
+
+  .positions__form-btn-box {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  .positions__form-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

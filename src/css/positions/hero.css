@@ -1,0 +1,11 @@
+.hero::after {
+  background-image: url('../../img/positions-page-img/positions-hero-bg.png');
+  background-size: 1014px 506px;
+  background-position: right bottom;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero::after {
+    background-position: center bottom;
+  }
+}

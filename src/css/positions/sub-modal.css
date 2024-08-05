@@ -1,0 +1,8 @@
+.sub-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-modal label:first-child {
+  margin-bottom: 20px;
+}
