@@ -91,8 +91,8 @@ a:has(.logo) {
   position: absolute;
   display: grid;
   place-items: center;
-  top: 20px;
-  right: 40px;
+  top: 14px;
+  right: 20px;
   width: 40px;
   height: 40px;
   border: none;

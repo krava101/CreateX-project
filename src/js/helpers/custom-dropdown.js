@@ -1,7 +1,8 @@
 export class CustomDropdown {
-  constructor(triggerId, menuId) {
+  constructor(triggerId, menuId, onOptionSelected) {
     this.trigger = document.getElementById(triggerId);
     this.menu = document.getElementById(menuId);
+    this.onOptionSelected = onOptionSelected;
 
     this.openDropdown = this.openDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
@@ -30,8 +31,8 @@ export class CustomDropdown {
   chooseOption(event) {
     const click = event.target;
     if (click.nodeName === 'BUTTON') {
-      this.trigger.textContent = click.textContent;
       this.closeDropdown();
+      this.onOptionSelected(this.trigger, event.target);
     }
   }
 

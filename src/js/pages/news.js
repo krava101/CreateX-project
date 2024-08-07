@@ -1,9 +1,8 @@
 import news from '../../data/data-news';
+import { CustomDropdown } from '../helpers/custom-dropdown';
 
-const newsList = document.querySelector('#news-list');
+const newsList = document.getElementById('news-list');
 const filterList = document.getElementById('news-filter');
-
-const filterCurrentBtn = document.getElementById('news-filter-current');
 const filterListMobile = document.getElementById('news-filter-mobile');
 
 const iconUrl = new URL('/img/icons.svg', import.meta.url).href;
@@ -12,7 +11,26 @@ let newsType = 'all';
 
 loadNews(news, newsType);
 
-filterCurrentBtn.addEventListener('click', handleOpenFilterMobile);
+const newsFilterDd = new CustomDropdown(
+  'news-filter-current',
+  'news-filter-mobile',
+  chooseNewsTypeDd
+);
+
+function chooseNewsTypeDd(filterBtn, option) {
+  pageIndex = 1;
+  newsType = option.dataset.filter;
+  const selectedFilter = filterBtn.querySelector('span');
+  if (selectedFilter) {
+    selectedFilter.textContent = option.textContent;
+  }
+  const prevFilter = filterListMobile.querySelector('.hidden');
+  if (prevFilter) {
+    prevFilter.classList.remove('hidden');
+  }
+  option.parentNode.classList.add('hidden');
+  loadNews(news, newsType);
+}
 
 filterList.addEventListener('click', event => {
   if (event.target.nodeName === 'BUTTON') {
@@ -27,48 +45,6 @@ filterList.addEventListener('click', event => {
     filterBtn.parentNode.classList.add('active');
   }
 });
-
-function handleOpenFilterMobile() {
-  filterListMobile.classList.add('active');
-  filterCurrentBtn.classList.add('active');
-  filterListMobile.addEventListener('click', handleChooseFilter);
-  filterCurrentBtn.addEventListener('click', handleCloseFilterMobile);
-  document.addEventListener('click', clickOutsideTheFilter);
-}
-
-function clickOutsideTheFilter(event) {
-  if (
-    !filterListMobile.contains(event.target) &&
-    event.target !== filterCurrentBtn
-  ) {
-    handleCloseFilterMobile();
-  }
-}
-
-function handleCloseFilterMobile() {
-  filterListMobile.classList.remove('active');
-  filterCurrentBtn.classList.remove('active');
-  filterListMobile.removeEventListener('click', handleChooseFilter);
-  filterCurrentBtn.removeEventListener('click', handleCloseFilterMobile);
-  filterCurrentBtn.addEventListener('click', handleOpenFilterMobile);
-  document.removeEventListener('click', clickOutsideTheFilter);
-}
-
-function handleChooseFilter(event) {
-  if (event.target.nodeName === 'BUTTON') {
-    const filterBtn = event.target;
-    filterCurrentBtn.textContent = filterBtn.textContent;
-    const hiddenFilter = filterListMobile.querySelector('.hidden');
-    if (hiddenFilter) {
-      hiddenFilter.classList.remove('hidden');
-    }
-    filterBtn.parentNode.classList.add('hidden');
-    pageIndex = 1;
-    newsType = filterBtn.dataset.filter;
-    loadNews(news, newsType);
-    handleCloseFilterMobile();
-  }
-}
 
 function loadNews(list, type = 'all') {
   let arr = 0;
