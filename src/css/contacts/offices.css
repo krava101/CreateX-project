@@ -3,22 +3,23 @@
   background-color: var(--cloud);
 }
 
-.offices .section-title {
+.offices__title {
   margin-bottom: 24px;
 }
 
-ul.offices-list {
+.offices__list {
   display: flex;
-  align-items: center;
-  gap: 120px;
+  justify-content: space-between;
+  gap: 60px;
   margin-top: 60px;
 }
 
-.offices-item {
-  min-width: 250px;
+.offices__item {
+  width: 100%;
+  max-width: 300px;
 }
 
-.offices-item-title {
+.offices__item-title {
   color: var(--title-color);
   font-size: 28px;
   font-weight: 700;
@@ -26,7 +27,7 @@ ul.offices-list {
   margin-bottom: 24px;
 }
 
-.offices-link {
+.offices__link {
   display: inline-block;
   color: var(--red-color);
   font-size: 16px;
@@ -36,7 +37,7 @@ ul.offices-list {
   margin-bottom: 20px;
 }
 
-.offices-text {
+.offices__text {
   color: var(--title-color);
   font-size: 16px;
   font-weight: 400;
@@ -44,11 +45,11 @@ ul.offices-list {
   margin-bottom: 4px;
 }
 
-.offices-address {
+.offices__address {
   font-style: normal;
 }
 
-.offices-address-item {
+.offices__address-item {
   display: flex;
   gap: 4px;
   font-size: 16px;
@@ -56,29 +57,50 @@ ul.offices-list {
   line-height: 160%;
 }
 
-.offices-address-item:not(:last-child) {
+.offices__address-item:not(:last-child) {
   margin-bottom: 4px;
 }
 
-.offices-address-text {
+.offices__address-text {
   color: var(--secondary-color);
 }
 
-.offices-address-link {
+.offices__address-link {
   display: inline-block;
   color: var(--title-color);
 }
 
-.offices-decor-item {
-  width: 1px;
-  height: 254px;
-  border-radius: 50%;
-  background: linear-gradient(
-    270deg,
-    rgba(218, 219, 221, 0) 0%,
-    rgba(218, 219, 221, 0.5) 12.33%,
-    #dadbdd 51.91%,
-    rgba(218, 219, 221, 0.5) 87.85%,
-    rgba(218, 219, 221, 0) 100%
-  );
+@media screen and (max-width: 1024px) {
+  .offices {
+    padding: 60px 0;
+  }
+
+  .offices__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offices__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .offices__item {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .offices__item-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .offices__link {
+    margin-bottom: 10px;
+  }
 }

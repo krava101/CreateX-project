@@ -1,4 +1,4 @@
-import { services } from '../data/data-services';
+import { services } from '../data/data-services.js';
 import { loadProjects } from './projects-slider.js';
 
 const offerSection = document.querySelector('.offer__container');
@@ -49,15 +49,15 @@ offerSection.innerHTML = markup;
 
 loadProjects(null, currentService.status);
 
-document.querySelector('.offer__list').addEventListener('click', event => {
+const offerList = document.querySelector('.offer__list');
+
+offerList.addEventListener('click', event => {
   if (event.target.nodeName === 'LI') {
     event.target.classList.toggle('visible');
     if (event.target.classList.contains('visible')) {
       event.target.querySelector('use').href.baseVal = iconUrl + '#icon-minus';
     } else {
-      setTimeout(() => {
-        event.target.querySelector('use').href.baseVal = iconUrl + '#icon-plus';
-      }, 400);
+      event.target.querySelector('use').href.baseVal = iconUrl + '#icon-plus';
     }
   }
 });
