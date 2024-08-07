@@ -22,5 +22,5 @@ import"./assets/header-4ffb22f8.js";/* empty css                     */import{l 
             </li>`,"")}
       </ul>
     </div>
-  `;n.innerHTML=u;o(null,t.status);document.querySelector(".offer__list").addEventListener("click",e=>{e.target.nodeName==="LI"&&(e.target.classList.toggle("visible"),e.target.classList.contains("visible")?e.target.querySelector("use").href.baseVal=s+"#icon-minus":setTimeout(()=>{e.target.querySelector("use").href.baseVal=s+"#icon-plus"},400))});
+  `;n.innerHTML=u;o(null,t.status);const m=document.querySelector(".offer__list");m.addEventListener("click",e=>{e.target.nodeName==="LI"&&(e.target.classList.toggle("visible"),e.target.classList.contains("visible")?e.target.querySelector("use").href.baseVal=s+"#icon-minus":e.target.querySelector("use").href.baseVal=s+"#icon-plus")});
 //# sourceMappingURL=commonHelpers8.js.map
