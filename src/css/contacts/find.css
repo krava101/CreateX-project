@@ -1,0 +1,27 @@
+.find-us {
+  padding: 60px 0 120px;
+  background-color: var(--cloud);
+}
+
+.find-us .section-title {
+  margin-bottom: 40px;
+}
+
+.find-us-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.find-us-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--secondary-color);
+  transition: fill 0.25s ease-in-out 0.1s;
+}
+
+.find-us-link:hover .find-us-icon,
+.find-us-link:focus .find-us-icon {
+  fill: var(--red-color);
+}

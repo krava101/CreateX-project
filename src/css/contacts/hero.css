@@ -1,0 +1,11 @@
+.hero::after {
+  background-image: url('../../img/contacts-page-img/contacts-hero-bg.jpg');
+  background-size: contain cover;
+  background-position: right;
+}
+
+@media screen and (max-width: 768px) {
+  .hero::after {
+    background-position: center;
+  }
+}

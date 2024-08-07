@@ -1,0 +1,261 @@
+.contacts {
+  padding: 120px 0;
+}
+
+.contacts__title {
+  margin-bottom: 24px;
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0 0;
+}
+
+.contacts__form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 30px;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.contacts__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.contacts__form-wrapper .contacts__label {
+  width: calc((100% - 30px) / 2);
+}
+
+.contacts__radio-title {
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 20px;
+}
+
+.contacts__input,
+.contacts__textarea,
+.select-option {
+  width: 100%;
+  height: 52px;
+  padding: 13px 16px;
+  border-radius: 4px;
+  border: 1px solid #d7dadd;
+  background-color: var(--cloud);
+  outline: none;
+  color: #424551;
+}
+
+.contacts__input::placeholder,
+.contacts__textarea::placeholder {
+  color: var(--light-gray);
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.contacts__textarea {
+  width: 600px;
+  height: 128px;
+  resize: none;
+}
+
+.contacts__select-label {
+  position: relative;
+  width: 285px;
+}
+
+.contacts__select-label button {
+  color: inherit;
+  text-align: left;
+}
+
+.contacts__select-list {
+  position: absolute;
+  top: 90px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 285px;
+
+  border-radius: 4px;
+  border: 1px solid #d7dadd;
+  background-color: var(--cloud);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.contacts__select-list.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.contacts__option {
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid #d7dadd;
+  background-color: var(--cloud);
+  outline: none;
+  color: #424551;
+  cursor: pointer;
+}
+
+.contacts__option:last-child {
+  border: none;
+}
+
+.contacts__option button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+/* radio */
+.contacts__radio-list {
+  display: flex;
+  gap: 24px;
+}
+
+.contacts__radio-label {
+  position: relative;
+  display: flex;
+  gap: 12px;
+}
+
+.contacts__radio {
+  opacity: 0;
+}
+
+.decor-radio,
+.default-radio {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+
+.decor-radio {
+  opacity: 0;
+  z-index: 1;
+}
+
+.contacts__radio:checked + .decor-radio {
+  opacity: 1;
+}
+
+/* radio/ */
+
+.checkbox-btn-wrapper {
+  display: flex;
+  gap: 75px;
+  margin-top: 40px;
+}
+
+.checkbox-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 28px;
+  gap: 8px;
+  max-width: 315px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--primary-color);
+}
+
+.contacts__checkbox {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+}
+
+.contacts__checkbox:checked {
+  opacity: 0;
+}
+
+.decor-checkbox {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.contacts__checkbox:checked + .decor-checkbox {
+  display: block;
+}
+
+.contacts__btn {
+  display: block;
+  width: 210px;
+  min-width: 210px;
+  height: 52px;
+  border: none;
+  border-radius: 4px;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--red-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .contacts {
+    padding: 90px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    padding: 60px 0;
+  }
+
+  .contacts__form-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .contacts__form-wrapper .contacts__label,
+  .contacts__label,
+  .contacts__textarea,
+  .contacts__radio-wrapper,
+  .checkbox-btn-wrapper {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .checkbox-btn-wrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .checkbox-label {
+    max-width: none;
+  }
+
+  .contacts__btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

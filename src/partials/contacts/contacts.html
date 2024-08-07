@@ -1,0 +1,160 @@
+<section class="contacts">
+  <div class="contacts__container container">
+    <h2 class="contacts__title section-title">Contact us</h2>
+    <p class="section-text">
+      Please complete the form. Detailed information will help us to make a
+      tuned offer.
+    </p>
+    <form class="contacts__form" action="">
+      <div class="contacts__form-wrapper">
+        <label class="contacts__label" for="contact-user-name">
+          Name*
+          <input
+            class="contacts__input"
+            type="text"
+            name="user_name"
+            placeholder="Your name"
+            id="contact-user-name"
+          />
+        </label>
+        <div class="contacts__label contacts__select-label">
+          I am interested in*
+          <button class="select-option" type="button" id="interested-input">
+            Select option
+          </button>
+          <ul class="contacts__select-list list" id="interested-list">
+            <li class="contacts__option">
+              <button type="button">Interior Design</button>
+            </li>
+            <li class="contacts__option">
+              <button type="button">Construction</button>
+            </li>
+            <li class="contacts__option">
+              <button type="button">Project Development</button>
+            </li>
+            <li class="contacts__option">
+              <button type="button">Repairs</button>
+            </li>
+          </ul>
+        </div>
+        <label class="contacts__label" for="contact-user-tel">
+          Phone*
+          <input
+            class="contacts__input"
+            type="tel"
+            name="user_tel"
+            placeholder="Your phone number"
+            id="contact-user-tel"
+          />
+        </label>
+        <div class="contacts__label contacts__select-label">
+          Location*
+          <button class="select-option" type="button" id="location-btn">
+            Select Location
+          </button>
+          <ul class="contacts__select-list list" id="location-list">
+            <li class="contacts__option">
+              <button type="button">New York</button>
+            </li>
+            <li class="contacts__option">
+              <button type="button">Kyiv</button>
+            </li>
+            <li class="contacts__option">
+              <button type="button">Berlin</button>
+            </li>
+            <li class="contacts__option">
+              <button type="button">Toronto</button>
+            </li>
+          </ul>
+        </div>
+        <label class="contacts__label" for="contact-user-email">
+          Email
+          <input
+            class="contacts__input"
+            type="email"
+            name="user_email"
+            placeholder="Your working email"
+            id="contact-user-email"
+          />
+        </label>
+        <div class="contacts__radio-wrapper">
+          <p class="contacts__radio-title" for="">Preferred contact method</p>
+          <ul class="contacts__radio-list list">
+            <li class="contacts__radio-item">
+              <label for="radio-phone" class="contacts__radio-label">
+                <input
+                  class="contacts__radio"
+                  type="radio"
+                  name="contact-radio"
+                  id="radio-phone"
+                />
+                <svg class="decor-radio">
+                  <use href="./img/icons.svg#icon-radio-checked"></use>
+                </svg>
+                <svg class="default-radio">
+                  <use href="./img/icons.svg#icon-radio-default"></use>
+                </svg>
+                Phone
+              </label>
+            </li>
+            <li class="contacts__radio-item">
+              <label for="radio-email" class="contacts__radio-label">
+                <input
+                  class="contacts__radio"
+                  type="radio"
+                  name="contact-radio"
+                  id="radio-email"
+                />
+                <svg class="decor-radio">
+                  <use href="./img/icons.svg#icon-radio-checked"></use>
+                </svg>
+                <svg class="default-radio">
+                  <use href="./img/icons.svg#icon-radio-default"></use>
+                </svg>
+                Email
+              </label>
+            </li>
+            <li class="contacts__radio-item">
+              <label for="radio-viber" class="contacts__radio-label">
+                <input
+                  class="contacts__radio"
+                  type="radio"
+                  name="contact-radio"
+                  id="radio-viber"
+                />
+                <svg class="decor-radio">
+                  <use href="./img/icons.svg#icon-radio-checked"></use>
+                </svg>
+                <svg class="default-radio">
+                  <use href="./img/icons.svg#icon-radio-default"></use>
+                </svg>
+                Viber
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <label class="contacts__label" for="contact-user-message">
+        Message*
+        <textarea
+          class="contacts__textarea"
+          name="user-message"
+          id="contact-user-message"
+          placeholder="Your message"
+        ></textarea>
+      </label>
+      <div class="checkbox-btn-wrapper">
+        <label class="checkbox-label">
+          <input type="checkbox" class="contacts__checkbox" />
+          <svg class="decor-checkbox">
+            <use href="./img/icons.svg#icon-decor-checkbox"></use>
+          </svg>
+          I agree to receive communications from Createx Construction Bureau.
+        </label>
+        <button class="contacts__btn orange-btn" type="submit">
+          send request
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
