@@ -24,7 +24,8 @@
     <script type="module" crossorigin src="/CreateX-project/commonHelpers4.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-d0acb961.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/news-3bfabfae.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/custom-dropdown-fcd182db.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/news-fd701598.css">
     <link rel="stylesheet" href="/CreateX-project/assets/utils-ce09651c.css">
   </head>
   <body>
@@ -103,9 +104,6 @@
     <div class="news__tilte-wrap">
       <h2 class="news__tilte section-title">Categories</h2>
       <div class="news__filter-mobile-wrap">
-        <button class="news__filter-btn_current" id="news-filter-current">
-          All News
-        </button>
         <ul class="news__filter-mobile list" id="news-filter-mobile">
           <li class="news__filter-item hidden">
             <button class="news__filter-btn" type="button" data-filter="all">
@@ -158,6 +156,19 @@
             </button>
           </li>
         </ul>
+        <button class="news__filter-btn_current" id="news-filter-current">
+          <span>All News</span>
+          <svg
+            class="news__filter-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 18 18"
+            fill="none"
+          >
+            <path
+              d="M14.7727 5.27344H3.22735C2.88106 5.27344 2.6877 5.63906 2.90216 5.88867L8.67481 12.5824C8.84005 12.774 9.15821 12.774 9.3252 12.5824L15.0979 5.88867C15.3123 5.63906 15.119 5.27344 14.7727 5.27344Z"
+            />
+          </svg>
+        </button>
       </div>
     </div>
     <ul class="news__filter list" id="news-filter">
