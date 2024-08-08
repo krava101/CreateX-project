@@ -33,14 +33,22 @@
   max-width: 600px;
 }
 
-.reviews-avatar {
+.reviews-avatar,
+.review-avatar.loader {
   width: 72px;
   height: 72px;
   border-radius: 50%;
+  background-color: var(--loading-bg);
 }
 
 .reviews-text {
   color: var(--primary-color);
+}
+
+.reviews-text.loader {
+  height: 4lh;
+  background-color: var(--loading-bg);
+  border-radius: 8px;
 }
 
 .reviews-nickname {
@@ -49,10 +57,24 @@
   margin: 24px 0 4px;
 }
 
+.reviews-nickname.loader {
+  height: 25px;
+  width: 120px;
+  background-color: var(--loading-bg);
+  border-radius: 4px;
+}
+
 .reviews-position {
   font-size: 14px;
   line-height: 1.5;
   color: var(--secondary-color);
+}
+
+.reviews-position.loader {
+  height: 21px;
+  width: 100px;
+  background-color: var(--loading-bg);
+  border-radius: 4px;
 }
 
 .reviews-img {
