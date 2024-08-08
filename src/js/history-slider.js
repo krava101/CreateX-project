@@ -29,6 +29,7 @@ historyList.addEventListener('click', event => {
 });
 
 function activeHistorySlider(num) {
+  historyImg.src = '';
   const currentHistory = history[num];
   historyImg.src = currentHistory.image;
   historyText.textContent = currentHistory.text;

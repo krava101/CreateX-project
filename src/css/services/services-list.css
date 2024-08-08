@@ -27,6 +27,7 @@
 .services-card img {
   width: 100%;
   aspect-ratio: 115/84;
+  background-color: var(--loading-bg);
 }
 
 .services-title {
