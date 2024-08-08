@@ -1,4 +1,4 @@
-import"./assets/header-4ffb22f8.js";import"./assets/comments-accae290.js";import{n as r}from"./assets/data-news-d0acb961.js";import{t as l}from"./assets/touch-slider-a3d169cb.js";import"./assets/main-form-25ecbd05.js";import{l as a}from"./assets/projects-slider-612221fd.js";import"./assets/data-projects-2fb17aac.js";const m=document.getElementById("newsList"),d=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,h=r.slice(0,3).reduce((n,e,i)=>n+`
+import"./assets/header-4ffb22f8.js";import{t as r}from"./assets/touch-slider-a3d169cb.js";import"./assets/comments-accae290.js";import{n as l}from"./assets/data-news-d0acb961.js";import{l as a}from"./assets/projects-slider-612221fd.js";import"./assets/main-form-25ecbd05.js";import"./assets/data-projects-2fb17aac.js";const s=document.querySelector(".hero-steps-list"),m=document.querySelector(".hero-left-btn"),d=document.querySelector(".hero-right-btn"),o=document.querySelector(".hero-pag-list");let t=0;r(s,c,t);m.addEventListener("click",()=>{t<=0?t=s.children.length-1:t--,c(t)});d.addEventListener("click",()=>{t===s.children.length-1?t=0:t++,c(t)});function c(n){const e=s.firstElementChild.getBoundingClientRect();o.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),s.style.transform=`translateX(${-n*e.width}px)`,o.children[n].classList.add("active-hero-pag")}const h=document.getElementById("newsList"),p=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,g=l.slice(0,3).reduce((n,e,i)=>n+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img
@@ -14,7 +14,7 @@ import"./assets/header-4ffb22f8.js";import"./assets/comments-accae290.js";import
           <li>${e.date}</li>
           <li class="news-comments">
             <svg class="news-comment-icon">
-              <use href="${d}#icon-comments"></use>
+              <use href="${p}#icon-comments"></use>
             </svg>
             <p>
               ${e.comments.length?e.comments.length+(e.comments.length>1?" comments":" comment"):"No comments"}
@@ -25,5 +25,5 @@ import"./assets/header-4ffb22f8.js";import"./assets/comments-accae290.js";import
         ${e.previewText}</p>
       </div>
     </li>
-    `,"");m.innerHTML=h;const s=document.querySelector(".hero-steps-list"),p=document.querySelector(".hero-left-btn"),g=document.querySelector(".hero-right-btn"),o=document.querySelector(".hero-pag-list");let t=0;l(s,c,t);p.addEventListener("click",()=>{t<=0?t=s.children.length-1:t--,c(t)});g.addEventListener("click",()=>{t===s.children.length-1?t=0:t++,c(t)});function c(n){const e=s.firstElementChild.getBoundingClientRect();o.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),s.style.transform=`translateX(${-n*e.width}px)`,o.children[n].classList.add("active-hero-pag")}a();
+    `,"");h.innerHTML=g;a();
 //# sourceMappingURL=commonHelpers3.js.map

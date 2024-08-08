@@ -21,13 +21,13 @@
     
     <script type="module" crossorigin src="/CreateX-project/commonHelpers3.js"></script>
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/touch-slider-a3d169cb.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/comments-accae290.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-d0acb961.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/touch-slider-a3d169cb.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-25ecbd05.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-2fb17aac.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-612221fd.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/index-c6ce8921.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-25ecbd05.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/index-b051feba.css">
   </head>
   <body>
     <header id="header">
@@ -449,7 +449,16 @@
   <div class="container">
     <div class="single-review-wrap">
       <h2 class="section-title">What our clients are saying</h2>
-      <div class="reviews-info" id="comments"></div>
+      <div class="reviews-info" id="comments">
+        <div class="review-owner">
+          <div class="review-avatar loader"></div>
+          <span>
+            <p class="reviews-nickname loader"></p>
+            <p class="reviews-position loader"></p>
+          </span>
+        </div>
+        <p class="reviews-text loader"></p>
+      </div>
       <div class="reviews-slider">
         <button type="button" class="reviews-slider-btn" id="rev-left-btn">
           <svg class="reviews-slider-icons">
@@ -471,7 +480,6 @@
   </div>
 </section>
 
-      
       <section class="facts-news">
         <div class="facts">
   <div class="container">
@@ -530,7 +538,6 @@
   </div>
 </div>
 
-        
       </section>
       <section class="application" id="application">
   <div class="container">
