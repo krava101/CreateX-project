@@ -25,9 +25,9 @@
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/header-4ffb22f8.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-2fb17aac.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/touch-slider-a3d169cb.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-612221fd.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/service-373ec039.css">
-    <link rel="stylesheet" href="/CreateX-project/assets/utils-76c95a69.css">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-4fc44e60.js">
+    <link rel="stylesheet" href="/CreateX-project/assets/service-d3c7cab1.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/utils-87a3813e.css">
   </head>
   <body>
     <header id="header">
@@ -249,11 +249,17 @@
       </div>
     </div>
     <div class="projects__list-wrapper">
-      <ul class="projects__list list" id="p-list"></ul>
+      <ul class="projects__list list" id="p-list">
+        <li class="projects__item loader"></li>
+        <li class="projects__item loader"></li>
+        <li class="projects__item loader"></li>
+      </ul>
       <ul class="projects__pag-list list" id="p-pag-list">
-        <li><button class="active" type="button"></button></li>
-        <li><button type="button"></button></li>
-        <li><button type="button"></button></li>
+        <li>
+          <button class="projects__pag-btn active" type="button"></button>
+        </li>
+        <li><button class="projects__pag-btn" type="button"></button></li>
+        <li><button class="projects__pag-btn" type="button"></button></li>
       </ul>
     </div>
     <div class="projects__view">

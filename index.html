@@ -25,9 +25,9 @@
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/comments-accae290.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-news-d0acb961.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/data-projects-2fb17aac.js">
-    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-612221fd.js">
+    <link rel="modulepreload" crossorigin href="/CreateX-project/assets/projects-slider-4fc44e60.js">
     <link rel="modulepreload" crossorigin href="/CreateX-project/assets/main-form-25ecbd05.js">
-    <link rel="stylesheet" href="/CreateX-project/assets/index-b051feba.css">
+    <link rel="stylesheet" href="/CreateX-project/assets/index-a953f3c2.css">
   </head>
   <body>
     <header id="header">
@@ -387,11 +387,17 @@
       </div>
     </div>
     <div class="projects__list-wrapper">
-      <ul class="projects__list list" id="p-list"></ul>
+      <ul class="projects__list list" id="p-list">
+        <li class="projects__item loader"></li>
+        <li class="projects__item loader"></li>
+        <li class="projects__item loader"></li>
+      </ul>
       <ul class="projects__pag-list list" id="p-pag-list">
-        <li><button class="active" type="button"></button></li>
-        <li><button type="button"></button></li>
-        <li><button type="button"></button></li>
+        <li>
+          <button class="projects__pag-btn active" type="button"></button>
+        </li>
+        <li><button class="projects__pag-btn" type="button"></button></li>
+        <li><button class="projects__pag-btn" type="button"></button></li>
       </ul>
     </div>
     <div class="projects__view">
@@ -528,7 +534,11 @@
         <div class="news">
   <div class="container">
     <h2 class="section-title">Recent news</h2>
-    <ul id="newsList" class="news-list list"></ul>
+    <ul id="newsList" class="news-list list">
+      <li class="news-card loader"></li>
+      <li class="news-card loader"></li>
+      <li class="news-card loader"></li>
+    </ul>
     <div class="news-info">
       <h3 class="view-more-title">Explore all our news posts</h3>
       <a href="./news.html" class="news-link view-more-link orange-btn"
