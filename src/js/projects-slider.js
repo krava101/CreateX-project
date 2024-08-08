@@ -5,6 +5,7 @@ const projectsList = document.getElementById('p-list');
 const projectsLeftBtn = document.getElementById('p-left-btn');
 const projectsRightBtn = document.getElementById('p-right-btn');
 const projectsTitle = document.getElementById('p__title');
+const projectsPagList = document.getElementById('p-pag-list');
 let projectsIndex = 0;
 
 touchSlider(projectsList, activeProjectsSlider, projectsIndex);
@@ -61,6 +62,17 @@ export const loadProjects = (project, status) => {
     ''
   );
   projectsList.innerHTML = markup;
+
+  const pag = list.map(
+    (_, i) =>
+      `<li><button class="projects__pag-btn ${
+        i === 0 ? 'active' : ''
+      }" type="button" ></button></li>`
+  );
+
+  if (pag.length > 1) {
+    projectsPagList.innerHTML = pag.join('');
+  }
 };
 
 projectsLeftBtn.addEventListener('click', () => {
@@ -82,5 +94,10 @@ function activeProjectsSlider(index) {
     const cardWidth =
       projectsList.children[0].getBoundingClientRect().width + 30;
     projectsList.style.transform = `translateX(${-index * cardWidth}px)`;
+    const activePag = projectsPagList.querySelector('.active');
+    if (activePag) {
+      activePag.classList.remove('active');
+    }
+    projectsPagList.children[index].firstChild.classList.add('active');
   }
 }
