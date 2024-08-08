@@ -119,6 +119,9 @@
 }
 
 .news__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   width: calc((100% - 30px) / 2);
   max-height: 482px;
   border-radius: 8px;
@@ -135,6 +138,15 @@
     0px 12px 10px -6px rgba(154, 156, 165, 0.08),
     0px 30px 24px -10px rgba(154, 156, 165, 0.1),
     0px 80px 80px -20px rgba(154, 156, 165, 0.16);
+}
+
+.news__card-img-wrapper {
+  aspect-ratio: 2/1;
+}
+
+.news__card-img {
+  height: 100%;
+  background-color: var(--loading-bg);
 }
 
 .news__card-box {

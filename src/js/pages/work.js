@@ -2,7 +2,6 @@ import { projects } from '../../data/data-projects.js';
 
 const projectsList = document.querySelector('.projects-list');
 const mediaNavList = document.querySelector('.media-list');
-const mediaBtns = document.querySelectorAll('.media-btn');
 const loadMoreBtn = document.querySelector('.projects-load-more');
 let page = 1;
 
