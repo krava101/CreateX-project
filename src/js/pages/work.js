@@ -39,7 +39,11 @@ const loadProjects = (status = 'all', page = 1) => {
 loadProjects();
 
 mediaNavList.addEventListener('click', event => {
-  mediaBtns.forEach(btn => btn.classList.remove('active'));
+  const activeMedia = mediaNavList.querySelector('.active');
+
+  if (activeMedia) {
+    activeMedia.classList.remove('active');
+  }
   event.target.classList.add('active');
   loadProjects(event.target.dataset.media);
 });

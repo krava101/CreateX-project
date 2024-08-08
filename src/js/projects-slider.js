@@ -51,7 +51,7 @@ export const loadProjects = (project, status) => {
         <img
           class="projects__card-img"
           src="${e.previewImg}"
-          alt=""
+          alt="${e.name} img"
         />
         <div class="projects__card-box">
           <h5 class="card-title">${e.name}</h5>

@@ -108,7 +108,7 @@
 }
 
 .projects-load-more.active .projects-load-icon {
-  animation: spin 0.7s linear;
+  animation: spin 0.7s infinite;
 }
 
 @keyframes spin {
@@ -124,22 +124,6 @@
   .projects .container {
     padding: 0 50px;
   }
-
-  .projects-card {
-    width: calc((100% - 30px) / 2);
-    max-width: 390px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .projects .container {
-    padding: 0 50px;
-  }
-
-  .projects-card {
-    width: calc((100% - 30px) / 2);
-    max-width: 390px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -148,7 +132,9 @@
   }
 
   .projects-card {
-    width: 390px;
+    width: 347px;
+    min-width: 339px;
+    height: 395px;
   }
 
   .projects-card-box {
@@ -169,5 +155,10 @@
 @media screen and (max-width: 375px) {
   .projects-img {
     height: 67%;
+  }
+
+  .projects-card {
+    min-width: 280px;
+    height: 320px;
   }
 }
