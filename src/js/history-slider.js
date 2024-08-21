@@ -1,5 +1,4 @@
 import history from '../data/data-history';
-import { touchSlider } from './helpers/touch-slider';
 
 const historyImg = document.querySelector('.active-history-img');
 const historyList = document.querySelector('.history-list');
@@ -8,8 +7,6 @@ const historyPag = document.querySelector('#history-pag');
 const historyBtnRight = document.getElementById('history-btn-right');
 const historyBtnLeft = document.getElementById('history-btn-left');
 let historyIndex = 0;
-
-touchSlider(historyImg, activeHistorySlider, historyIndex, history.length);
 
 historyBtnRight.addEventListener('click', () => {
   historyIndex !== history.length - 1 ? historyIndex++ : (historyIndex = 0);
