@@ -2,8 +2,6 @@ import { defineConfig } from 'vite';
 import glob from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
-import commonjs from '@rollup/plugin-commonjs';
-import babel from '@rollup/plugin-babel';
 
 export default defineConfig(({ command }) => {
   return {
@@ -24,10 +22,6 @@ export default defineConfig(({ command }) => {
           },
           entryFileNames: 'commonHelpers.js',
         },
-        plugins: [
-          commonjs(),
-          babel({ babelHelpers: 'bundled', exclude: 'node_modules/**' }),
-        ],
       },
       outDir: '../dist',
     },
