@@ -1,10 +1,12 @@
-import { touchSlider } from './helpers/touch-slider';
+import TouchSlider from './helpers/touch-slider';
 
 const projectGallery = document.getElementById('project-gallery');
 const projectSmallGallery = document.getElementById('project-small-gallery');
 const leftBtn = document.querySelector('.project__gallery-btn_left');
 const rightBtn = document.querySelector('.project__gallery-btn_right');
 let currentIndex = 0;
+
+const slider = new TouchSlider(projectGallery, galleryScroll, 6);
 
 leftBtn.addEventListener('click', () => {
   currentIndex <= 0
@@ -28,9 +30,9 @@ projectSmallGallery.addEventListener('click', event => {
   }
 });
 
-touchSlider(projectGallery, galleryScroll, currentIndex);
-
 function galleryScroll(index) {
+  currentIndex = index;
+  slider.index = currentIndex;
   projectSmallGallery.querySelector('.active').classList.remove('active');
   const imgWidth = projectGallery.children[0].getBoundingClientRect().width;
   projectGallery.style.transform = `translateX(-${index * imgWidth}px)`;

@@ -12,8 +12,6 @@ export const projects = [
     completed: 'June 2013',
     description:
       "Completed in 2013, Cubes Building provides spaces for offices, housing, shops and hotels, creating a dynamic urban landscapeon the banks of the Meuse River. Its modern and innovative design reflects the modern architectural aesthetic and plays an important rolein Rotterdam's modern urban appearance.",
-    previewImg: new URL('/img/work-page-img/project-1.jpg', import.meta.url)
-      .href,
     images: [
       `${new URL('/img/project-img/1-project-1.jpg', import.meta.url).href}`,
       `${new URL('/img/project-img/1-project-2.jpg', import.meta.url).href}`,

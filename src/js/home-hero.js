@@ -1,4 +1,4 @@
-import { touchSlider } from './helpers/touch-slider';
+import TouchSlider from './helpers/touch-slider';
 
 const heroList = document.querySelector('.hero-steps-list');
 const heroLeftBtn = document.querySelector('.hero-left-btn');
@@ -6,7 +6,7 @@ const heroRightBtn = document.querySelector('.hero-right-btn');
 const heroPagList = document.querySelector('.hero-pag-list');
 let heroIndex = 0;
 
-touchSlider(heroList, activHeroSlider, heroIndex);
+const slider = new TouchSlider(heroList, activHeroSlider);
 
 heroLeftBtn.addEventListener('click', () => {
   heroIndex <= 0 ? (heroIndex = heroList.children.length - 1) : heroIndex--;
@@ -19,6 +19,8 @@ heroRightBtn.addEventListener('click', () => {
 });
 
 function activHeroSlider(index) {
+  heroIndex = index;
+  slider.index = index;
   const step = heroList.firstElementChild.getBoundingClientRect();
   heroPagList
     .querySelector('.active-hero-pag')

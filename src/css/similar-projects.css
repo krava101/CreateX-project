@@ -176,9 +176,7 @@
   background-color: var(--cloud);
 }
 
-.projects__pag-btn.active,
-.projects__pag-btn:hover,
-.projects__pag-btn:focus {
+.projects__pag-btn.active {
   background-color: var(--light-gray);
 }
 

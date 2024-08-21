@@ -1,10 +1,11 @@
-import { projects } from '../data/data-projects.js';
+import { currentProject } from '../api/projects.js';
 import { loadProjects } from './projects-slider.js';
 
 const href = window.location.href;
 const url = new URL(href);
-const projectNum = +url.searchParams.get('project');
-const currentProject = projects[projectNum];
+const projectId = url.searchParams.get('project');
+const project = await currentProject(projectId);
+const imgUrl = 'https://res.cloudinary.com/dxseifgey/image/upload/v1723796772';
 
 const projectTitle = document.getElementById('project-title');
 const projectPath = document.getElementById('project-path');
@@ -13,71 +14,83 @@ const projectSmallGallery = document.getElementById('project-small-gallery');
 const projectInfo = document.getElementById('project-info');
 const projectDescription = document.getElementById('project-description');
 
-projectTitle.textContent = currentProject.name;
+projectTitle.textContent = project.name;
 projectTitle.classList.remove('project__title_loader');
-projectPath.textContent = `/ ${currentProject.name}`;
+projectPath.textContent = `/ ${project.name}`;
 
 projectGallery.innerHTML = `
   <li>
-    <img src="${currentProject.images[0]}" alt="Project photo">
+    <img src="${imgUrl + project.images[0].src}" alt="Project photo">
   </li>
   <li>
-    <img src="${currentProject.images[1]}" alt="Project photo">
+    <img src="${imgUrl + project.images[1].src}" alt="Project photo">
   </li>
   <li>
-    <img src="${currentProject.images[2]}" alt="Project photo">
+    <img src="${imgUrl + project.images[2].src}" alt="Project photo">
   </li>
   <li>
-    <img src="${currentProject.images[3]}" alt="Project photo">
+    <img src="${imgUrl + project.images[3].src}" alt="Project photo">
   </li>
   <li>
-    <img src="${currentProject.images[4]}" alt="Project photo">
+    <img src="${imgUrl + project.images[4].src}" alt="Project photo">
   </li>
   <li>
-    <img src="${currentProject.images[5]}" alt="Project photo">
+    <img src="${imgUrl + project.images[5].src}" alt="Project photo">
   </li>`;
 
 projectSmallGallery.innerHTML = `
   <li class="project__gallery-small-item active">
     <button class="project__gallery-small-btn" type="button">
-      <img src="${currentProject.images[0]}" alt="Project small photo pagination">
+      <img src="${
+        imgUrl + project.images[0].src
+      }" alt="Project small photo pagination">
     </button>
   </li>
   <li class="project__gallery-small-item">
     <button class="project__gallery-small-btn" type="button">
-      <img src="${currentProject.images[1]}" alt="Project small photo pagination">
+      <img src="${
+        imgUrl + project.images[1].src
+      }" alt="Project small photo pagination">
     </button></li>
   <li class="project__gallery-small-item">
     <button class="project__gallery-small-btn" type="button">
-      <img src="${currentProject.images[2]}" alt="Project small photo pagination">
+      <img src="${
+        imgUrl + project.images[2].src
+      }" alt="Project small photo pagination">
     </button></li>
   <li class="project__gallery-small-item"> 
     <button class="project__gallery-small-btn" type="button">
-      <img src="${currentProject.images[3]}" alt="Project small photo pagination">
+      <img src="${
+        imgUrl + project.images[3].src
+      }" alt="Project small photo pagination">
     </button></li>
   <li class="project__gallery-small-item">
     <button class="project__gallery-small-btn" type="button">
-      <img src="${currentProject.images[4]}" alt="Project small photo pagination">
+      <img src="${
+        imgUrl + project.images[4].src
+      }" alt="Project small photo pagination">
     </button></li>
   <li class="project__gallery-small-item">
     <button class="project__gallery-small-btn" type="button">
-      <img src="${currentProject.images[5]}" alt="Project small photo pagination">
+      <img src="${
+        imgUrl + project.images[5].src
+      }" alt="Project small photo pagination">
     </button></li>`;
 
 projectInfo.innerHTML = `
   <li>Location</li>
-  <li>${currentProject.location}</li>
+  <li>${project.location}</li>
   <li>CLIENT</li>
-  <li>${currentProject.client}</li>
+  <li>${project.client}</li>
   <li>ARCHITECT</li>
-  <li>${currentProject.architect}</li>
+  <li>${project.architect}</li>
   <li>SIZE</li>
-  <li>${currentProject.size}</li>
+  <li>${project.size}</li>
   <li>VALUE</li>
-  <li>${currentProject.value}</li>
+  <li>${project.value}</li>
   <li>COMPLETED</li>
-  <li>${currentProject.completed}</li>`;
+  <li>${project.completed}</li>`;
 
-projectDescription.textContent = currentProject.description;
+projectDescription.textContent = project.description;
 
-loadProjects(currentProject);
+loadProjects(project);

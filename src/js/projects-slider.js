@@ -1,14 +1,15 @@
-import { projects } from '../data/data-projects.js';
-import { touchSlider } from './helpers/touch-slider.js';
+import { getProjects } from '../api/projects.js';
+import TouchSlider from './helpers/touch-slider.js';
 
 const projectsList = document.getElementById('p-list');
 const projectsLeftBtn = document.getElementById('p-left-btn');
 const projectsRightBtn = document.getElementById('p-right-btn');
 const projectsTitle = document.getElementById('p__title');
 const projectsPagList = document.getElementById('p-pag-list');
-let projectsIndex = 0;
 
-touchSlider(projectsList, activeProjectsSlider, projectsIndex);
+const imgUrl = 'https://res.cloudinary.com/dxseifgey/image/upload/v1723796772';
+let projectsIndex = 0;
+let slider = 0;
 
 const currentPath = window.location.pathname;
 const navMap = {
@@ -23,8 +24,10 @@ const navMap = {
 
 projectsTitle.textContent = navMap[currentPath];
 
-export const loadProjects = (project, status) => {
+export const loadProjects = async (project, status) => {
+  const projects = await getProjects();
   let list = projects;
+
   if (project) {
     list = projects.filter(
       e => e.type === project.type && e.name !== project.name
@@ -39,10 +42,12 @@ export const loadProjects = (project, status) => {
     const projectsSection = document.querySelector('.projects');
     projectsSection.style.paddingTop = '0';
     projectsSection.style.backgroundColor = '#f4f5f6';
+    return;
   }
   if (list.length === 1) {
     projectsLeftBtn.style.display = 'none';
     projectsRightBtn.style.display = 'none';
+    projectsPagList.style.display = 'none';
   }
   const markup = list.reduce(
     (acc, e) =>
@@ -50,18 +55,22 @@ export const loadProjects = (project, status) => {
       `<li class="projects__card">
         <img
           class="projects__card-img"
-          src="${e.previewImg}"
+          src="${imgUrl + e.images[0].src}"
           alt="${e.name} img"
         />
         <div class="projects__card-box">
           <h5 class="card-title">${e.name}</h5>
           <p class="projects__card-text">${e.type}</p>
-          <a class="projects__card-link" href="project.html?project=${e.id}">view project</a>
+          <a class="projects__card-link" href="project.html?project=${
+            e._id
+          }">view project</a>
         </div>
     </li>`,
     ''
   );
   projectsList.innerHTML = markup;
+
+  slider = new TouchSlider(projectsList, activeProjectsSlider);
 
   const pag = list.map(
     (_, i) =>
@@ -69,10 +78,7 @@ export const loadProjects = (project, status) => {
         i === 0 ? 'active' : ''
       }" type="button" ></button></li>`
   );
-
-  if (pag.length > 1) {
-    projectsPagList.innerHTML = pag.join('');
-  }
+  projectsPagList.innerHTML = pag.join('');
 };
 
 projectsLeftBtn.addEventListener('click', () => {
@@ -89,7 +95,19 @@ projectsRightBtn.addEventListener('click', () => {
   activeProjectsSlider(projectsIndex);
 });
 
+projectsPagList.addEventListener('click', event => {
+  if (event.target.tagName === 'BUTTON') {
+    const pagButtons = Array.from(projectsPagList.children);
+    const newIndex = pagButtons.indexOf(event.target.parentElement);
+    if (newIndex !== -1 && newIndex !== projectsIndex) {
+      activeProjectsSlider(newIndex);
+    }
+  }
+});
+
 function activeProjectsSlider(index) {
+  projectsIndex = index;
+  slider.index = index;
   if (projectsList.children.length > 1) {
     const cardWidth =
       projectsList.children[0].getBoundingClientRect().width + 30;
@@ -98,6 +116,6 @@ function activeProjectsSlider(index) {
     if (activePag) {
       activePag.classList.remove('active');
     }
-    projectsPagList.children[index].firstChild.classList.add('active');
+    projectsPagList.children[index].firstElementChild.classList.add('active');
   }
 }
