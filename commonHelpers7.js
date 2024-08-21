@@ -1,57 +1,25 @@
-import"./assets/header-4ffb22f8.js";/* empty css                     */import{p as n}from"./assets/data-projects-2fb17aac.js";import{l as s}from"./assets/projects-slider-4fc44e60.js";import{t as m}from"./assets/touch-slider-a3d169cb.js";const p=window.location.href,g=new URL(p),j=+g.searchParams.get("project"),t=n[j],a=document.getElementById("project-title"),d=document.getElementById("project-path"),y=document.getElementById("project-gallery"),u=document.getElementById("project-small-gallery"),_=document.getElementById("project-info"),h=document.getElementById("project-description");a.textContent=t.name;a.classList.remove("project__title_loader");d.textContent=`/ ${t.name}`;y.innerHTML=`
-  <li>
-    <img src="${t.images[0]}" alt="Project photo">
-  </li>
-  <li>
-    <img src="${t.images[1]}" alt="Project photo">
-  </li>
-  <li>
-    <img src="${t.images[2]}" alt="Project photo">
-  </li>
-  <li>
-    <img src="${t.images[3]}" alt="Project photo">
-  </li>
-  <li>
-    <img src="${t.images[4]}" alt="Project photo">
-  </li>
-  <li>
-    <img src="${t.images[5]}" alt="Project photo">
-  </li>`;u.innerHTML=`
-  <li class="project__gallery-small-item active">
-    <button class="project__gallery-small-btn" type="button">
-      <img src="${t.images[0]}" alt="Project small photo pagination">
-    </button>
-  </li>
-  <li class="project__gallery-small-item">
-    <button class="project__gallery-small-btn" type="button">
-      <img src="${t.images[1]}" alt="Project small photo pagination">
-    </button></li>
-  <li class="project__gallery-small-item">
-    <button class="project__gallery-small-btn" type="button">
-      <img src="${t.images[2]}" alt="Project small photo pagination">
-    </button></li>
-  <li class="project__gallery-small-item"> 
-    <button class="project__gallery-small-btn" type="button">
-      <img src="${t.images[3]}" alt="Project small photo pagination">
-    </button></li>
-  <li class="project__gallery-small-item">
-    <button class="project__gallery-small-btn" type="button">
-      <img src="${t.images[4]}" alt="Project small photo pagination">
-    </button></li>
-  <li class="project__gallery-small-item">
-    <button class="project__gallery-small-btn" type="button">
-      <img src="${t.images[5]}" alt="Project small photo pagination">
-    </button></li>`;_.innerHTML=`
-  <li>Location</li>
-  <li>${t.location}</li>
-  <li>CLIENT</li>
-  <li>${t.client}</li>
-  <li>ARCHITECT</li>
-  <li>${t.architect}</li>
-  <li>SIZE</li>
-  <li>${t.size}</li>
-  <li>VALUE</li>
-  <li>${t.value}</li>
-  <li>COMPLETED</li>
-  <li>${t.completed}</li>`;h.textContent=t.description;s(t);const l=document.getElementById("project-gallery"),c=document.getElementById("project-small-gallery"),b=document.querySelector(".project__gallery-btn_left"),$=document.querySelector(".project__gallery-btn_right");let e=0;b.addEventListener("click",()=>{e<=0?e=l.children.length-1:e--,r(e)});$.addEventListener("click",()=>{e===l.children.length-1?e=0:e++,r(e)});c.addEventListener("click",o=>{const i=o.target;i.nodeName==="BUTTON"&&(e=[...c.children].indexOf(i.parentNode),r(e))});m(l,r,e);function r(o){c.querySelector(".active").classList.remove("active");const i=l.children[0].getBoundingClientRect().width;l.style.transform=`translateX(-${o*i}px)`,c.children[o].classList.add("active")}
+import"./assets/header-35869669.js";/* empty css                     */import{l as j,c as y,T as u}from"./assets/projects-slider-315c9a9a.js";const h=window.location.href,E=new URL(h),f=E.searchParams.get("project");async function I(t){try{return await y(t)}catch(l){return console.error("Error fetching project data:",l),null}}async function L(){const t=await I(f);if(t){const l="https://res.cloudinary.com/dxseifgey/image/upload/v1723796772",i=document.getElementById("project-title"),a=document.getElementById("project-path"),s=document.getElementById("project-gallery"),d=document.getElementById("project-small-gallery"),m=document.getElementById("project-info"),p=document.getElementById("project-description");i.textContent=t.name,i.classList.remove("project__title_loader"),a.textContent=`/ ${t.name}`,s.innerHTML=t.images.map(n=>`
+      <li>
+        <img src="${l+n.src}" alt="Project photo">
+      </li>
+    `).join(""),d.innerHTML=t.images.map((n,g)=>`
+      <li class="project__gallery-small-item ${g===0?"active":""}">
+        <button class="project__gallery-small-btn" type="button">
+          <img src="${l+n.src}" alt="Project small photo pagination">
+        </button>
+      </li>
+    `).join(""),m.innerHTML=`
+      <li>Location</li>
+      <li>${t.location}</li>
+      <li>CLIENT</li>
+      <li>${t.client}</li>
+      <li>ARCHITECT</li>
+      <li>${t.architect}</li>
+      <li>SIZE</li>
+      <li>${t.size}</li>
+      <li>VALUE</li>
+      <li>${t.value}</li>
+      <li>COMPLETED</li>
+      <li>${t.completed}</li>
+    `,p.textContent=t.description,j(t)}else console.error("Project data is not available.")}L();const o=document.getElementById("project-gallery"),c=document.getElementById("project-small-gallery"),_=document.querySelector(".project__gallery-btn_left"),v=document.querySelector(".project__gallery-btn_right");let e=0;const B=new u(o,r,6);_.addEventListener("click",()=>{e<=0?e=o.children.length-1:e--,r(e)});v.addEventListener("click",()=>{e===o.children.length-1?e=0:e++,r(e)});c.addEventListener("click",t=>{const l=t.target;l.nodeName==="BUTTON"&&(e=[...c.children].indexOf(l.parentNode),r(e))});function r(t){e=t,B.index=e,c.querySelector(".active").classList.remove("active");const l=o.children[0].getBoundingClientRect().width;o.style.transform=`translateX(-${t*l}px)`,c.children[t].classList.add("active")}
 //# sourceMappingURL=commonHelpers7.js.map

@@ -1,4 +1,4 @@
-import"./assets/header-4ffb22f8.js";import{t as r}from"./assets/touch-slider-a3d169cb.js";import"./assets/comments-accae290.js";import{n as l}from"./assets/data-news-d0acb961.js";import{l as a}from"./assets/projects-slider-4fc44e60.js";import"./assets/main-form-25ecbd05.js";import"./assets/data-projects-2fb17aac.js";const s=document.querySelector(".hero-steps-list"),m=document.querySelector(".hero-left-btn"),d=document.querySelector(".hero-right-btn"),o=document.querySelector(".hero-pag-list");let t=0;r(s,c,t);m.addEventListener("click",()=>{t<=0?t=s.children.length-1:t--,c(t)});d.addEventListener("click",()=>{t===s.children.length-1?t=0:t++,c(t)});function c(n){const e=s.firstElementChild.getBoundingClientRect();o.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),s.style.transform=`translateX(${-n*e.width}px)`,o.children[n].classList.add("active-hero-pag")}const h=document.getElementById("newsList"),p=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,g=l.slice(0,3).reduce((n,e,i)=>n+`
+import"./assets/header-35869669.js";import{T as r,l}from"./assets/projects-slider-315c9a9a.js";import"./assets/comments-accae290.js";import{n as a}from"./assets/data-news-d0acb961.js";import"./assets/main-form-25ecbd05.js";const n=document.querySelector(".hero-steps-list"),m=document.querySelector(".hero-left-btn"),d=document.querySelector(".hero-right-btn"),o=document.querySelector(".hero-pag-list");let t=0;const h=new r(n,c);m.addEventListener("click",()=>{t<=0?t=n.children.length-1:t--,c(t)});d.addEventListener("click",()=>{t===n.children.length-1?t=0:t++,c(t)});function c(s){t=s,h.index=s;const e=n.firstElementChild.getBoundingClientRect();o.querySelector(".active-hero-pag").classList.remove("active-hero-pag"),n.style.transform=`translateX(${-s*e.width}px)`,o.children[s].classList.add("active-hero-pag")}const g=document.getElementById("newsList"),p=new URL("/CreateX-project/assets/icons-97ef5a9b.svg",self.location).href,u=a.slice(0,3).reduce((s,e,i)=>s+`
     <li class="news-card">
       <div class="news-card-img-wrapper">
         <img
@@ -25,5 +25,5 @@ import"./assets/header-4ffb22f8.js";import{t as r}from"./assets/touch-slider-a3d
         ${e.previewText}</p>
       </div>
     </li>
-    `,"");h.innerHTML=g;a();
+    `,"");g.innerHTML=u;l();
 //# sourceMappingURL=commonHelpers3.js.map
