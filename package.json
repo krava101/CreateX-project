@@ -15,8 +15,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "vanilla-app-template": "file:",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
