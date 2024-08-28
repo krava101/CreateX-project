@@ -1,0 +1,2 @@
+const o="https://createx-api.vercel.app";async function t(){try{const r=await fetch(`${o}/projects`);if(!r.ok)throw new Error("Network response was not ok");return await r.json()}catch(r){console.error(r)}}async function s(r){try{const e=await fetch(`${o}/projects/${r}`);if(!e.ok)throw new Error("Network response was not ok");return await e.json()}catch(e){console.error(e)}}export{s as c,t as g};
+//# sourceMappingURL=projects-0519d275.js.map
