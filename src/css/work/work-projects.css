@@ -33,6 +33,10 @@
     0px 80px 80px -20px rgba(154, 156, 165, 0.16);
 }
 
+.projects-img {
+  width: auto;
+}
+
 .projects-card-box {
   position: absolute;
   bottom: 0;
